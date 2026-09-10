@@ -5,16 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>えみりん｜AI × Web Creative Director / Designer｜Webサイト制作</title>
+  <title>Emirin｜AI × Web Creative Director / Designer</title>
 
   <meta
     name="description"
-    content="AIを活用したWebサイト制作。企画・コンセプト設計からデザイン、制作、公開まで一貫してサポートします。"
+    content="AIを活用したWebサイト制作。企画・コンセプト設計からデザイン、制作、情報発信、マーケティングまで一貫してサポートします。"
   >
 
   <style>
-    /* ===== BASIC ===== */
-
     * {
       box-sizing: border-box;
     }
@@ -26,16 +24,17 @@
     body {
       margin: 0;
       font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
         "Hiragino Kaku Gothic ProN",
         "Hiragino Sans",
         Meiryo,
         sans-serif;
-      color: #222;
-      background: #fff;
+      color: #202020;
+      background: #ffffff;
       line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
     }
 
     a {
@@ -46,336 +45,359 @@
     img {
       display: block;
       max-width: 100%;
-      height: auto;
     }
 
     .container {
-      width: min(1100px, 90%);
+      width: min(1180px, 90%);
       margin: 0 auto;
     }
 
 
-    /* ===== HEADER ===== */
+    /* HEADER */
 
     header {
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
       background: rgba(255, 255, 255, 0.94);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #eee;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     }
 
-    .nav {
-      min-height: 72px;
+    .header-inner {
+      min-height: 76px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 24px;
+      justify-content: space-between;
+      gap: 30px;
     }
 
     .logo {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.6rem;
-      font-style: italic;
-      font-weight: 400;
+      font-size: 1.4rem;
+      font-weight: 300;
+      letter-spacing: 0.12em;
+      line-height: 1;
+      white-space: nowrap;
     }
 
     nav ul {
       display: flex;
       align-items: center;
-      gap: 22px;
-      list-style: none;
+      gap: 24px;
       margin: 0;
       padding: 0;
-      font-size: 0.82rem;
-      letter-spacing: 0.05em;
+      list-style: none;
     }
 
     nav a {
-      transition: opacity 0.2s;
+      position: relative;
+      display: block;
+      padding: 28px 0 24px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
     }
 
-    nav a:hover {
-      opacity: 0.5;
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 19px;
+      width: 0;
+      height: 1px;
+      background: #202020;
+      transition: width 0.25s ease;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
     }
 
 
-    /* ===== HERO ===== */
+    /* HERO */
 
     .hero {
-      min-height: calc(100vh - 72px);
+      min-height: calc(100vh - 76px);
       display: flex;
       align-items: center;
-      padding: 80px 0;
+      padding: 75px 0 90px;
+      overflow: hidden;
 
       background:
+        radial-gradient(
+          circle at 82% 30%,
+          rgba(225, 228, 232, 0.7),
+          transparent 32%
+        ),
         linear-gradient(
           135deg,
           #ffffff 0%,
-          #f8f8f8 55%,
-          #f1f1f1 100%
+          #fafafa 55%,
+          #f4f4f4 100%
         );
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+      grid-template-columns:
+        minmax(0, 1.25fr)
+        minmax(300px, 0.75fr);
       align-items: center;
-      gap: 70px;
+      gap: clamp(50px, 8vw, 110px);
     }
 
-    .hero h1 {
-      margin: 0 0 18px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(4rem, 9vw, 7rem);
-      font-style: italic;
-      font-weight: 400;
-      line-height: 0.95;
-      letter-spacing: -0.02em;
+    .hero-name {
+      margin: 0 0 15px;
+      font-size: clamp(4rem, 8vw, 7rem);
+      font-weight: 200;
+      letter-spacing: 0.07em;
+      line-height: 1;
     }
 
-    .hero h2 {
+    .hero-title {
       margin: 0;
-      font-size: clamp(1.05rem, 2vw, 1.45rem);
-      font-weight: 500;
-      letter-spacing: 0.02em;
+      font-size: clamp(0.95rem, 1.6vw, 1.25rem);
+      font-weight: 400;
+      letter-spacing: 0.05em;
     }
 
-    .hero-copy {
-      margin: 32px 0 28px;
-      font-size: clamp(1.5rem, 3vw, 2.25rem);
-      font-weight: 600;
+    .hero-catch {
+      margin: 38px 0 30px;
+      font-size: clamp(1.65rem, 3vw, 2.5rem);
+      font-weight: 500;
       letter-spacing: 0.08em;
       line-height: 1.5;
     }
 
     .hero-description {
-      max-width: 720px;
+      max-width: 700px;
       margin: 0 0 18px;
-      font-size: 1rem;
-    }
-
-    .hero-photo {
-      width: 100%;
-      max-width: 390px;
-      margin-left: auto;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-      object-position: center;
-      border-radius: 4px;
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.10);
+      font-size: 0.98rem;
+      line-height: 2;
     }
 
 
-    /* ===== BUTTON ===== */
+    /* BUTTON */
+
+    .button-area {
+      margin-top: 35px;
+    }
 
     .button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 30px;
-      border: 1px solid #222;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 210px;
+      padding: 14px 28px;
+      border: 1px solid #202020;
       border-radius: 999px;
-      background: transparent;
-      font-size: 0.95rem;
-      transition: 0.2s;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+      transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
     }
 
     .button:hover {
-      background: #222;
-      color: #fff;
+      color: #ffffff;
+      background: #202020;
       transform: translateY(-2px);
     }
 
 
-    /* ===== SECTIONS ===== */
+    /* PHOTO */
 
-    section {
-      padding: 110px 0;
+    .hero-visual {
+      position: relative;
     }
 
-    main > section:nth-child(odd):not(.hero) {
-      background: #fafafa;
+    .hero-visual::before {
+      content: "";
+      position: absolute;
+      width: 76%;
+      height: 76%;
+      right: -30px;
+      top: -30px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      z-index: 0;
     }
 
-    .section-title {
-      margin: 0 0 40px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 400;
-      letter-spacing: 0.04em;
-    }
-
-    .lead {
-      max-width: 760px;
-      margin: 0 0 45px;
-    }
-
-
-    /* ===== CARDS ===== */
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .card {
-      padding: 32px;
-      border: 1px solid #e5e5e5;
-      border-radius: 12px;
-      background: #fff;
-    }
-
-    .card h3 {
-      margin-top: 0;
-    }
-
-
-    /* ===== PRICE ===== */
-
-    .price-box {
-      max-width: 760px;
-      padding: 42px;
-      border: 1px solid #222;
-      border-radius: 16px;
-      background: #fff;
-    }
-
-    .price {
-      margin: 10px 0;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 3rem;
-      font-weight: 400;
-    }
-
-
-    /* ===== PROFILE ===== */
-
-    .profile {
-      display: grid;
-      grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
-      gap: 65px;
-      align-items: center;
-    }
-
-    .profile-photo {
+    .hero-photo {
+      position: relative;
+      z-index: 1;
       width: 100%;
+      max-width: 400px;
+      margin-left: auto;
       aspect-ratio: 4 / 5;
       object-fit: cover;
       object-position: center;
-      border-radius: 4px;
-    }
-
-    .profile-name {
-      margin: 0 0 5px;
-      font-size: 2rem;
-    }
-
-    .profile-title {
-      margin: 0 0 30px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.1rem;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
     }
 
 
-    /* ===== FLOW ===== */
+    /* PAGE LINKS */
 
-    .flow {
+    .page-links {
+      padding: 90px 0;
+      background: #ffffff;
+    }
+
+    .page-links-heading {
+      margin: 0 0 45px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+    }
+
+    .page-links-grid {
       display: grid;
-      gap: 22px;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid #dedede;
     }
 
-    .flow-item {
-      padding-left: 24px;
-      border-left: 2px solid #222;
+    .page-link {
+      display: block;
+      padding: 30px 20px 30px 0;
+      border-bottom: 1px solid #dedede;
+      transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
     }
 
-    .flow-item h3 {
+    .page-link:nth-child(3n + 2),
+    .page-link:nth-child(3n + 3) {
+      padding-left: 30px;
+    }
+
+    .page-link:hover {
+      opacity: 0.5;
+      transform: translateX(5px);
+    }
+
+    .page-link-en {
+      display: block;
       margin-bottom: 4px;
+      font-size: 1.05rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
     }
 
-    .flow-item p {
-      margin-top: 0;
-    }
-
-
-    /* ===== FAQ ===== */
-
-    details {
-      padding: 20px 0;
-      border-bottom: 1px solid #ddd;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: 600;
+    .page-link-ja {
+      display: block;
+      font-size: 0.78rem;
+      color: #777777;
     }
 
 
-    /* ===== CONTACT ===== */
-
-    .contact-box {
-      padding: 70px 25px;
-      text-align: center;
-      border: 1px solid #ddd;
-      border-radius: 16px;
-      background: #fff;
-    }
-
-
-    /* ===== FOOTER ===== */
+    /* FOOTER */
 
     footer {
-      padding: 50px 0;
-      text-align: center;
-      border-top: 1px solid #eee;
-      font-size: 0.82rem;
+      padding: 40px 0;
+      border-top: 1px solid #eeeeee;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      font-size: 0.75rem;
+      color: #777777;
+    }
+
+    .footer-inner p {
+      margin: 0;
     }
 
 
-    /* ===== MOBILE ===== */
+    /* TABLET */
 
-    @media (max-width: 800px) {
-
+    @media (max-width: 900px) {
       nav ul {
-        display: none;
+        gap: 13px;
       }
 
-      section {
-        padding: 75px 0;
-      }
-
-      .hero {
-        padding: 65px 0;
+      nav a {
+        font-size: 0.67rem;
       }
 
       .hero-grid {
         grid-template-columns: 1fr;
-        gap: 45px;
+        gap: 55px;
       }
 
       .hero-photo {
-        width: min(100%, 360px);
-        margin: 10px auto 0;
-      }
-
-      .grid-3 {
-        grid-template-columns: 1fr;
-      }
-
-      .profile {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
-      .profile-photo {
-        width: min(100%, 380px);
+        width: min(100%, 390px);
         margin: 0 auto;
       }
 
-      .price-box {
-        padding: 30px 24px;
+      .page-links-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .page-link,
+      .page-link:nth-child(3n + 2),
+      .page-link:nth-child(3n + 3) {
+        padding-left: 0;
+      }
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 720px) {
+      .header-inner {
+        min-height: 68px;
+      }
+
+      .logo {
+        font-size: 1.2rem;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 65px 0 75px;
+      }
+
+      .hero-name {
+        font-size: clamp(3.3rem, 16vw, 5rem);
+        letter-spacing: 0.04em;
+      }
+
+      .hero-title {
+        font-size: 0.88rem;
+        line-height: 1.6;
+      }
+
+      .hero-catch {
+        margin-top: 30px;
+        font-size: 1.5rem;
+      }
+
+      .hero-description {
+        font-size: 0.94rem;
+        line-height: 1.9;
+      }
+
+      .page-links {
+        padding: 70px 0;
+      }
+
+      .page-links-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
       }
     }
   </style>
@@ -387,20 +409,22 @@
   <!-- HEADER -->
 
   <header>
-    <div class="container nav">
+    <div class="container header-inner">
 
-      <a class="logo" href="#home">Emirin</a>
+      <a class="logo" href="index.html">
+        Emirin
+      </a>
 
       <nav>
         <ul>
-          <li><a href="#home">HOME</a></li>
-          <li><a href="#service">SERVICE</a></li>
-          <li><a href="#works">WORKS</a></li>
-          <li><a href="#price">PRICE</a></li>
-          <li><a href="#profile">PROFILE</a></li>
-          <li><a href="#flow">FLOW</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contact">CONTACT</a></li>
+          <li><a class="active" href="index.html">HOME</a></li>
+          <li><a href="comingsoon.html">SERVICE</a></li>
+          <li><a href="comingsoon.html">WORKS</a></li>
+          <li><a href="comingsoon.html">PRICE</a></li>
+          <li><a href="comingsoon.html">PROFILE</a></li>
+          <li><a href="comingsoon.html">FLOW</a></li>
+          <li><a href="comingsoon.html">FAQ</a></li>
+          <li><a href="comingsoon.html">CONTACT</a></li>
         </ul>
       </nav>
 
@@ -408,25 +432,27 @@
   </header>
 
 
+  <!-- HOME -->
+
   <main>
 
-    <!-- HOME -->
-
-    <section class="hero" id="home">
+    <section class="hero">
 
       <div class="container hero-grid">
 
-        <div>
+        <div class="hero-text">
 
-          <h1>Emirin</h1>
+          <h1 class="hero-name">
+            Emirin
+          </h1>
 
-          <h2>
+          <p class="hero-title">
             AI × Web Creative Director / Designer
-          </h2>
-
-          <p class="hero-copy">
-            アイデアを、伝わるカタチに。
           </p>
+
+          <h2 class="hero-catch">
+            アイデアを、伝わるカタチに。
+          </h2>
 
           <p class="hero-description">
             会社やお店、個人の魅力をインターネットで伝えるお手伝いをしています。
@@ -440,19 +466,23 @@
             マーケティングまで一貫してサポートします。
           </p>
 
-          <a class="button" href="#contact">
-            無料相談・お見積り
-          </a>
+          <div class="button-area">
+            <a class="button" href="comingsoon.html">
+              無料相談・お見積り
+            </a>
+          </div>
 
         </div>
 
 
-        <div>
+        <div class="hero-visual">
+
           <img
             class="hero-photo"
             src="emirin-profile.jpg"
-            alt="Web Creative Director / Designer えみりん"
+            alt="AI × Web Creative Director / Designer えみりん"
           >
+
         </div>
 
       </div>
@@ -460,347 +490,46 @@
     </section>
 
 
-    <!-- SERVICE -->
+    <!-- PAGE LINKS -->
 
-    <section id="service">
+    <section class="page-links">
 
       <div class="container">
 
-        <h2 class="section-title">SERVICE</h2>
-
-        <p class="lead">
-          ヒアリングから企画、デザイン、制作、公開まで一貫して対応します。
-          AIを制作パートナーとして活用しながら、
-          お客様の目的に合ったWebサイトを形にします。
+        <p class="page-links-heading">
+          EXPLORE
         </p>
 
-        <div class="grid-3">
-
-          <div class="card">
-            <h3>企画・要件定義</h3>
-            <p>
-              目的、ターゲット、必要なページや機能を整理し、
-              サイト全体の方向性を決めます。
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>デザイン・制作</h3>
-            <p>
-              ワイヤーフレーム、デザイン、コーディング、
-              スマートフォン対応まで行います。
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>公開・運用サポート</h3>
-            <p>
-              Webサイトの公開設定、
-              SNSや外部サービスとの連携、
-              必要に応じた更新にも対応します。
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- WORKS -->
-
-    <section id="works">
-
-      <div class="container">
-
-        <h2 class="section-title">WORKS</h2>
-
-        <p class="lead">
-          制作事例を順次掲載します。
-        </p>
-
-        <div class="grid-3">
-
-          <div class="card">
-            <h3>Emirin Official Website</h3>
-            <p>
-              AI × Web Creative Director / Designer
-              えみりん公式サイト
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Coming Soon</h3>
-            <p>
-              ネイルサロン Webサイト
-              （自主制作・架空案件）
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Coming Soon</h3>
-            <p>
-              小規模事業者向け Webサイト
-              （自主制作・架空案件）
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- PRICE -->
-
-    <section id="price">
-
-      <div class="container">
-
-        <h2 class="section-title">PRICE</h2>
-
-        <div class="price-box">
-
-          <p>Webサイト制作</p>
-
-          <div class="price">
-            60,000円〜
-          </div>
-
-          <p>
-            企画・コンセプト設計、デザイン、制作、
-            スマートフォン対応、公開設定まで含みます。
-          </p>
-
-          <p>
-            公開後の月額維持費0円で
-            運用できる方法にも対応しています。
-          </p>
-
-          <p>
-            ※現在のサービス・無料プランの提供条件に基づきます。
-            独自ドメイン、有料外部サービス等の利用、
-            または提供元の料金・仕様変更等により、
-            別途費用が発生する場合があります。
-          </p>
-
-          <p>
-            お支払い：原則一括払い（分割払い応相談）
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- PROFILE -->
-
-    <section id="profile">
-
-      <div class="container">
-
-        <h2 class="section-title">PROFILE</h2>
-
-        <div class="profile">
-
-          <div>
-            <img
-              class="profile-photo"
-              src="emirin-profile.jpg"
-              alt="えみりん"
-            >
-          </div>
-
-          <div>
-
-            <h3 class="profile-name">
-              えみりん
-            </h3>
-
-            <p class="profile-title">
-              AI × Web Creative Director / Designer
-            </p>
-
-            <p>
-              外資系IT企業に約10年間勤務。
-              IT分野での実務に加え、
-              セキュリティマネージャーとしての経験を持つ。
-            </p>
-
-            <p>
-              これまで培ったITの知識と経験を活かし、
-              AIを取り入れたWebサイトの
-              企画・デザイン・制作を行っています。
-            </p>
-
-            <p>
-              「何を作ればいいかわからない」という段階から、
-              目的や伝えたいことを整理し、
-              企画・コンセプト設計からデザイン、制作、公開まで
-              一貫してサポートします。
-            </p>
-
-            <p>
-              見た目だけではなく、
-              使いやすさと、その先にいる人に
-              きちんと伝わることを大切にしています。
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- FLOW -->
-
-    <section id="flow">
-
-      <div class="container">
-
-        <h2 class="section-title">FLOW</h2>
-
-        <div class="flow">
-
-          <div class="flow-item">
-            <h3>01. お問い合わせ</h3>
-            <p>
-              まずは制作内容やご希望をお聞かせください。
-            </p>
-          </div>
-
-          <div class="flow-item">
-            <h3>02. ヒアリング・お見積り</h3>
-            <p>
-              目的やご希望を整理し、
-              制作内容と料金をご案内します。
-            </p>
-          </div>
-
-          <div class="flow-item">
-            <h3>03. お申し込み・お支払い</h3>
-            <p>
-              内容をご確認いただき、
-              お申し込み・お支払い確認後に制作を開始します。
-            </p>
-          </div>
-
-          <div class="flow-item">
-            <h3>04. デザイン・制作</h3>
-            <p>
-              構成、デザイン、コーディングを進めます。
-            </p>
-          </div>
-
-          <div class="flow-item">
-            <h3>05. ご確認・修正</h3>
-            <p>
-              完成前にサイトをご確認いただき、
-              必要な修正を行います。
-            </p>
-          </div>
-
-          <div class="flow-item">
-            <h3>06. 公開・納品</h3>
-            <p>
-              最終確認後、Webサイトを公開します。
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- FAQ -->
-
-    <section id="faq">
-
-      <div class="container">
-
-        <h2 class="section-title">FAQ</h2>
-
-        <details>
-          <summary>
-            Webサイトについて何も決まっていなくても相談できますか？
-          </summary>
-          <p>
-            はい。
-            目的や伝えたいことを整理するところから
-            一緒に進めます。
-          </p>
-        </details>
-
-        <details>
-          <summary>
-            公開後に月額費用はかかりますか？
-          </summary>
-          <p>
-            月額管理費0円で運用できる方法にも対応しています。
-            独自ドメインや有料サービスを利用する場合は、
-            別途費用が発生することがあります。
-          </p>
-        </details>
-
-        <details>
-          <summary>
-            更新をお願いすることはできますか？
-          </summary>
-          <p>
-            はい。
-            文章や画像の変更、ページ追加など、
-            必要なときだけご依頼いただけます。
-          </p>
-        </details>
-
-        <details>
-          <summary>
-            パソコンや設定が苦手でも大丈夫ですか？
-          </summary>
-          <p>
-            はい。
-            必要に応じて、
-            画面を一緒に確認しながら
-            サポートすることも可能です。
-          </p>
-        </details>
-
-      </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-
-    <section id="contact">
-
-      <div class="container">
-
-        <h2 class="section-title">CONTACT</h2>
-
-        <div class="contact-box">
-
-          <h3>
-            まずはご相談ください
-          </h3>
-
-          <p>
-            「こんなサイトを作りたい」
-            「何から始めればいいかわからない」
-            という段階でも大丈夫です。
-          </p>
-
-          <a class="button" href="#">
-            お問い合わせ
+        <div class="page-links-grid">
+
+          <a class="page-link" href="comingsoon.html">
+            <span class="page-link-en">SERVICE</span>
+            <span class="page-link-ja">サービス</span>
+          </a>
+
+          <a class="page-link" href="comingsoon.html">
+            <span class="page-link-en">WORKS</span>
+            <span class="page-link-ja">制作実績</span>
+          </a>
+
+          <a class="page-link" href="comingsoon.html">
+            <span class="page-link-en">PRICE</span>
+            <span class="page-link-ja">料金</span>
+          </a>
+
+          <a class="page-link" href="comingsoon.html">
+            <span class="page-link-en">PROFILE</span>
+            <span class="page-link-ja">プロフィール</span>
+          </a>
+
+          <a class="page-link" href="comingsoon.html">
+            <span class="page-link-en">FLOW</span>
+            <span class="page-link-ja">制作の流れ</span>
+          </a>
+
+          <a class="page-link" href="comingsoon.html">
+            <span class="page-link-en">FAQ</span>
+            <span class="page-link-ja">よくあるご質問</span>
           </a>
 
         </div>
@@ -815,20 +544,19 @@
   <!-- FOOTER -->
 
   <footer>
-
-    <div class="container">
+    <div class="container footer-inner">
 
       <p>
-        このWebサイトも、AIを活用しながら
-        企画・デザインから制作・公開まで
-        自身で手がけています。
+        AIを活用しながら、企画・デザインから制作・公開まで自身で手がけています。
       </p>
 
-      <p>© Emirin</p>
+      <p>
+        © Emirin
+      </p>
 
     </div>
-
   </footer>
 
 </body>
+
 </html>
