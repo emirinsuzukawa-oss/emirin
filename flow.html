@@ -9,7 +9,7 @@
 
   <meta
     name="description"
-    content="EmirinのWebサイト制作の流れ。お問い合わせからヒアリング、お見積り、制作、確認・修正、公開・納品までの流れをご案内します。"
+    content="EmirinのWebサイト制作の流れ。お問い合わせからヒアリング、お見積り、制作、確認、公開・納品までご案内します。"
   >
 
   <style>
@@ -42,9 +42,17 @@
       -webkit-font-smoothing: antialiased;
     }
 
+    body.menu-open {
+      overflow: hidden;
+    }
+
     a {
       color: inherit;
       text-decoration: none;
+    }
+
+    button {
+      font: inherit;
     }
 
     .container {
@@ -53,7 +61,9 @@
     }
 
 
-    /* HEADER */
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
       position: sticky;
@@ -79,6 +89,9 @@
     }
 
     .logo {
+      position: relative;
+      z-index: 1002;
+
       font-size: 1.35rem;
       font-weight: 300;
 
@@ -88,7 +101,9 @@
     }
 
 
-    /* NAVIGATION */
+    /* =========================
+       NAVIGATION
+    ========================= */
 
     nav ul {
       display: flex;
@@ -137,7 +152,35 @@
     }
 
 
-    /* PAGE HERO */
+    /* =========================
+       MOBILE MENU BUTTON
+    ========================= */
+
+    .menu-button {
+      display: none;
+
+      position: relative;
+      z-index: 1002;
+
+      padding: 10px 0;
+
+      border: 0;
+      background: transparent;
+
+      color: #202020;
+
+      font-size: 0.72rem;
+      font-weight: 500;
+
+      letter-spacing: 0.14em;
+
+      cursor: pointer;
+    }
+
+
+    /* =========================
+       PAGE HERO
+    ========================= */
 
     .page-hero {
       padding: 105px 0 80px;
@@ -188,10 +231,12 @@
     }
 
 
-    /* INTRO */
+    /* =========================
+       INTRO
+    ========================= */
 
     .intro {
-      padding: 90px 0 65px;
+      padding: 90px 0 60px;
     }
 
     .intro-text {
@@ -205,119 +250,71 @@
     }
 
 
-    /* FLOW */
+    /* =========================
+       FLOW
+    ========================= */
 
     .flow {
-      padding: 20px 0 120px;
+      padding: 25px 0 120px;
     }
 
     .flow-list {
       max-width: 900px;
 
-      margin: 0 auto;
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
+
+      border-top: 1px solid #dddddd;
     }
 
     .flow-item {
-      position: relative;
-
       display: grid;
 
-      grid-template-columns: 130px 1fr;
+      grid-template-columns: 120px 1fr;
 
       gap: 45px;
 
-      padding: 0 0 65px;
-    }
+      padding: 42px 0;
 
-    .flow-item:last-child {
-      padding-bottom: 0;
-    }
-
-    .flow-number-area {
-      position: relative;
-
-      display: flex;
-      justify-content: center;
+      border-bottom: 1px solid #dddddd;
     }
 
     .flow-number {
-      position: relative;
+      margin: 0;
 
-      z-index: 2;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      width: 82px;
-      height: 82px;
-
-      border: 1px solid #bcbcbc;
-      border-radius: 50%;
-
-      background: #ffffff;
-
-      font-size: 0.82rem;
+      font-size: 0.75rem;
       font-weight: 500;
 
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
+
+      color: #888888;
     }
 
-    .flow-item:not(:last-child)
-    .flow-number-area::after {
-      content: "";
+    .flow-item h2 {
+      margin: 0 0 13px;
 
-      position: absolute;
-
-      top: 82px;
-      bottom: -65px;
-
-      left: 50%;
-
-      width: 1px;
-
-      background: #d8d8d8;
-    }
-
-    .flow-content {
-      padding: 9px 0 0;
-    }
-
-    .flow-en {
-      margin: 0 0 5px;
-
-      font-size: 0.68rem;
-      font-weight: 500;
-
-      letter-spacing: 0.15em;
-
-      color: #999999;
-    }
-
-    .flow-content h2 {
-      margin: 0 0 14px;
-
-      font-size: clamp(1.3rem, 2.5vw, 1.75rem);
-
-      font-weight: 500;
+      font-size: clamp(1.35rem, 2.5vw, 1.8rem);
+      font-weight: 400;
 
       letter-spacing: 0.04em;
     }
 
-    .flow-content p {
-      max-width: 650px;
-
+    .flow-item p {
       margin: 0;
 
-      font-size: 0.95rem;
+      font-size: 0.93rem;
 
-      line-height: 1.95;
+      line-height: 2;
 
-      color: #555555;
+      color: #666666;
     }
 
 
-    /* DELIVERY */
+    /* =========================
+       DELIVERY
+    ========================= */
 
     .delivery {
       padding: 100px 0;
@@ -344,7 +341,6 @@
       margin: 0 0 28px;
 
       font-size: clamp(1.8rem, 3vw, 2.5rem);
-
       font-weight: 400;
 
       letter-spacing: 0.04em;
@@ -358,7 +354,7 @@
       line-height: 2;
     }
 
-    .delivery-note {
+    .note {
       margin-top: 30px;
 
       padding: 24px 28px;
@@ -375,7 +371,9 @@
     }
 
 
-    /* CTA */
+    /* =========================
+       CTA
+    ========================= */
 
     .cta {
       padding: 110px 0;
@@ -387,7 +385,6 @@
       margin: 0 0 15px;
 
       font-size: clamp(1.8rem, 3vw, 2.5rem);
-
       font-weight: 400;
 
       letter-spacing: 0.05em;
@@ -431,7 +428,9 @@
     }
 
 
-    /* FOOTER */
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       padding: 40px 0;
@@ -457,7 +456,9 @@
     }
 
 
-    /* TABLET */
+    /* =========================
+       TABLET
+    ========================= */
 
     @media (max-width: 900px) {
 
@@ -471,7 +472,9 @@
     }
 
 
-    /* MOBILE */
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 720px) {
 
@@ -483,7 +486,76 @@
         font-size: 1.2rem;
       }
 
+      .menu-button {
+        display: block;
+      }
+
       nav {
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100dvh;
+
+        padding: 105px 5% 40px;
+
+        background: rgba(255, 255, 255, 0.98);
+
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+
+        opacity: 0;
+        visibility: hidden;
+
+        transform: translateY(-10px);
+
+        transition:
+          opacity 0.25s ease,
+          visibility 0.25s ease,
+          transform 0.25s ease;
+
+        overflow-y: auto;
+
+        z-index: 1001;
+      }
+
+      nav.open {
+        opacity: 1;
+        visibility: visible;
+
+        transform: translateY(0);
+      }
+
+      nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 0;
+
+        width: 100%;
+      }
+
+      nav li {
+        width: 100%;
+
+        border-bottom: 1px solid #eeeeee;
+      }
+
+      nav a {
+        width: 100%;
+
+        padding: 17px 0;
+
+        font-size: 1rem;
+        font-weight: 400;
+
+        letter-spacing: 0.1em;
+      }
+
+      nav a::after {
         display: none;
       }
 
@@ -496,7 +568,7 @@
       }
 
       .intro {
-        padding: 65px 0 50px;
+        padding: 65px 0 45px;
       }
 
       .flow {
@@ -504,28 +576,11 @@
       }
 
       .flow-item {
-        grid-template-columns: 70px 1fr;
+        grid-template-columns: 1fr;
 
-        gap: 22px;
+        gap: 12px;
 
-        padding-bottom: 55px;
-      }
-
-      .flow-number {
-        width: 58px;
-        height: 58px;
-
-        font-size: 0.72rem;
-      }
-
-      .flow-item:not(:last-child)
-      .flow-number-area::after {
-        top: 58px;
-        bottom: -55px;
-      }
-
-      .flow-content {
-        padding-top: 2px;
+        padding: 34px 0;
       }
 
       .delivery {
@@ -552,7 +607,9 @@
 <body>
 
 
-  <!-- HEADER -->
+  <!-- =========================
+       HEADER
+  ========================= -->
 
   <header>
 
@@ -562,36 +619,62 @@
         Emirin
       </a>
 
-      <nav>
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+        aria-controls="global-nav"
+      >
+        MENU
+      </button>
+
+
+      <nav id="global-nav">
 
         <ul>
 
           <li>
-            <a href="index.html">HOME</a>
+            <a href="index.html">
+              HOME
+            </a>
           </li>
 
           <li>
-            <a href="service.html">SERVICE</a>
+            <a href="service.html">
+              SERVICE
+            </a>
           </li>
 
           <li>
-            <a href="works.html">WORKS</a>
+            <a href="works.html">
+              WORKS
+            </a>
           </li>
 
           <li>
-            <a href="price.html">PRICE</a>
+            <a href="price.html">
+              PRICE
+            </a>
           </li>
 
           <li>
-            <a href="profile.html">PROFILE</a>
+            <a href="profile.html">
+              PROFILE
+            </a>
           </li>
 
           <li>
-            <a class="active" href="flow.html">FLOW</a>
+            <a class="active" href="flow.html">
+              FLOW
+            </a>
           </li>
 
           <li>
-            <a href="faq.html">FAQ</a>
+            <a href="faq.html">
+              FAQ
+            </a>
           </li>
 
           <li>
@@ -616,14 +699,16 @@
   <main>
 
 
-    <!-- PAGE HERO -->
+    <!-- =========================
+         PAGE HERO
+    ========================= -->
 
     <section class="page-hero">
 
       <div class="container">
 
         <p class="page-label">
-          HOW IT WORKS
+          PROCESS
         </p>
 
         <h1 class="page-title">
@@ -639,15 +724,17 @@
     </section>
 
 
-    <!-- INTRO -->
+    <!-- =========================
+         INTRO
+    ========================= -->
 
     <section class="intro">
 
       <div class="container">
 
         <p class="intro-text">
-          お問い合わせからWebサイトの公開・納品まで、
-          一つひとつ確認しながら進めていきます。
+          お問い合わせから公開・納品まで、
+          内容を確認しながら一つずつ進めていきます。
         </p>
 
       </div>
@@ -655,26 +742,24 @@
     </section>
 
 
-    <!-- FLOW -->
+    <!-- =========================
+         FLOW
+    ========================= -->
 
     <section class="flow">
 
       <div class="container">
 
-        <div class="flow-list">
+        <ol class="flow-list">
 
 
-          <div class="flow-item">
+          <li class="flow-item">
 
-            <div class="flow-number-area">
-              <span class="flow-number">01</span>
-            </div>
+            <p class="flow-number">
+              01 / CONTACT
+            </p>
 
-            <div class="flow-content">
-
-              <p class="flow-en">
-                CONTACT
-              </p>
+            <div>
 
               <h2>
                 お問い合わせ
@@ -687,20 +772,16 @@
 
             </div>
 
-          </div>
+          </li>
 
 
-          <div class="flow-item">
+          <li class="flow-item">
 
-            <div class="flow-number-area">
-              <span class="flow-number">02</span>
-            </div>
+            <p class="flow-number">
+              02 / HEARING
+            </p>
 
-            <div class="flow-content">
-
-              <p class="flow-en">
-                HEARING &amp; ESTIMATE
-              </p>
+            <div>
 
               <h2>
                 ヒアリング・お見積り
@@ -714,20 +795,16 @@
 
             </div>
 
-          </div>
+          </li>
 
 
-          <div class="flow-item">
+          <li class="flow-item">
 
-            <div class="flow-number-area">
-              <span class="flow-number">03</span>
-            </div>
+            <p class="flow-number">
+              03 / PAYMENT
+            </p>
 
-            <div class="flow-content">
-
-              <p class="flow-en">
-                APPLICATION &amp; PAYMENT
-              </p>
+            <div>
 
               <h2>
                 お申し込み・お支払い
@@ -740,20 +817,16 @@
 
             </div>
 
-          </div>
+          </li>
 
 
-          <div class="flow-item">
+          <li class="flow-item">
 
-            <div class="flow-number-area">
-              <span class="flow-number">04</span>
-            </div>
+            <p class="flow-number">
+              04 / PRODUCTION
+            </p>
 
-            <div class="flow-content">
-
-              <p class="flow-en">
-                DESIGN &amp; DEVELOPMENT
-              </p>
+            <div>
 
               <h2>
                 デザイン・制作
@@ -767,20 +840,16 @@
 
             </div>
 
-          </div>
+          </li>
 
 
-          <div class="flow-item">
+          <li class="flow-item">
 
-            <div class="flow-number-area">
-              <span class="flow-number">05</span>
-            </div>
+            <p class="flow-number">
+              05 / REVIEW
+            </p>
 
-            <div class="flow-content">
-
-              <p class="flow-en">
-                REVIEW &amp; REVISION
-              </p>
+            <div>
 
               <h2>
                 ご確認・修正
@@ -794,20 +863,16 @@
 
             </div>
 
-          </div>
+          </li>
 
 
-          <div class="flow-item">
+          <li class="flow-item">
 
-            <div class="flow-number-area">
-              <span class="flow-number">06</span>
-            </div>
+            <p class="flow-number">
+              06 / LAUNCH
+            </p>
 
-            <div class="flow-content">
-
-              <p class="flow-en">
-                LAUNCH &amp; DELIVERY
-              </p>
+            <div>
 
               <h2>
                 公開・納品
@@ -820,17 +885,19 @@
 
             </div>
 
-          </div>
+          </li>
 
 
-        </div>
+        </ol>
 
       </div>
 
     </section>
 
 
-    <!-- DELIVERY -->
+    <!-- =========================
+         DELIVERY
+    ========================= -->
 
     <section class="delivery">
 
@@ -839,7 +906,7 @@
         <div class="delivery-inner">
 
           <p class="section-label">
-            DELIVERY TIME
+            DELIVERY
           </p>
 
           <h2>
@@ -856,8 +923,9 @@
             準備が整い次第、公開・納品することも可能です。
           </p>
 
-          <div class="delivery-note">
-            ※制作内容やページ数、お客様によるご確認・修正の状況、
+          <div class="note">
+            ※制作内容やページ数、
+            お客様によるご確認・修正の状況、
             必要素材のご提出時期などにより、
             納期が前後する場合があります。
           </div>
@@ -869,7 +937,9 @@
     </section>
 
 
-    <!-- CTA -->
+    <!-- =========================
+         CTA
+    ========================= -->
 
     <section class="cta">
 
@@ -900,7 +970,9 @@
   </main>
 
 
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
   <footer>
 
@@ -917,6 +989,63 @@
     </div>
 
   </footer>
+
+
+  <!-- =========================
+       MOBILE NAVIGATION
+  ========================= -->
+
+  <script>
+
+    const menuButton = document.querySelector(".menu-button");
+    const navigation = document.querySelector("#global-nav");
+
+    menuButton.addEventListener("click", function () {
+
+      const isOpen = navigation.classList.toggle("open");
+
+      document.body.classList.toggle("menu-open", isOpen);
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+
+      menuButton.setAttribute(
+        "aria-label",
+        isOpen ? "メニューを閉じる" : "メニューを開く"
+      );
+
+      menuButton.textContent = isOpen ? "CLOSE" : "MENU";
+
+    });
+
+
+    navigation.querySelectorAll("a").forEach(function (link) {
+
+      link.addEventListener("click", function () {
+
+        navigation.classList.remove("open");
+
+        document.body.classList.remove("menu-open");
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+        menuButton.setAttribute(
+          "aria-label",
+          "メニューを開く"
+        );
+
+        menuButton.textContent = "MENU";
+
+      });
+
+    });
+
+  </script>
 
 
 </body>
