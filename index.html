@@ -9,7 +9,7 @@
 
   <meta
     name="description"
-    content="AI × Web Creative Director / Designer えみりん。企画・コンセプト設計からWebデザイン、制作、公開、情報発信まで一貫してサポートします。"
+    content="AI × Web Creative Director / Designer えみりん。企画・コンセプト設計からWebデザイン、制作、情報発信、マーケティングまで一貫してサポートします。"
   >
 
   <style>
@@ -24,6 +24,7 @@
 
     body {
       margin: 0;
+
       font-family:
         "Helvetica Neue",
         Helvetica,
@@ -32,10 +33,17 @@
         "Hiragino Sans",
         Meiryo,
         sans-serif;
+
       color: #202020;
       background: #ffffff;
+
       line-height: 1.8;
+
       -webkit-font-smoothing: antialiased;
+    }
+
+    body.menu-open {
+      overflow: hidden;
     }
 
     a {
@@ -49,62 +57,98 @@
       height: auto;
     }
 
+    button {
+      font: inherit;
+    }
+
     .container {
       width: min(1180px, 90%);
       margin: 0 auto;
     }
 
+
+    /* =========================
+       HEADER
+    ========================= */
+
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
+
       background: rgba(255, 255, 255, 0.94);
+
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
+
       border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     }
 
     .header-inner {
       min-height: 76px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       gap: 30px;
     }
 
     .logo {
+      position: relative;
+      z-index: 1002;
+
       font-size: 1.35rem;
       font-weight: 300;
+
       letter-spacing: 0.1em;
+
       white-space: nowrap;
     }
+
+
+    /* =========================
+       DESKTOP NAVIGATION
+    ========================= */
 
     nav ul {
       display: flex;
       align-items: center;
+
       gap: 24px;
+
       margin: 0;
       padding: 0;
+
       list-style: none;
     }
 
     nav a {
       position: relative;
+
       display: block;
+
       padding: 28px 0 24px;
+
       font-size: 0.75rem;
       font-weight: 500;
+
       letter-spacing: 0.08em;
     }
 
     nav a::after {
       content: "";
+
       position: absolute;
+
       left: 0;
       bottom: 19px;
+
       width: 0;
       height: 1px;
+
       background: #202020;
+
       transition: width 0.25s ease;
     }
 
@@ -113,74 +157,135 @@
       width: 100%;
     }
 
+
+    /* =========================
+       MOBILE MENU BUTTON
+    ========================= */
+
+    .menu-button {
+      display: none;
+
+      position: relative;
+      z-index: 1002;
+
+      padding: 10px 0;
+
+      border: 0;
+      background: transparent;
+
+      color: #202020;
+
+      font-size: 0.72rem;
+      font-weight: 500;
+
+      letter-spacing: 0.14em;
+
+      cursor: pointer;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
     .hero {
       min-height: calc(100vh - 76px);
+
       display: flex;
       align-items: center;
-      padding: 85px 0;
+
+      padding: 90px 0 100px;
 
       background:
         radial-gradient(
-          circle at 82% 28%,
-          rgba(226, 229, 233, 0.72),
-          transparent 30%
+          circle at 80% 30%,
+          rgba(226, 229, 233, 0.75),
+          transparent 34%
         ),
         linear-gradient(
           135deg,
           #ffffff 0%,
           #fafafa 55%,
-          #f4f4f4 100%
+          #f3f3f3 100%
         );
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
-      gap: clamp(50px, 8vw, 110px);
+
+      grid-template-columns:
+        minmax(0, 1.15fr)
+        minmax(300px, 0.85fr);
+
+      gap: clamp(55px, 8vw, 110px);
+
       align-items: center;
     }
 
     .hero-name {
-      margin: 0 0 16px;
+      margin: 0 0 20px;
+
       font-size: clamp(3.4rem, 6vw, 5.2rem);
       font-weight: 300;
+
       letter-spacing: 0.06em;
-      line-height: 1.05;
+
+      line-height: 1.1;
     }
 
     .hero-title {
-      margin: 0 0 22px;
+      margin: 0 0 25px;
+
       font-size: clamp(1.5rem, 2.7vw, 2.1rem);
       font-weight: 700;
-      line-height: 1.4;
+
+      letter-spacing: 0.015em;
+
+      line-height: 1.45;
     }
 
     .hero-catch {
       margin: 0 0 35px;
+
       font-size: clamp(1.45rem, 2.5vw, 2rem);
       font-weight: 300;
+
       letter-spacing: 0.04em;
-      line-height: 1.5;
+
+      line-height: 1.55;
     }
 
-    .hero-text {
-      max-width: 680px;
-      margin: 0 0 20px;
+    .hero-description {
+      max-width: 650px;
+
+      margin: 0 0 22px;
+
       font-size: 0.97rem;
+
       line-height: 2;
+    }
+
+    .hero-button {
+      margin-top: 20px;
     }
 
     .button {
       display: inline-flex;
+
       align-items: center;
       justify-content: center;
+
       min-width: 210px;
-      margin-top: 18px;
+
       padding: 14px 28px;
+
       border: 1px solid #202020;
       border-radius: 999px;
+
       font-size: 0.9rem;
+
       letter-spacing: 0.04em;
+
       transition:
         background 0.25s ease,
         color 0.25s ease,
@@ -189,115 +294,183 @@
 
     .button:hover {
       color: #ffffff;
+
       background: #202020;
+
       transform: translateY(-2px);
     }
 
     .hero-visual {
       position: relative;
+
+      display: flex;
+      justify-content: center;
     }
 
     .hero-visual::before {
       content: "";
+
       position: absolute;
-      width: 82%;
-      height: 82%;
+
+      width: 85%;
+      height: 85%;
+
       right: -25px;
-      top: -25px;
+      bottom: -25px;
+
       border: 1px solid rgba(0, 0, 0, 0.08);
-      z-index: 0;
     }
 
     .hero-photo {
       position: relative;
       z-index: 1;
+
       width: 100%;
       max-width: 430px;
-      margin-left: auto;
+
       aspect-ratio: 4 / 5;
+
       object-fit: cover;
       object-position: center;
-      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.11);
+
+      box-shadow:
+        0 30px 80px
+        rgba(0, 0, 0, 0.12);
     }
+
+
+    /* =========================
+       EXPLORE
+    ========================= */
 
     .explore {
       padding: 110px 0;
     }
 
     .section-label {
-      margin: 0 0 12px;
+      margin: 0 0 15px;
+
       font-size: 0.75rem;
       font-weight: 500;
-      letter-spacing: 0.16em;
+
+      letter-spacing: 0.15em;
+
       color: #777777;
     }
 
     .section-title {
       margin: 0 0 55px;
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      font-weight: 300;
+
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 400;
+
       letter-spacing: 0.04em;
     }
 
     .explore-grid {
       display: grid;
+
       grid-template-columns: repeat(3, 1fr);
-      border-top: 1px solid #dddddd;
-      border-left: 1px solid #dddddd;
+
+      gap: 20px;
     }
 
     .explore-card {
       min-height: 210px;
-      padding: 35px;
-      border-right: 1px solid #dddddd;
-      border-bottom: 1px solid #dddddd;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      padding: 30px;
+
+      border: 1px solid #dddddd;
+
+      background: #ffffff;
+
       transition:
         background 0.25s ease,
-        transform 0.25s ease;
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
     }
 
     .explore-card:hover {
-      background: #f7f7f7;
+      background: #fafafa;
+
+      transform: translateY(-3px);
+
+      box-shadow:
+        0 20px 45px
+        rgba(0, 0, 0, 0.06);
     }
 
     .explore-number {
-      display: block;
-      margin-bottom: 35px;
+      margin: 0;
+
       font-size: 0.7rem;
-      color: #999999;
+
       letter-spacing: 0.12em;
+
+      color: #999999;
     }
 
     .explore-card h3 {
       margin: 0 0 8px;
-      font-size: 1.25rem;
-      font-weight: 400;
+
+      font-size: 1.15rem;
+      font-weight: 500;
+
       letter-spacing: 0.06em;
     }
 
     .explore-card p {
       margin: 0;
-      font-size: 0.85rem;
+
+      font-size: 0.82rem;
+
       color: #777777;
     }
 
+    .explore-arrow {
+      margin-top: 20px;
+
+      font-size: 1rem;
+
+      color: #777777;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
     footer {
       padding: 40px 0;
+
       border-top: 1px solid #eeeeee;
     }
 
     .footer-inner {
       display: flex;
+
       justify-content: space-between;
       align-items: center;
+
       gap: 30px;
+
       font-size: 0.75rem;
+
       color: #777777;
     }
 
     .footer-inner p {
       margin: 0;
     }
+
+
+    /* =========================
+       TABLET
+    ========================= */
 
     @media (max-width: 900px) {
 
@@ -310,18 +483,19 @@
       }
 
       .hero-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-photo {
-        margin: 30px 0 0;
-        width: min(100%, 430px);
+        grid-template-columns: 1fr 0.8fr;
+        gap: 50px;
       }
 
       .explore-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 720px) {
 
@@ -333,29 +507,111 @@
         font-size: 1.2rem;
       }
 
+      .menu-button {
+        display: block;
+      }
+
       nav {
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100dvh;
+
+        padding: 105px 5% 40px;
+
+        background: rgba(255, 255, 255, 0.98);
+
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+
+        opacity: 0;
+        visibility: hidden;
+
+        transform: translateY(-10px);
+
+        transition:
+          opacity 0.25s ease,
+          visibility 0.25s ease,
+          transform 0.25s ease;
+
+        overflow-y: auto;
+
+        z-index: 1001;
+      }
+
+      nav.open {
+        opacity: 1;
+        visibility: visible;
+
+        transform: translateY(0);
+      }
+
+      nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 0;
+
+        width: 100%;
+      }
+
+      nav li {
+        width: 100%;
+
+        border-bottom: 1px solid #eeeeee;
+      }
+
+      nav a {
+        width: 100%;
+
+        padding: 17px 0;
+
+        font-size: 1rem;
+        font-weight: 400;
+
+        letter-spacing: 0.1em;
+      }
+
+      nav a::after {
         display: none;
       }
 
       .hero {
         min-height: auto;
-        padding: 70px 0;
+
+        padding: 70px 0 80px;
       }
 
       .hero-grid {
-        gap: 45px;
+        grid-template-columns: 1fr;
+
+        gap: 60px;
       }
 
       .hero-name {
-        font-size: clamp(3rem, 16vw, 4.2rem);
+        font-size: clamp(3rem, 16vw, 4.5rem);
       }
 
       .hero-title {
-        font-size: 1.4rem;
+        font-size: clamp(1.25rem, 6vw, 1.7rem);
       }
 
       .hero-catch {
-        font-size: 1.4rem;
+        font-size: clamp(1.3rem, 6vw, 1.7rem);
+      }
+
+      .hero-visual {
+        width: 92%;
+
+        margin: 0 auto;
+      }
+
+      .hero-photo {
+        max-width: 420px;
       }
 
       .explore {
@@ -368,7 +624,9 @@
 
       .footer-inner {
         flex-direction: column;
+
         align-items: flex-start;
+
         gap: 10px;
       }
     }
@@ -379,6 +637,11 @@
 
 <body>
 
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
   <header>
 
     <div class="container header-inner">
@@ -387,7 +650,19 @@
         Emirin
       </a>
 
-      <nav>
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+        aria-controls="global-nav"
+      >
+        MENU
+      </button>
+
+
+      <nav id="global-nav">
 
         <ul>
 
@@ -452,11 +727,19 @@
   </header>
 
 
+  <!-- =========================
+       MAIN
+  ========================= -->
+
   <main>
+
+
+    <!-- HERO -->
 
     <section class="hero">
 
       <div class="container hero-grid">
+
 
         <div class="hero-content">
 
@@ -472,26 +755,30 @@
             アイデアを、伝わるカタチに。
           </p>
 
-          <p class="hero-text">
+          <p class="hero-description">
             会社やお店、個人の魅力をインターネットで伝えるお手伝いをしています。
             AIを活用して、WebサイトやSNSなどの企画・デザイン・制作を行います。
           </p>
 
-          <p class="hero-text">
+          <p class="hero-description">
             「何を作ればいいかわからない」という段階から、
             目的や伝えたいことを整理し、
             企画・コンセプト設計からデザイン、制作、情報発信、
             マーケティングまで一貫してサポートします。
           </p>
 
-          <a
-            class="button"
-            href="https://forms.gle/8iQKXtGYebTbxYhW6"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            無料相談・お見積り
-          </a>
+          <div class="hero-button">
+
+            <a
+              class="button"
+              href="https://forms.gle/8iQKXtGYebTbxYhW6"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              無料相談・お見積り
+            </a>
+
+          </div>
 
         </div>
 
@@ -506,10 +793,13 @@
 
         </div>
 
+
       </div>
 
     </section>
 
+
+    <!-- EXPLORE -->
 
     <section class="explore">
 
@@ -520,112 +810,162 @@
         </p>
 
         <h2 class="section-title">
-          More about my work.
+          できること、考えていること。
         </h2>
 
 
         <div class="explore-grid">
 
+
           <a class="explore-card" href="service.html">
 
-            <span class="explore-number">
+            <p class="explore-number">
               01
-            </span>
-
-            <h3>
-              SERVICE
-            </h3>
-
-            <p>
-              サービス
             </p>
+
+            <div>
+
+              <h3>
+                SERVICE
+              </h3>
+
+              <p>
+                サービス
+              </p>
+
+              <div class="explore-arrow">
+                →
+              </div>
+
+            </div>
 
           </a>
 
 
           <a class="explore-card" href="works.html">
 
-            <span class="explore-number">
+            <p class="explore-number">
               02
-            </span>
-
-            <h3>
-              WORKS
-            </h3>
-
-            <p>
-              制作実績
             </p>
+
+            <div>
+
+              <h3>
+                WORKS
+              </h3>
+
+              <p>
+                制作実績
+              </p>
+
+              <div class="explore-arrow">
+                →
+              </div>
+
+            </div>
 
           </a>
 
 
           <a class="explore-card" href="price.html">
 
-            <span class="explore-number">
+            <p class="explore-number">
               03
-            </span>
-
-            <h3>
-              PRICE
-            </h3>
-
-            <p>
-              料金
             </p>
+
+            <div>
+
+              <h3>
+                PRICE
+              </h3>
+
+              <p>
+                料金
+              </p>
+
+              <div class="explore-arrow">
+                →
+              </div>
+
+            </div>
 
           </a>
 
 
           <a class="explore-card" href="profile.html">
 
-            <span class="explore-number">
+            <p class="explore-number">
               04
-            </span>
-
-            <h3>
-              PROFILE
-            </h3>
-
-            <p>
-              プロフィール
             </p>
+
+            <div>
+
+              <h3>
+                PROFILE
+              </h3>
+
+              <p>
+                プロフィール
+              </p>
+
+              <div class="explore-arrow">
+                →
+              </div>
+
+            </div>
 
           </a>
 
 
           <a class="explore-card" href="flow.html">
 
-            <span class="explore-number">
+            <p class="explore-number">
               05
-            </span>
-
-            <h3>
-              FLOW
-            </h3>
-
-            <p>
-              制作の流れ
             </p>
+
+            <div>
+
+              <h3>
+                FLOW
+              </h3>
+
+              <p>
+                制作の流れ
+              </p>
+
+              <div class="explore-arrow">
+                →
+              </div>
+
+            </div>
 
           </a>
 
 
           <a class="explore-card" href="faq.html">
 
-            <span class="explore-number">
+            <p class="explore-number">
               06
-            </span>
-
-            <h3>
-              FAQ
-            </h3>
-
-            <p>
-              よくあるご質問
             </p>
 
+            <div>
+
+              <h3>
+                FAQ
+              </h3>
+
+              <p>
+                よくあるご質問
+              </p>
+
+              <div class="explore-arrow">
+                →
+              </div>
+
+            </div>
+
           </a>
+
 
         </div>
 
@@ -633,8 +973,13 @@
 
     </section>
 
+
   </main>
 
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
   <footer>
 
@@ -651,6 +996,64 @@
     </div>
 
   </footer>
+
+
+  <!-- =========================
+       MOBILE NAVIGATION
+  ========================= -->
+
+  <script>
+
+    const menuButton = document.querySelector(".menu-button");
+    const navigation = document.querySelector("#global-nav");
+
+    menuButton.addEventListener("click", function () {
+
+      const isOpen = navigation.classList.toggle("open");
+
+      document.body.classList.toggle("menu-open", isOpen);
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+
+      menuButton.setAttribute(
+        "aria-label",
+        isOpen ? "メニューを閉じる" : "メニューを開く"
+      );
+
+      menuButton.textContent = isOpen ? "CLOSE" : "MENU";
+
+    });
+
+
+    navigation.querySelectorAll("a").forEach(function (link) {
+
+      link.addEventListener("click", function () {
+
+        navigation.classList.remove("open");
+
+        document.body.classList.remove("menu-open");
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+        menuButton.setAttribute(
+          "aria-label",
+          "メニューを開く"
+        );
+
+        menuButton.textContent = "MENU";
+
+      });
+
+    });
+
+  </script>
+
 
 </body>
 
