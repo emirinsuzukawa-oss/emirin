@@ -9,7 +9,7 @@
 
   <meta
     name="description"
-    content="EmirinのWeb制作実績・制作事例をご紹介します。"
+    content="EmirinのWeb制作実績。企画・コンセプト設計からデザイン、コーディング、公開まで一貫して制作しています。"
   >
 
   <style>
@@ -203,7 +203,7 @@
     ========================= */
 
     .intro {
-      padding: 90px 0 60px;
+      padding: 90px 0 65px;
     }
 
     .intro-text {
@@ -222,7 +222,7 @@
     ========================= */
 
     .works {
-      padding: 25px 0 120px;
+      padding: 20px 0 120px;
     }
 
     .works-grid {
@@ -230,71 +230,52 @@
 
       grid-template-columns: repeat(2, 1fr);
 
-      gap: 32px;
+      gap: 30px;
     }
 
     .work-card {
-      position: relative;
+      padding: 42px;
+
+      border: 1px solid #dddddd;
+
+      background: #ffffff;
+
+      min-height: 360px;
 
       display: flex;
       flex-direction: column;
 
-      min-height: 390px;
-
-      padding: 42px;
-
-      border: 1px solid #e2e2e2;
-
-      background:
-        linear-gradient(
-          145deg,
-          #ffffff 0%,
-          #f8f8f8 100%
-        );
-
-      overflow: hidden;
-
       transition:
+        background 0.25s ease,
         transform 0.25s ease,
         box-shadow 0.25s ease;
     }
 
     .work-card:hover {
-      transform: translateY(-5px);
+      background: #fafafa;
+
+      transform: translateY(-3px);
 
       box-shadow:
-        0 25px 60px
-        rgba(0, 0, 0, 0.07);
+        0 20px 45px
+        rgba(0, 0, 0, 0.06);
     }
 
-    .work-card::after {
-      content: "";
-
-      position: absolute;
-
-      width: 190px;
-      height: 190px;
-
-      right: -75px;
-      bottom: -75px;
-
-      border: 1px solid rgba(0, 0, 0, 0.08);
-
-      border-radius: 50%;
-    }
-
-    .work-status {
-      display: inline-block;
-
-      width: fit-content;
-
-      margin-bottom: 55px;
-
-      padding: 5px 11px;
-
-      border: 1px solid #d7d7d7;
+    .work-category {
+      margin: 0 0 50px;
 
       font-size: 0.68rem;
+      font-weight: 500;
+
+      letter-spacing: 0.16em;
+
+      color: #999999;
+    }
+
+    .work-type {
+      margin: 0 0 12px;
+
+      font-size: 0.72rem;
       font-weight: 500;
 
       letter-spacing: 0.12em;
@@ -302,20 +283,10 @@
       color: #777777;
     }
 
-    .work-category {
-      margin: 0 0 10px;
-
-      font-size: 0.72rem;
-
-      letter-spacing: 0.13em;
-
-      color: #888888;
-    }
-
     .work-card h2 {
-      margin: 0 0 15px;
+      margin: 0 0 20px;
 
-      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-size: clamp(1.5rem, 2.8vw, 2rem);
 
       font-weight: 400;
 
@@ -325,57 +296,46 @@
     }
 
     .work-description {
-      max-width: 520px;
-
       margin: 0;
 
       font-size: 0.92rem;
 
-      line-height: 1.9;
+      line-height: 1.95;
 
-      color: #555555;
+      color: #666666;
     }
 
-    .work-card-main {
-      grid-column: 1 / -1;
+    .work-status {
+      margin-top: auto;
+      padding-top: 35px;
 
-      min-height: 440px;
+      font-size: 0.7rem;
 
-      background:
-        radial-gradient(
-          circle at 85% 30%,
-          rgba(218, 222, 227, 0.8),
-          transparent 28%
-        ),
-        linear-gradient(
-          135deg,
-          #ffffff 0%,
-          #f5f5f5 100%
-        );
+      letter-spacing: 0.12em;
+
+      color: #999999;
     }
 
-    .work-card-main .work-status {
-      border-color: #202020;
-
-      color: #202020;
+    .coming-soon {
+      background: #f8f8f8;
     }
 
 
     /* =========================
-       NOTE
+       ABOUT WORKS
     ========================= */
 
-    .note {
-      padding: 90px 0;
+    .about {
+      padding: 100px 0;
 
       background: #f7f7f7;
     }
 
-    .note-inner {
-      max-width: 780px;
+    .about-inner {
+      max-width: 850px;
     }
 
-    .note-label {
+    .section-label {
       margin: 0 0 15px;
 
       font-size: 0.75rem;
@@ -386,17 +346,19 @@
       color: #777777;
     }
 
-    .note h2 {
-      margin: 0 0 24px;
+    .about h2 {
+      margin: 0 0 28px;
 
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
 
       font-weight: 400;
 
       letter-spacing: 0.04em;
+
+      line-height: 1.5;
     }
 
-    .note p {
+    .about p {
       margin: 0;
 
       line-height: 2;
@@ -454,6 +416,7 @@
 
     .button:hover {
       color: #ffffff;
+
       background: #202020;
 
       transform: translateY(-2px);
@@ -505,10 +468,6 @@
       .works-grid {
         grid-template-columns: 1fr;
       }
-
-      .work-card-main {
-        grid-column: auto;
-      }
     }
 
 
@@ -539,25 +498,24 @@
       }
 
       .intro {
-        padding: 65px 0 45px;
+        padding: 65px 0 50px;
       }
 
       .works {
         padding-bottom: 80px;
       }
 
-      .work-card,
-      .work-card-main {
-        min-height: 330px;
+      .work-card {
+        padding: 32px;
 
-        padding: 30px;
+        min-height: 330px;
       }
 
-      .work-status {
+      .work-category {
         margin-bottom: 40px;
       }
 
-      .note {
+      .about {
         padding: 75px 0;
       }
 
@@ -644,7 +602,11 @@
           </li>
 
           <li>
-            <a href="comingsoon.html">
+            <a
+              href="https://forms.gle/8iQKXtGYebTbxYhW6"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               CONTACT
             </a>
           </li>
@@ -670,7 +632,7 @@
       <div class="container">
 
         <p class="page-label">
-          PORTFOLIO
+          SELECTED PROJECTS
         </p>
 
         <h1 class="page-title">
@@ -714,15 +676,15 @@
         <div class="works-grid">
 
 
-          <!-- CURRENT WEBSITE -->
+          <!-- WORK 01 -->
 
-          <article class="work-card work-card-main">
-
-            <span class="work-status">
-              WEBSITE
-            </span>
+          <article class="work-card">
 
             <p class="work-category">
+              WEBSITE
+            </p>
+
+            <p class="work-type">
               WEB DESIGN / CREATIVE DIRECTION
             </p>
 
@@ -737,18 +699,22 @@
               コーディング、公開まで一貫して制作。
             </p>
 
+            <p class="work-status">
+              ORIGINAL PROJECT
+            </p>
+
           </article>
 
 
-          <!-- SAMPLE 01 -->
+          <!-- WORK 02 -->
 
-          <article class="work-card">
-
-            <span class="work-status">
-              COMING SOON
-            </span>
+          <article class="work-card coming-soon">
 
             <p class="work-category">
+              WEBSITE
+            </p>
+
+            <p class="work-type">
               WEB DESIGN
             </p>
 
@@ -757,21 +723,27 @@
             </h2>
 
             <p class="work-description">
-              自主制作・架空案件
+              サロンの世界観やサービス内容を
+              わかりやすく伝えるWebサイトを想定した
+              自主制作・架空案件です。
+            </p>
+
+            <p class="work-status">
+              COMING SOON / CONCEPT WORK
             </p>
 
           </article>
 
 
-          <!-- SAMPLE 02 -->
+          <!-- WORK 03 -->
 
-          <article class="work-card">
-
-            <span class="work-status">
-              COMING SOON
-            </span>
+          <article class="work-card coming-soon">
 
             <p class="work-category">
+              WEBSITE
+            </p>
+
+            <p class="work-type">
               WEB DESIGN
             </p>
 
@@ -780,7 +752,13 @@
             </h2>
 
             <p class="work-description">
-              自主制作・架空案件
+              小規模事業者のサービスや強みを整理し、
+              シンプルに伝えるWebサイトを想定した
+              自主制作・架空案件です。
+            </p>
+
+            <p class="work-status">
+              COMING SOON / CONCEPT WORK
             </p>
 
           </article>
@@ -794,28 +772,29 @@
 
 
     <!-- =========================
-         NOTE
+         ABOUT WORKS
     ========================= -->
 
-    <section class="note">
+    <section class="about">
 
       <div class="container">
 
-        <div class="note-inner">
+        <div class="about-inner">
 
-          <p class="note-label">
+          <p class="section-label">
             ABOUT WORKS
           </p>
 
           <h2>
-            目的に合わせて、ゼロから設計します。
+            目的に合わせて、必要なものを設計します。
           </h2>
 
           <p>
-            業種や規模にかかわらず、
-            「誰に、何を、どう伝えるか」を整理したうえで、
-            サイトの構成・デザイン・制作を行います。
-            制作事例は今後順次追加していきます。
+            見た目だけを整えるのではなく、
+            誰に、何を、どのように伝えるのかを考えながら、
+            サイト構成やデザインを組み立てます。
+            企画・コンセプト設計から制作・公開まで、
+            一貫して対応します。
           </p>
 
         </div>
@@ -834,7 +813,7 @@
       <div class="container">
 
         <h2>
-          アイデアを、伝わるカタチに。
+          あなたのアイデアも、カタチにします。
         </h2>
 
         <p>
@@ -843,7 +822,9 @@
 
         <a
           class="button"
-          href="comingsoon.html"
+          href="https://forms.gle/8iQKXtGYebTbxYhW6"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           無料相談・お見積り
         </a>
