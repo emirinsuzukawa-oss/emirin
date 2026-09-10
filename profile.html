@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PROFILE｜Emirin｜AI × Web Creative Director / Designer</title>
+
+  <meta
+    name="description"
+    content="AI × Web Creative Director / Designer えみりんのプロフィール。IT分野での実務経験を活かし、AIを取り入れたWebサイトの企画・デザイン・制作を行っています。"
+  >
+
+  <style>
+
+    /* =========================
+       BASIC
+    ========================= */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+
+      font-family:
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        Meiryo,
+        sans-serif;
+
+      color: #202020;
+      background: #ffffff;
+
+      line-height: 1.8;
+
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .container {
+      width: min(1180px, 90%);
+      margin: 0 auto;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(255, 255, 255, 0.94);
+
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .header-inner {
+      min-height: 76px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 300;
+
+      letter-spacing: 0.1em;
+
+      white-space: nowrap;
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav ul {
+      display: flex;
+      align-items: center;
+
+      gap: 24px;
+
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
+    }
+
+    nav a {
+      position: relative;
+
+      display: block;
+
+      padding: 28px 0 24px;
+
+      font-size: 0.75rem;
+      font-weight: 500;
+
+      letter-spacing: 0.08em;
+    }
+
+    nav a::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      bottom: 19px;
+
+      width: 0;
+      height: 1px;
+
+      background: #202020;
+
+      transition: width 0.25s ease;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+
+    /* =========================
+       PAGE HERO
+    ========================= */
+
+    .page-hero {
+      padding: 105px 0 80px;
+
+      background:
+        radial-gradient(
+          circle at 82% 30%,
+          rgba(226, 229, 233, 0.7),
+          transparent 32%
+        ),
+        linear-gradient(
+          135deg,
+          #ffffff 0%,
+          #fafafa 55%,
+          #f4f4f4 100%
+        );
+    }
+
+    .page-label {
+      margin: 0 0 12px;
+
+      font-size: 0.75rem;
+      font-weight: 500;
+
+      letter-spacing: 0.16em;
+
+      color: #777777;
+    }
+
+    .page-title {
+      margin: 0;
+
+      font-size: clamp(3.2rem, 7vw, 5.5rem);
+      font-weight: 300;
+
+      letter-spacing: 0.06em;
+
+      line-height: 1.1;
+    }
+
+    .page-subtitle {
+      margin: 18px 0 0;
+
+      font-size: 1rem;
+      font-weight: 400;
+
+      letter-spacing: 0.08em;
+    }
+
+
+    /* =========================
+       PROFILE
+    ========================= */
+
+    .profile {
+      padding: 110px 0;
+    }
+
+    .profile-grid {
+      display: grid;
+
+      grid-template-columns:
+        minmax(300px, 0.8fr)
+        minmax(0, 1.2fr);
+
+      gap: clamp(60px, 9vw, 130px);
+
+      align-items: start;
+    }
+
+
+    /* =========================
+       PHOTO
+    ========================= */
+
+    .profile-visual {
+      position: relative;
+    }
+
+    .profile-visual::before {
+      content: "";
+
+      position: absolute;
+
+      width: 82%;
+      height: 82%;
+
+      left: -25px;
+      top: -25px;
+
+      border: 1px solid rgba(0, 0, 0, 0.08);
+
+      z-index: 0;
+    }
+
+    .profile-photo {
+      position: relative;
+
+      z-index: 1;
+
+      width: 100%;
+      max-width: 430px;
+
+      aspect-ratio: 4 / 5;
+
+      object-fit: cover;
+      object-position: center;
+
+      box-shadow:
+        0 30px 80px
+        rgba(0, 0, 0, 0.11);
+    }
+
+
+    /* =========================
+       PROFILE TEXT
+    ========================= */
+
+    .profile-content {
+      padding-top: 15px;
+    }
+
+    .profile-small {
+      margin: 0 0 14px;
+
+      font-size: 0.72rem;
+      font-weight: 500;
+
+      letter-spacing: 0.16em;
+
+      color: #888888;
+    }
+
+    .profile-name {
+      margin: 0;
+
+      font-size: clamp(2.5rem, 5vw, 4.2rem);
+
+      font-weight: 300;
+
+      letter-spacing: 0.07em;
+
+      line-height: 1.2;
+    }
+
+    .profile-title {
+      margin: 20px 0 45px;
+
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+
+      font-weight: 600;
+
+      letter-spacing: 0.025em;
+
+      line-height: 1.5;
+    }
+
+    .profile-text {
+      max-width: 650px;
+
+      margin: 0 0 24px;
+
+      font-size: 0.97rem;
+
+      line-height: 2.05;
+    }
+
+
+    /* =========================
+       EXPERIENCE
+    ========================= */
+
+    .experience {
+      margin-top: 55px;
+
+      border-top: 1px solid #dddddd;
+    }
+
+    .experience-row {
+      display: grid;
+
+      grid-template-columns: 150px 1fr;
+
+      gap: 30px;
+
+      padding: 22px 0;
+
+      border-bottom: 1px solid #dddddd;
+    }
+
+    .experience-row strong {
+      font-size: 0.76rem;
+      font-weight: 500;
+
+      letter-spacing: 0.1em;
+
+      color: #777777;
+    }
+
+    .experience-row p {
+      margin: 0;
+
+      font-size: 0.92rem;
+    }
+
+
+    /* =========================
+       PHILOSOPHY
+    ========================= */
+
+    .philosophy {
+      padding: 100px 0;
+
+      background: #f7f7f7;
+    }
+
+    .philosophy-inner {
+      max-width: 850px;
+    }
+
+    .section-label {
+      margin: 0 0 15px;
+
+      font-size: 0.75rem;
+      font-weight: 500;
+
+      letter-spacing: 0.15em;
+
+      color: #777777;
+    }
+
+    .philosophy h2 {
+      margin: 0 0 28px;
+
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+
+      font-weight: 400;
+
+      letter-spacing: 0.04em;
+
+      line-height: 1.5;
+    }
+
+    .philosophy p {
+      margin: 0;
+
+      font-size: 1rem;
+
+      line-height: 2;
+    }
+
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      padding: 110px 0;
+
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin: 0 0 15px;
+
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+
+      font-weight: 400;
+
+      letter-spacing: 0.05em;
+    }
+
+    .cta p {
+      margin: 0 0 30px;
+
+      color: #666666;
+    }
+
+    .button {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      min-width: 210px;
+
+      padding: 14px 28px;
+
+      border: 1px solid #202020;
+      border-radius: 999px;
+
+      font-size: 0.9rem;
+
+      letter-spacing: 0.04em;
+
+      transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .button:hover {
+      color: #ffffff;
+      background: #202020;
+
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 40px 0;
+
+      border-top: 1px solid #eeeeee;
+    }
+
+    .footer-inner {
+      display: flex;
+
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 30px;
+
+      font-size: 0.75rem;
+
+      color: #777777;
+    }
+
+    .footer-inner p {
+      margin: 0;
+    }
+
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      nav ul {
+        gap: 13px;
+      }
+
+      nav a {
+        font-size: 0.67rem;
+      }
+
+      .profile-grid {
+        grid-template-columns: 1fr;
+
+        gap: 65px;
+      }
+
+      .profile-photo {
+        width: min(100%, 430px);
+      }
+
+      .profile-content {
+        padding-top: 0;
+      }
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 720px) {
+
+      .header-inner {
+        min-height: 68px;
+      }
+
+      .logo {
+        font-size: 1.2rem;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .page-hero {
+        padding: 75px 0 60px;
+      }
+
+      .page-title {
+        font-size: clamp(2.8rem, 15vw, 4rem);
+      }
+
+      .profile {
+        padding: 80px 0;
+      }
+
+      .profile-grid {
+        gap: 55px;
+      }
+
+      .profile-photo {
+        margin: 0 auto;
+      }
+
+      .profile-title {
+        margin-bottom: 35px;
+      }
+
+      .experience {
+        margin-top: 45px;
+      }
+
+      .experience-row {
+        grid-template-columns: 1fr;
+
+        gap: 6px;
+      }
+
+      .philosophy {
+        padding: 75px 0;
+      }
+
+      .cta {
+        padding: 80px 0;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header>
+
+    <div class="container header-inner">
+
+      <a class="logo" href="index.html">
+        Emirin
+      </a>
+
+
+      <nav>
+
+        <ul>
+
+          <li>
+            <a href="index.html">
+              HOME
+            </a>
+          </li>
+
+          <li>
+            <a href="service.html">
+              SERVICE
+            </a>
+          </li>
+
+          <li>
+            <a href="works.html">
+              WORKS
+            </a>
+          </li>
+
+          <li>
+            <a href="price.html">
+              PRICE
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="active"
+              href="profile.html"
+            >
+              PROFILE
+            </a>
+          </li>
+
+          <li>
+            <a href="flow.html">
+              FLOW
+            </a>
+          </li>
+
+          <li>
+            <a href="faq.html">
+              FAQ
+            </a>
+          </li>
+
+          <li>
+            <a href="comingsoon.html">
+              CONTACT
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+
+    <!-- =========================
+         PAGE HERO
+    ========================= -->
+
+    <section class="page-hero">
+
+      <div class="container">
+
+        <p class="page-label">
+          ABOUT ME
+        </p>
+
+        <h1 class="page-title">
+          PROFILE
+        </h1>
+
+        <p class="page-subtitle">
+          プロフィール
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROFILE
+    ========================= -->
+
+    <section class="profile">
+
+      <div class="container">
+
+        <div class="profile-grid">
+
+
+          <!-- PHOTO -->
+
+          <div class="profile-visual">
+
+            <img
+              class="profile-photo"
+              src="emirin-profile.jpg"
+              alt="AI × Web Creative Director / Designer えみりん"
+            >
+
+          </div>
+
+
+          <!-- TEXT -->
+
+          <div class="profile-content">
+
+            <p class="profile-small">
+              AI × WEB CREATIVE
+            </p>
+
+            <h2 class="profile-name">
+              えみりん
+            </h2>
+
+            <p class="profile-title">
+              AI × Web Creative Director / Designer
+            </p>
+
+
+            <p class="profile-text">
+              外資系IT企業に約10年間勤務。
+              IT分野での実務に加え、
+              セキュリティマネージャーとしての経験を持つ。
+            </p>
+
+
+            <p class="profile-text">
+              これまで培ったITの知識と経験を活かし、
+              AIを取り入れたWebサイトの
+              企画・デザイン・制作を行っています。
+            </p>
+
+
+            <p class="profile-text">
+              「何を作ればいいかわからない」という段階から、
+              目的や伝えたいことを整理し、
+              企画・コンセプト設計からデザイン、
+              制作、公開まで一貫してサポートします。
+            </p>
+
+
+            <p class="profile-text">
+              見た目だけではなく、
+              使いやすさと、その先にいる人に
+              きちんと伝わることを大切にしています。
+            </p>
+
+
+            <div class="experience">
+
+
+              <div class="experience-row">
+
+                <strong>
+                  EXPERIENCE
+                </strong>
+
+                <p>
+                  外資系IT企業 約10年間
+                </p>
+
+              </div>
+
+
+              <div class="experience-row">
+
+                <strong>
+                  FIELD
+                </strong>
+
+                <p>
+                  IT / Security / Web / AI
+                </p>
+
+              </div>
+
+
+              <div class="experience-row">
+
+                <strong>
+                  SERVICE
+                </strong>
+
+                <p>
+                  企画・コンセプト設計 / Webデザイン / 制作 / 公開サポート
+                </p>
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PHILOSOPHY
+    ========================= -->
+
+    <section class="philosophy">
+
+      <div class="container">
+
+        <div class="philosophy-inner">
+
+          <p class="section-label">
+            PHILOSOPHY
+          </p>
+
+          <h2>
+            アイデアを、伝わるカタチに。
+          </h2>
+
+          <p>
+            AIに制作を任せるのではなく、
+            目的やターゲットに合わせて情報を整理し、
+            必要なものを選択・設計・判断しながら、
+            Webサイトを形にします。
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+    ========================= -->
+
+    <section class="cta">
+
+      <div class="container">
+
+        <h2>
+          まずはお話を聞かせてください。
+        </h2>
+
+        <p>
+          「何を作ればいいかわからない」という段階からでも大丈夫です。
+        </p>
+
+        <a
+          class="button"
+          href="comingsoon.html"
+        >
+          無料相談・お見積り
+        </a>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <p>
+        AIを活用しながら、企画・デザインから制作・公開まで自身で手がけています。
+      </p>
+
+      <p>
+        © Emirin
+      </p>
+
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>
