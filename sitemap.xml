@@ -1,24 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://emirinsuzukawa-oss.github.io/emirin/</loc>
   </url>
+
   <url>
     <loc>https://emirinsuzukawa-oss.github.io/emirin/profile.html</loc>
   </url>
+
   <url>
     <loc>https://emirinsuzukawa-oss.github.io/emirin/service.html</loc>
   </url>
+
   <url>
     <loc>https://emirinsuzukawa-oss.github.io/emirin/works.html</loc>
   </url>
+
   <url>
     <loc>https://emirinsuzukawa-oss.github.io/emirin/price.html</loc>
   </url>
+
   <url>
     <loc>https://emirinsuzukawa-oss.github.io/emirin/flow.html</loc>
   </url>
+
   <url>
     <loc>https://emirinsuzukawa-oss.github.io/emirin/faq.html</loc>
   </url>
+
+  <url>
+    <loc>https://emirinsuzukawa-oss.github.io/emirin/privacy.html</loc>
+  </url>
+
 </urlset>
