@@ -9,7 +9,7 @@
 
   <meta
     name="description"
-    content="EmirinのWebサイト制作料金。企画・コンセプト設計、デザイン、制作、スマートフォン対応、公開設定まで一貫して対応します。"
+    content="EmirinのWebサイト制作料金。企画・コンセプト設計からデザイン、制作、公開まで一貫して対応します。"
   >
 
   <style>
@@ -38,6 +38,7 @@
       background: #ffffff;
 
       line-height: 1.8;
+
       -webkit-font-smoothing: antialiased;
     }
 
@@ -52,7 +53,9 @@
     }
 
 
-    /* HEADER */
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
       position: sticky;
@@ -87,7 +90,9 @@
     }
 
 
-    /* NAVIGATION */
+    /* =========================
+       NAVIGATION
+    ========================= */
 
     nav ul {
       display: flex;
@@ -136,7 +141,9 @@
     }
 
 
-    /* PAGE HERO */
+    /* =========================
+       PAGE HERO
+    ========================= */
 
     .page-hero {
       padding: 105px 0 80px;
@@ -187,10 +194,12 @@
     }
 
 
-    /* INTRO */
+    /* =========================
+       INTRO
+    ========================= */
 
     .intro {
-      padding: 90px 0 55px;
+      padding: 90px 0 60px;
     }
 
     .intro-text {
@@ -204,57 +213,43 @@
     }
 
 
-    /* PRICE */
+    /* =========================
+       PRICE
+    ========================= */
 
-    .price-section {
-      padding: 20px 0 110px;
+    .pricing {
+      padding: 20px 0 120px;
     }
 
     .price-card {
       display: grid;
 
-      grid-template-columns: 0.8fr 1.2fr;
+      grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
 
-      border: 1px solid #dedede;
+      gap: clamp(45px, 8vw, 100px);
+
+      padding: clamp(40px, 6vw, 70px);
+
+      border: 1px solid #dddddd;
 
       background: #ffffff;
     }
 
-    .price-main {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      padding: 60px;
-
-      background:
-        radial-gradient(
-          circle at 15% 15%,
-          rgba(225, 228, 232, 0.8),
-          transparent 35%
-        ),
-        linear-gradient(
-          135deg,
-          #fafafa 0%,
-          #f3f3f3 100%
-        );
-    }
-
     .price-label {
-      margin: 0 0 24px;
+      margin: 0 0 20px;
 
       font-size: 0.75rem;
       font-weight: 500;
 
-      letter-spacing: 0.15em;
+      letter-spacing: 0.14em;
 
       color: #777777;
     }
 
-    .price-main h2 {
-      margin: 0 0 24px;
+    .price-title {
+      margin: 0 0 25px;
 
-      font-size: clamp(1.5rem, 3vw, 2.1rem);
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
 
       font-weight: 400;
 
@@ -279,20 +274,27 @@
       margin-left: 5px;
 
       font-size: 0.85em;
+
       font-weight: 300;
     }
 
-    .price-detail {
-      padding: 60px;
+    .price-description {
+      margin: 20px 0 0;
+
+      font-size: 0.85rem;
+
+      color: #777777;
     }
 
-    .price-detail h3 {
-      margin: 0 0 28px;
+    .included-title {
+      margin: 0 0 25px;
 
-      font-size: 1rem;
-      font-weight: 600;
+      font-size: 0.75rem;
+      font-weight: 500;
 
-      letter-spacing: 0.06em;
+      letter-spacing: 0.14em;
+
+      color: #777777;
     }
 
     .included-list {
@@ -300,38 +302,30 @@
       padding: 0;
 
       list-style: none;
+
+      border-top: 1px solid #dddddd;
     }
 
     .included-list li {
-      position: relative;
+      padding: 15px 0;
 
-      padding: 14px 0 14px 28px;
+      border-bottom: 1px solid #dddddd;
 
-      border-bottom: 1px solid #eeeeee;
-
-      font-size: 0.95rem;
-    }
-
-    .included-list li::before {
-      content: "—";
-
-      position: absolute;
-
-      left: 0;
-
-      color: #888888;
+      font-size: 0.93rem;
     }
 
 
-    /* MONTHLY */
+    /* =========================
+       RUNNING COST
+    ========================= */
 
-    .monthly {
+    .running-cost {
       padding: 100px 0;
 
       background: #f7f7f7;
     }
 
-    .monthly-inner {
+    .running-inner {
       max-width: 850px;
     }
 
@@ -346,7 +340,7 @@
       color: #777777;
     }
 
-    .monthly h2 {
+    .running-cost h2 {
       margin: 0 0 28px;
 
       font-size: clamp(1.8rem, 3vw, 2.5rem);
@@ -358,27 +352,22 @@
       line-height: 1.5;
     }
 
-    .monthly h2 strong {
-      font-size: 1.35em;
-      font-weight: 500;
-    }
-
-    .monthly p {
-      margin: 0 0 20px;
+    .running-cost p {
+      margin: 0 0 18px;
 
       line-height: 2;
     }
 
-    .notice {
-      margin-top: 35px;
+    .note {
+      margin-top: 30px;
 
-      padding: 25px 28px;
+      padding: 24px 28px;
 
       border-left: 2px solid #bdbdbd;
 
       background: #ffffff;
 
-      font-size: 0.82rem;
+      font-size: 0.85rem;
 
       line-height: 1.9;
 
@@ -386,74 +375,45 @@
     }
 
 
-    /* PAYMENT */
+    /* =========================
+       PAYMENT
+    ========================= */
 
     .payment {
       padding: 100px 0;
     }
 
-    .payment-grid {
-      display: grid;
-
-      grid-template-columns: 0.65fr 1.35fr;
-
-      gap: 70px;
-
-      align-items: start;
+    .payment-inner {
+      max-width: 850px;
     }
 
     .payment h2 {
-      margin: 0;
+      margin: 0 0 28px;
 
-      font-size: clamp(1.7rem, 3vw, 2.3rem);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
 
       font-weight: 400;
 
       letter-spacing: 0.04em;
     }
 
-    .payment-content {
-      border-top: 1px solid #dddddd;
-    }
+    .payment p {
+      margin: 0 0 15px;
 
-    .payment-row {
-      display: grid;
-
-      grid-template-columns: 150px 1fr;
-
-      gap: 30px;
-
-      padding: 26px 0;
-
-      border-bottom: 1px solid #dddddd;
-    }
-
-    .payment-row strong {
-      font-size: 0.85rem;
-
-      letter-spacing: 0.04em;
-    }
-
-    .payment-row p {
-      margin: 0;
-
-      font-size: 0.94rem;
+      line-height: 2;
     }
 
 
-    /* CTA */
+    /* =========================
+       CTA
+    ========================= */
 
     .cta {
       padding: 110px 0;
 
       text-align: center;
 
-      background:
-        linear-gradient(
-          135deg,
-          #fafafa,
-          #f4f4f4
-        );
+      background: #f7f7f7;
     }
 
     .cta h2 {
@@ -504,7 +464,9 @@
     }
 
 
-    /* FOOTER */
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       padding: 40px 0;
@@ -530,7 +492,9 @@
     }
 
 
-    /* TABLET */
+    /* =========================
+       TABLET
+    ========================= */
 
     @media (max-width: 900px) {
 
@@ -545,16 +509,12 @@
       .price-card {
         grid-template-columns: 1fr;
       }
-
-      .payment-grid {
-        grid-template-columns: 1fr;
-
-        gap: 35px;
-      }
     }
 
 
-    /* MOBILE */
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 720px) {
 
@@ -582,32 +542,25 @@
         padding: 65px 0 45px;
       }
 
-      .price-section {
-        padding-bottom: 75px;
+      .pricing {
+        padding-bottom: 80px;
       }
 
-      .price-main,
-      .price-detail {
-        padding: 38px 28px;
+      .price-card {
+        padding: 32px 24px;
+
+        gap: 45px;
       }
 
       .price {
         font-size: clamp(2rem, 10vw, 3rem);
+
         white-space: nowrap;
       }
 
-      .monthly {
-        padding: 75px 0;
-      }
-
+      .running-cost,
       .payment {
         padding: 75px 0;
-      }
-
-      .payment-row {
-        grid-template-columns: 1fr;
-
-        gap: 8px;
       }
 
       .cta {
@@ -630,6 +583,10 @@
 <body>
 
 
+  <!-- =========================
+       HEADER
+  ========================= -->
+
   <header>
 
     <div class="container header-inner">
@@ -637,6 +594,7 @@
       <a class="logo" href="index.html">
         Emirin
       </a>
+
 
       <nav>
 
@@ -661,7 +619,10 @@
           </li>
 
           <li>
-            <a class="active" href="price.html">
+            <a
+              class="active"
+              href="price.html"
+            >
               PRICE
             </a>
           </li>
@@ -685,7 +646,11 @@
           </li>
 
           <li>
-            <a href="comingsoon.html">
+            <a
+              href="https://forms.gle/8iQKXtGYebTbxYhW6"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               CONTACT
             </a>
           </li>
@@ -701,6 +666,10 @@
 
   <main>
 
+
+    <!-- =========================
+         PAGE HERO
+    ========================= -->
 
     <section class="page-hero">
 
@@ -723,13 +692,17 @@
     </section>
 
 
+    <!-- =========================
+         INTRO
+    ========================= -->
+
     <section class="intro">
 
       <div class="container">
 
         <p class="intro-text">
-          企画・コンセプト設計からデザイン、制作、公開まで。
-          Webサイトに必要な工程を一貫してサポートします。
+          企画・コンセプト設計からデザイン、制作、公開まで、
+          Webサイト制作に必要な工程をまとめて対応します。
         </p>
 
       </div>
@@ -737,20 +710,24 @@
     </section>
 
 
-    <section class="price-section">
+    <!-- =========================
+         PRICE
+    ========================= -->
+
+    <section class="pricing">
 
       <div class="container">
 
         <div class="price-card">
 
 
-          <div class="price-main">
+          <div>
 
             <p class="price-label">
-              WEB SITE PRODUCTION
+              WEBSITE PRODUCTION
             </p>
 
-            <h2>
+            <h2 class="price-title">
               Webサイト制作
             </h2>
 
@@ -758,28 +735,53 @@
               60,000円<span>〜</span>
             </p>
 
+            <p class="price-description">
+              制作内容・ページ数・必要な機能により料金が異なります。
+            </p>
+
           </div>
 
 
-          <div class="price-detail">
+          <div>
 
-            <h3>
-              基本料金に含まれる内容
-            </h3>
+            <p class="included-title">
+              INCLUDED
+            </p>
 
             <ul class="included-list">
 
-              <li>ヒアリング</li>
-              <li>企画・コンセプト設計</li>
-              <li>サイト構成</li>
-              <li>Webデザイン</li>
-              <li>コーディング</li>
-              <li>スマートフォン対応</li>
-              <li>公開設定</li>
+              <li>
+                ヒアリング
+              </li>
+
+              <li>
+                企画・コンセプト設計
+              </li>
+
+              <li>
+                サイト構成
+              </li>
+
+              <li>
+                Webデザイン
+              </li>
+
+              <li>
+                コーディング
+              </li>
+
+              <li>
+                スマートフォン対応
+              </li>
+
+              <li>
+                公開設定
+              </li>
 
             </ul>
 
           </div>
+
 
         </div>
 
@@ -788,37 +790,38 @@
     </section>
 
 
-    <section class="monthly">
+    <!-- =========================
+         RUNNING COST
+    ========================= -->
+
+    <section class="running-cost">
 
       <div class="container">
 
-        <div class="monthly-inner">
+        <div class="running-inner">
 
           <p class="section-label">
             RUNNING COST
           </p>
 
           <h2>
-            公開後の月額維持費
-            <strong>0円</strong>
-            で運用できる方法にも対応。
+            月額管理費0円で運用できる方法にも対応。
           </h2>
 
           <p>
-            Webサイトの内容や用途に応じて、
-            公開後に月額のサーバー管理費をかけずに
-            運用できる方法をご提案することも可能です。
+            Webサイトの内容や目的に応じて、
+            公開後の月額管理費をかけずに運用できる方法をご提案できます。
           </p>
 
           <p>
-            必要なときだけ文章や画像の変更、
-            ページ追加などをご依頼いただくこともできます。
+            公開後に修正やページ追加が必要になった場合は、
+            必要なときだけご相談いただけます。
           </p>
 
-          <div class="notice">
-            ※現在のサービス・無料プランの提供条件に基づきます。
+          <div class="note">
+            ※現在利用可能なサービス・無料プランの提供条件に基づきます。
             独自ドメイン、有料外部サービス等の利用、
-            または提供元の料金・仕様変更等により、
+            またはサービス提供元の料金・仕様変更等により、
             別途費用が発生する場合があります。
           </div>
 
@@ -829,73 +832,37 @@
     </section>
 
 
+    <!-- =========================
+         PAYMENT
+    ========================= -->
+
     <section class="payment">
 
       <div class="container">
 
-        <div class="payment-grid">
+        <div class="payment-inner">
 
+          <p class="section-label">
+            PAYMENT
+          </p>
 
-          <div>
+          <h2>
+            お支払いについて
+          </h2>
 
-            <p class="section-label">
-              PAYMENT
-            </p>
+          <p>
+            原則として一括でのお支払いをお願いしています。
+          </p>
 
-            <h2>
-              お支払いについて
-            </h2>
+          <p>
+            制作内容やご事情に応じて、
+            分割払いについてもご相談いただけます。
+          </p>
 
-          </div>
-
-
-          <div class="payment-content">
-
-
-            <div class="payment-row">
-
-              <strong>
-                お支払い
-              </strong>
-
-              <p>
-                原則一括払い（分割払い応相談）
-              </p>
-
-            </div>
-
-
-            <div class="payment-row">
-
-              <strong>
-                制作料金
-              </strong>
-
-              <p>
-                サイトのページ数、機能、制作内容などにより
-                料金が変わる場合があります。
-                ヒアリング後にお見積りをご案内します。
-              </p>
-
-            </div>
-
-
-            <div class="payment-row">
-
-              <strong>
-                外部サービス
-              </strong>
-
-              <p>
-                独自ドメインや有料の外部サービスなどを
-                利用する場合は、制作料金とは別に
-                実費が必要となる場合があります。
-              </p>
-
-            </div>
-
-
-          </div>
+          <p>
+            制作内容とお見積りをご確認いただき、
+            お申し込み・お支払い確認後に制作を開始します。
+          </p>
 
         </div>
 
@@ -904,21 +871,27 @@
     </section>
 
 
+    <!-- =========================
+         CTA
+    ========================= -->
+
     <section class="cta">
 
       <div class="container">
 
         <h2>
-          まずはご相談ください。
+          まずは無料でご相談ください。
         </h2>
 
         <p>
-          ご希望の内容を伺ったうえで、お見積りをご案内します。
+          ご希望をお聞きしたうえで、制作内容と料金をご案内します。
         </p>
 
         <a
           class="button"
-          href="comingsoon.html"
+          href="https://forms.gle/8iQKXtGYebTbxYhW6"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           無料相談・お見積り
         </a>
@@ -930,6 +903,10 @@
 
   </main>
 
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
   <footer>
 
