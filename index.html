@@ -13,6 +13,11 @@
   >
 
   <style>
+
+    /* =========================
+       BASIC
+    ========================= */
+
     * {
       box-sizing: border-box;
     }
@@ -23,6 +28,7 @@
 
     body {
       margin: 0;
+
       font-family:
         "Helvetica Neue",
         Helvetica,
@@ -31,8 +37,10 @@
         "Hiragino Sans",
         Meiryo,
         sans-serif;
+
       color: #202020;
       background: #ffffff;
+
       line-height: 1.8;
       -webkit-font-smoothing: antialiased;
     }
@@ -45,6 +53,7 @@
     img {
       display: block;
       max-width: 100%;
+      height: auto;
     }
 
     .container {
@@ -53,60 +62,85 @@
     }
 
 
-    /* HEADER */
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
+
       background: rgba(255, 255, 255, 0.94);
+
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
+
       border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     }
 
     .header-inner {
       min-height: 76px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       gap: 30px;
     }
 
     .logo {
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       font-weight: 300;
-      letter-spacing: 0.12em;
-      line-height: 1;
+
+      letter-spacing: 0.1em;
+
       white-space: nowrap;
     }
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
 
     nav ul {
       display: flex;
       align-items: center;
+
       gap: 24px;
+
       margin: 0;
       padding: 0;
+
       list-style: none;
     }
 
     nav a {
       position: relative;
+
       display: block;
+
       padding: 28px 0 24px;
+
       font-size: 0.75rem;
       font-weight: 500;
+
       letter-spacing: 0.08em;
     }
 
     nav a::after {
       content: "";
+
       position: absolute;
+
       left: 0;
       bottom: 19px;
+
       width: 0;
       height: 1px;
+
       background: #202020;
+
       transition: width 0.25s ease;
     }
 
@@ -116,19 +150,24 @@
     }
 
 
-    /* HERO */
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
       min-height: calc(100vh - 76px);
+
       display: flex;
       align-items: center;
-      padding: 75px 0 90px;
+
+      padding: 80px 0;
+
       overflow: hidden;
 
       background:
         radial-gradient(
           circle at 82% 30%,
-          rgba(225, 228, 232, 0.7),
+          rgba(226, 229, 233, 0.72),
           transparent 32%
         ),
         linear-gradient(
@@ -141,45 +180,71 @@
 
     .hero-grid {
       display: grid;
+
       grid-template-columns:
         minmax(0, 1.25fr)
         minmax(300px, 0.75fr);
+
       align-items: center;
+
       gap: clamp(50px, 8vw, 110px);
     }
 
+
+    /* =========================
+       HERO TEXT
+    ========================= */
+
     .hero-name {
-      margin: 0 0 15px;
-      font-size: clamp(4rem, 8vw, 7rem);
-      font-weight: 200;
+      margin: 0;
+
+      font-size: clamp(3.4rem, 6vw, 5.2rem);
+
+      font-weight: 300;
+
       letter-spacing: 0.07em;
-      line-height: 1;
+
+      line-height: 1.05;
     }
 
     .hero-title {
-      margin: 0;
-      font-size: clamp(0.95rem, 1.6vw, 1.25rem);
-      font-weight: 400;
-      letter-spacing: 0.05em;
+      margin: 25px 0 0;
+
+      font-size: clamp(1.5rem, 2.7vw, 2.1rem);
+
+      font-weight: 700;
+
+      letter-spacing: 0.025em;
+
+      line-height: 1.4;
     }
 
     .hero-catch {
-      margin: 38px 0 30px;
-      font-size: clamp(1.65rem, 3vw, 2.5rem);
-      font-weight: 500;
-      letter-spacing: 0.08em;
+      margin: 22px 0 32px;
+
+      font-size: clamp(1.45rem, 2.5vw, 2rem);
+
+      font-weight: 300;
+
+      letter-spacing: 0.07em;
+
       line-height: 1.5;
     }
 
     .hero-description {
       max-width: 700px;
+
       margin: 0 0 18px;
+
       font-size: 0.98rem;
+
       line-height: 2;
     }
 
 
-    /* BUTTON */
+    /* =========================
+       BUTTON
+    ========================= */
 
     .button-area {
       margin-top: 35px;
@@ -187,14 +252,21 @@
 
     .button {
       display: inline-flex;
+
       align-items: center;
       justify-content: center;
+
       min-width: 210px;
+
       padding: 14px 28px;
+
       border: 1px solid #202020;
       border-radius: 999px;
+
       font-size: 0.9rem;
+
       letter-spacing: 0.04em;
+
       transition:
         background 0.25s ease,
         color 0.25s ease,
@@ -204,11 +276,14 @@
     .button:hover {
       color: #ffffff;
       background: #202020;
+
       transform: translateY(-2px);
     }
 
 
-    /* PHOTO */
+    /* =========================
+       PHOTO
+    ========================= */
 
     .hero-visual {
       position: relative;
@@ -216,95 +291,134 @@
 
     .hero-visual::before {
       content: "";
+
       position: absolute;
+
       width: 76%;
       height: 76%;
+
       right: -30px;
       top: -30px;
+
       border: 1px solid rgba(0, 0, 0, 0.08);
+
       z-index: 0;
     }
 
     .hero-photo {
       position: relative;
+
       z-index: 1;
+
       width: 100%;
       max-width: 400px;
+
       margin-left: auto;
+
       aspect-ratio: 4 / 5;
+
       object-fit: cover;
       object-position: center;
-      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+
+      box-shadow:
+        0 30px 80px
+        rgba(0, 0, 0, 0.12);
     }
 
 
-    /* PAGE LINKS */
+    /* =========================
+       EXPLORE
+    ========================= */
 
-    .page-links {
+    .explore {
       padding: 90px 0;
+
       background: #ffffff;
     }
 
-    .page-links-heading {
-      margin: 0 0 45px;
+    .explore-label {
+      margin: 0 0 42px;
+
       font-size: 0.75rem;
       font-weight: 500;
+
       letter-spacing: 0.16em;
     }
 
-    .page-links-grid {
+    .explore-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
       border-top: 1px solid #dedede;
     }
 
-    .page-link {
+    .explore-link {
       display: block;
+
       padding: 30px 20px 30px 0;
+
       border-bottom: 1px solid #dedede;
+
       transition:
         opacity 0.25s ease,
         transform 0.25s ease;
     }
 
-    .page-link:nth-child(3n + 2),
-    .page-link:nth-child(3n + 3) {
+    .explore-link:nth-child(3n + 2),
+    .explore-link:nth-child(3n + 3) {
       padding-left: 30px;
     }
 
-    .page-link:hover {
+    .explore-link:hover {
       opacity: 0.5;
+
       transform: translateX(5px);
     }
 
-    .page-link-en {
+    .explore-en {
       display: block;
+
       margin-bottom: 4px;
+
       font-size: 1.05rem;
-      font-weight: 400;
+      font-weight: 500;
+
       letter-spacing: 0.08em;
     }
 
-    .page-link-ja {
+    .explore-ja {
       display: block;
+
       font-size: 0.78rem;
+
       color: #777777;
     }
 
 
-    /* FOOTER */
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       padding: 40px 0;
+
       border-top: 1px solid #eeeeee;
+
+      background: #ffffff;
     }
 
     .footer-inner {
       display: flex;
+
       justify-content: space-between;
       align-items: center;
+
       gap: 30px;
+
       font-size: 0.75rem;
+
       color: #777777;
     }
 
@@ -313,9 +427,12 @@
     }
 
 
-    /* TABLET */
+    /* =========================
+       TABLET
+    ========================= */
 
     @media (max-width: 900px) {
+
       nav ul {
         gap: 13px;
       }
@@ -326,29 +443,35 @@
 
       .hero-grid {
         grid-template-columns: 1fr;
+
         gap: 55px;
       }
 
       .hero-photo {
         width: min(100%, 390px);
+
         margin: 0 auto;
       }
 
-      .page-links-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .explore-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
       }
 
-      .page-link,
-      .page-link:nth-child(3n + 2),
-      .page-link:nth-child(3n + 3) {
+      .explore-link,
+      .explore-link:nth-child(3n + 2),
+      .explore-link:nth-child(3n + 3) {
         padding-left: 0;
       }
     }
 
 
-    /* MOBILE */
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 720px) {
+
       .header-inner {
         min-height: 68px;
       }
@@ -363,101 +486,172 @@
 
       .hero {
         min-height: auto;
+
         padding: 65px 0 75px;
       }
 
       .hero-name {
-        font-size: clamp(3.3rem, 16vw, 5rem);
-        letter-spacing: 0.04em;
+        font-size: clamp(3rem, 15vw, 4.3rem);
       }
 
       .hero-title {
-        font-size: 0.88rem;
-        line-height: 1.6;
+        margin-top: 22px;
+
+        font-size: 1.4rem;
       }
 
       .hero-catch {
-        margin-top: 30px;
-        font-size: 1.5rem;
+        margin-top: 18px;
+
+        font-size: 1.35rem;
       }
 
       .hero-description {
         font-size: 0.94rem;
+
         line-height: 1.9;
       }
 
-      .page-links {
+      .explore {
         padding: 70px 0;
       }
 
-      .page-links-grid {
+      .explore-grid {
         grid-template-columns: 1fr;
       }
 
       .footer-inner {
         flex-direction: column;
+
         align-items: flex-start;
+
         gap: 10px;
       }
     }
+
   </style>
 </head>
 
 
 <body>
 
-  <!-- HEADER -->
+
+  <!-- =========================
+       HEADER
+  ========================= -->
 
   <header>
+
     <div class="container header-inner">
 
-      <a class="logo" href="index.html">
+      <a
+        class="logo"
+        href="index.html"
+      >
         Emirin
       </a>
 
+
       <nav>
+
         <ul>
-          <li><a class="active" href="index.html">HOME</a></li>
-          <li><a href="comingsoon.html">SERVICE</a></li>
-          <li><a href="comingsoon.html">WORKS</a></li>
-          <li><a href="comingsoon.html">PRICE</a></li>
-          <li><a href="comingsoon.html">PROFILE</a></li>
-          <li><a href="comingsoon.html">FLOW</a></li>
-          <li><a href="comingsoon.html">FAQ</a></li>
-          <li><a href="comingsoon.html">CONTACT</a></li>
+
+          <li>
+            <a
+              class="active"
+              href="index.html"
+            >
+              HOME
+            </a>
+          </li>
+
+          <li>
+            <a href="service.html">
+              SERVICE
+            </a>
+          </li>
+
+          <li>
+            <a href="works.html">
+              WORKS
+            </a>
+          </li>
+
+          <li>
+            <a href="price.html">
+              PRICE
+            </a>
+          </li>
+
+          <li>
+            <a href="profile.html">
+              PROFILE
+            </a>
+          </li>
+
+          <li>
+            <a href="flow.html">
+              FLOW
+            </a>
+          </li>
+
+          <li>
+            <a href="faq.html">
+              FAQ
+            </a>
+          </li>
+
+          <li>
+            <a href="comingsoon.html">
+              CONTACT
+            </a>
+          </li>
+
         </ul>
+
       </nav>
 
     </div>
+
   </header>
 
 
-  <!-- HOME -->
+  <!-- =========================
+       HOME
+  ========================= -->
 
   <main>
+
 
     <section class="hero">
 
       <div class="container hero-grid">
 
-        <div class="hero-text">
+
+        <!-- TEXT -->
+
+        <div>
 
           <h1 class="hero-name">
             Emirin
           </h1>
 
+
           <p class="hero-title">
             AI × Web Creative Director / Designer
           </p>
+
 
           <h2 class="hero-catch">
             アイデアを、伝わるカタチに。
           </h2>
 
+
           <p class="hero-description">
             会社やお店、個人の魅力をインターネットで伝えるお手伝いをしています。
             AIを活用して、WebサイトやSNSなどの企画・デザイン・制作を行います。
           </p>
+
 
           <p class="hero-description">
             「何を作ればいいかわからない」という段階から、
@@ -466,14 +660,22 @@
             マーケティングまで一貫してサポートします。
           </p>
 
+
           <div class="button-area">
-            <a class="button" href="comingsoon.html">
+
+            <a
+              class="button"
+              href="comingsoon.html"
+            >
               無料相談・お見積り
             </a>
+
           </div>
 
         </div>
 
+
+        <!-- PHOTO -->
 
         <div class="hero-visual">
 
@@ -485,52 +687,111 @@
 
         </div>
 
+
       </div>
 
     </section>
 
 
-    <!-- PAGE LINKS -->
+    <!-- =========================
+         EXPLORE
+    ========================= -->
 
-    <section class="page-links">
+    <section class="explore">
 
       <div class="container">
 
-        <p class="page-links-heading">
+        <p class="explore-label">
           EXPLORE
         </p>
 
-        <div class="page-links-grid">
 
-          <a class="page-link" href="comingsoon.html">
-            <span class="page-link-en">SERVICE</span>
-            <span class="page-link-ja">サービス</span>
+        <div class="explore-grid">
+
+
+          <a
+            class="explore-link"
+            href="service.html"
+          >
+            <span class="explore-en">
+              SERVICE
+            </span>
+
+            <span class="explore-ja">
+              サービス
+            </span>
           </a>
 
-          <a class="page-link" href="comingsoon.html">
-            <span class="page-link-en">WORKS</span>
-            <span class="page-link-ja">制作実績</span>
+
+          <a
+            class="explore-link"
+            href="works.html"
+          >
+            <span class="explore-en">
+              WORKS
+            </span>
+
+            <span class="explore-ja">
+              制作実績
+            </span>
           </a>
 
-          <a class="page-link" href="comingsoon.html">
-            <span class="page-link-en">PRICE</span>
-            <span class="page-link-ja">料金</span>
+
+          <a
+            class="explore-link"
+            href="price.html"
+          >
+            <span class="explore-en">
+              PRICE
+            </span>
+
+            <span class="explore-ja">
+              料金
+            </span>
           </a>
 
-          <a class="page-link" href="comingsoon.html">
-            <span class="page-link-en">PROFILE</span>
-            <span class="page-link-ja">プロフィール</span>
+
+          <a
+            class="explore-link"
+            href="profile.html"
+          >
+            <span class="explore-en">
+              PROFILE
+            </span>
+
+            <span class="explore-ja">
+              プロフィール
+            </span>
           </a>
 
-          <a class="page-link" href="comingsoon.html">
-            <span class="page-link-en">FLOW</span>
-            <span class="page-link-ja">制作の流れ</span>
+
+          <a
+            class="explore-link"
+            href="flow.html"
+          >
+            <span class="explore-en">
+              FLOW
+            </span>
+
+            <span class="explore-ja">
+              制作の流れ
+            </span>
           </a>
 
-          <a class="page-link" href="comingsoon.html">
-            <span class="page-link-en">FAQ</span>
-            <span class="page-link-ja">よくあるご質問</span>
+
+          <a
+            class="explore-link"
+            href="faq.html"
+          >
+            <span class="explore-en">
+              FAQ
+            </span>
+
+            <span class="explore-ja">
+              よくあるご質問
+            </span>
           </a>
+
 
         </div>
 
@@ -538,12 +799,16 @@
 
     </section>
 
+
   </main>
 
 
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
   <footer>
+
     <div class="container footer-inner">
 
       <p>
@@ -555,7 +820,9 @@
       </p>
 
     </div>
+
   </footer>
+
 
 </body>
 
