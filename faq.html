@@ -5,18 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>FAQ｜Emirin｜AI × Web Creative Director / Designer</title>
+  <title>FLOW｜Emirin｜AI × Web Creative Director / Designer</title>
 
   <meta
     name="description"
-    content="EmirinのWebサイト制作に関するよくあるご質問。ご相談、月額費用、公開後の更新、パソコンや設定のサポートなどについてご案内します。"
+    content="EmirinのWebサイト制作の流れ。お問い合わせからヒアリング、お見積り、制作、確認・修正、公開・納品までの流れをご案内します。"
   >
 
   <style>
-
-    /* =========================
-       BASIC
-    ========================= */
 
     * {
       box-sizing: border-box;
@@ -57,9 +53,7 @@
     }
 
 
-    /* =========================
-       HEADER
-    ========================= */
+    /* HEADER */
 
     header {
       position: sticky;
@@ -94,9 +88,7 @@
     }
 
 
-    /* =========================
-       NAVIGATION
-    ========================= */
+    /* NAVIGATION */
 
     nav ul {
       display: flex;
@@ -145,9 +137,7 @@
     }
 
 
-    /* =========================
-       PAGE HERO
-    ========================= */
+    /* PAGE HERO */
 
     .page-hero {
       padding: 105px 0 80px;
@@ -198,12 +188,10 @@
     }
 
 
-    /* =========================
-       INTRO
-    ========================= */
+    /* INTRO */
 
     .intro {
-      padding: 90px 0 60px;
+      padding: 90px 0 65px;
     }
 
     .intro-text {
@@ -217,143 +205,127 @@
     }
 
 
-    /* =========================
-       FAQ
-    ========================= */
+    /* FLOW */
 
-    .faq {
+    .flow {
       padding: 20px 0 120px;
     }
 
-    .faq-list {
+    .flow-list {
       max-width: 900px;
 
       margin: 0 auto;
-
-      border-top: 1px solid #dcdcdc;
     }
 
-    .faq-item {
-      border-bottom: 1px solid #dcdcdc;
-    }
-
-    .faq-item summary {
+    .flow-item {
       position: relative;
 
       display: grid;
 
-      grid-template-columns: 55px 1fr 40px;
+      grid-template-columns: 130px 1fr;
 
-      gap: 20px;
+      gap: 45px;
 
-      align-items: center;
-
-      padding: 32px 0;
-
-      cursor: pointer;
-
-      list-style: none;
+      padding: 0 0 65px;
     }
 
-    .faq-item summary::-webkit-details-marker {
-      display: none;
+    .flow-item:last-child {
+      padding-bottom: 0;
     }
 
-    .question-mark {
-      font-size: 1.1rem;
-      font-weight: 400;
-
-      letter-spacing: 0.05em;
-    }
-
-    .question {
-      font-size: clamp(1rem, 2vw, 1.15rem);
-
-      font-weight: 500;
-
-      letter-spacing: 0.025em;
-
-      line-height: 1.7;
-    }
-
-    .faq-icon {
+    .flow-number-area {
       position: relative;
 
-      width: 24px;
-      height: 24px;
-
-      justify-self: end;
+      display: flex;
+      justify-content: center;
     }
 
-    .faq-icon::before,
-    .faq-icon::after {
+    .flow-number {
+      position: relative;
+
+      z-index: 2;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 82px;
+      height: 82px;
+
+      border: 1px solid #bcbcbc;
+      border-radius: 50%;
+
+      background: #ffffff;
+
+      font-size: 0.82rem;
+      font-weight: 500;
+
+      letter-spacing: 0.12em;
+    }
+
+    .flow-item:not(:last-child)
+    .flow-number-area::after {
       content: "";
 
       position: absolute;
 
-      top: 50%;
+      top: 82px;
+      bottom: -65px;
+
       left: 50%;
 
-      width: 16px;
-      height: 1px;
+      width: 1px;
 
-      background: #202020;
-
-      transform: translate(-50%, -50%);
-
-      transition: transform 0.25s ease;
+      background: #d8d8d8;
     }
 
-    .faq-icon::after {
-      transform:
-        translate(-50%, -50%)
-        rotate(90deg);
+    .flow-content {
+      padding: 9px 0 0;
     }
 
-    .faq-item[open]
-    .faq-icon::after {
-      transform:
-        translate(-50%, -50%)
-        rotate(0deg);
-    }
+    .flow-en {
+      margin: 0 0 5px;
 
-    .answer {
-      display: grid;
-
-      grid-template-columns: 55px 1fr;
-
-      gap: 20px;
-
-      padding: 0 60px 34px 0;
-    }
-
-    .answer-mark {
-      font-size: 1.1rem;
+      font-size: 0.68rem;
       font-weight: 500;
+
+      letter-spacing: 0.15em;
+
+      color: #999999;
     }
 
-    .answer p {
+    .flow-content h2 {
+      margin: 0 0 14px;
+
+      font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+
+      font-weight: 500;
+
+      letter-spacing: 0.04em;
+    }
+
+    .flow-content p {
+      max-width: 650px;
+
       margin: 0;
 
       font-size: 0.95rem;
 
-      line-height: 2;
+      line-height: 1.95;
 
       color: #555555;
     }
 
 
-    /* =========================
-       SUPPORT
-    ========================= */
+    /* DELIVERY */
 
-    .support {
+    .delivery {
       padding: 100px 0;
 
       background: #f7f7f7;
     }
 
-    .support-inner {
+    .delivery-inner {
       max-width: 850px;
     }
 
@@ -368,7 +340,7 @@
       color: #777777;
     }
 
-    .support h2 {
+    .delivery h2 {
       margin: 0 0 28px;
 
       font-size: clamp(1.8rem, 3vw, 2.5rem);
@@ -380,16 +352,30 @@
       line-height: 1.5;
     }
 
-    .support p {
-      margin: 0;
+    .delivery p {
+      margin: 0 0 18px;
 
       line-height: 2;
     }
 
+    .delivery-note {
+      margin-top: 30px;
 
-    /* =========================
-       CTA
-    ========================= */
+      padding: 24px 28px;
+
+      border-left: 2px solid #bdbdbd;
+
+      background: #ffffff;
+
+      font-size: 0.85rem;
+
+      line-height: 1.9;
+
+      color: #666666;
+    }
+
+
+    /* CTA */
 
     .cta {
       padding: 110px 0;
@@ -445,9 +431,7 @@
     }
 
 
-    /* =========================
-       FOOTER
-    ========================= */
+    /* FOOTER */
 
     footer {
       padding: 40px 0;
@@ -473,9 +457,7 @@
     }
 
 
-    /* =========================
-       TABLET
-    ========================= */
+    /* TABLET */
 
     @media (max-width: 900px) {
 
@@ -489,9 +471,7 @@
     }
 
 
-    /* =========================
-       MOBILE
-    ========================= */
+    /* MOBILE */
 
     @media (max-width: 720px) {
 
@@ -516,46 +496,39 @@
       }
 
       .intro {
-        padding: 65px 0 45px;
+        padding: 65px 0 50px;
       }
 
-      .faq {
+      .flow {
         padding-bottom: 80px;
       }
 
-      .faq-item summary {
-        grid-template-columns: 35px 1fr 30px;
+      .flow-item {
+        grid-template-columns: 70px 1fr;
 
-        gap: 12px;
+        gap: 22px;
 
-        padding: 27px 0;
+        padding-bottom: 55px;
       }
 
-      .question-mark {
-        font-size: 0.95rem;
+      .flow-number {
+        width: 58px;
+        height: 58px;
+
+        font-size: 0.72rem;
       }
 
-      .question {
-        font-size: 0.95rem;
+      .flow-item:not(:last-child)
+      .flow-number-area::after {
+        top: 58px;
+        bottom: -55px;
       }
 
-      .answer {
-        grid-template-columns: 35px 1fr;
-
-        gap: 12px;
-
-        padding: 0 0 28px;
+      .flow-content {
+        padding-top: 2px;
       }
 
-      .answer-mark {
-        font-size: 0.95rem;
-      }
-
-      .answer p {
-        font-size: 0.9rem;
-      }
-
-      .support {
+      .delivery {
         padding: 75px 0;
       }
 
@@ -579,9 +552,7 @@
 <body>
 
 
-  <!-- =========================
-       HEADER
-  ========================= -->
+  <!-- HEADER -->
 
   <header>
 
@@ -591,58 +562,44 @@
         Emirin
       </a>
 
-
       <nav>
 
         <ul>
 
           <li>
-            <a href="index.html">
-              HOME
-            </a>
+            <a href="index.html">HOME</a>
           </li>
 
           <li>
-            <a href="service.html">
-              SERVICE
-            </a>
+            <a href="service.html">SERVICE</a>
           </li>
 
           <li>
-            <a href="works.html">
-              WORKS
-            </a>
+            <a href="works.html">WORKS</a>
           </li>
 
           <li>
-            <a href="price.html">
-              PRICE
-            </a>
+            <a href="price.html">PRICE</a>
           </li>
 
           <li>
-            <a href="profile.html">
-              PROFILE
-            </a>
+            <a href="profile.html">PROFILE</a>
           </li>
 
           <li>
-            <a href="flow.html">
-              FLOW
-            </a>
+            <a class="active" href="flow.html">FLOW</a>
+          </li>
+
+          <li>
+            <a href="faq.html">FAQ</a>
           </li>
 
           <li>
             <a
-              class="active"
-              href="faq.html"
+              href="https://forms.gle/8iQKXtGYebTbxYhW6"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              FAQ
-            </a>
-          </li>
-
-          <li>
-            <a href="comingsoon.html">
               CONTACT
             </a>
           </li>
@@ -659,24 +616,22 @@
   <main>
 
 
-    <!-- =========================
-         PAGE HERO
-    ========================= -->
+    <!-- PAGE HERO -->
 
     <section class="page-hero">
 
       <div class="container">
 
         <p class="page-label">
-          QUESTIONS &amp; ANSWERS
+          HOW IT WORKS
         </p>
 
         <h1 class="page-title">
-          FAQ
+          FLOW
         </h1>
 
         <p class="page-subtitle">
-          よくあるご質問
+          制作の流れ
         </p>
 
       </div>
@@ -684,17 +639,15 @@
     </section>
 
 
-    <!-- =========================
-         INTRO
-    ========================= -->
+    <!-- INTRO -->
 
     <section class="intro">
 
       <div class="container">
 
         <p class="intro-text">
-          Webサイト制作について、
-          よくいただくご質問をまとめています。
+          お問い合わせからWebサイトの公開・納品まで、
+          一つひとつ確認しながら進めていきます。
         </p>
 
       </div>
@@ -702,169 +655,172 @@
     </section>
 
 
-    <!-- =========================
-         FAQ
-    ========================= -->
+    <!-- FLOW -->
 
-    <section class="faq">
+    <section class="flow">
 
       <div class="container">
 
-        <div class="faq-list">
+        <div class="flow-list">
 
 
-          <!-- FAQ 01 -->
+          <div class="flow-item">
 
-          <details class="faq-item">
+            <div class="flow-number-area">
+              <span class="flow-number">01</span>
+            </div>
 
-            <summary>
+            <div class="flow-content">
 
-              <span class="question-mark">
-                Q.
-              </span>
+              <p class="flow-en">
+                CONTACT
+              </p>
 
-              <span class="question">
-                Webサイトについて何も決まっていなくても相談できますか？
-              </span>
-
-              <span class="faq-icon"></span>
-
-            </summary>
-
-
-            <div class="answer">
-
-              <span class="answer-mark">
-                A.
-              </span>
+              <h2>
+                お問い合わせ
+              </h2>
 
               <p>
-                はい。
-                目的や伝えたいことを整理するところから
-                一緒に進めます。
-                「何を作ればいいかわからない」という段階でも
-                お気軽にご相談ください。
+                まずは制作内容やご希望をお聞かせください。
+                「何から始めればいいかわからない」という段階でも大丈夫です。
               </p>
 
             </div>
 
-          </details>
+          </div>
 
 
-          <!-- FAQ 02 -->
+          <div class="flow-item">
 
-          <details class="faq-item">
+            <div class="flow-number-area">
+              <span class="flow-number">02</span>
+            </div>
 
-            <summary>
+            <div class="flow-content">
 
-              <span class="question-mark">
-                Q.
-              </span>
+              <p class="flow-en">
+                HEARING &amp; ESTIMATE
+              </p>
 
-              <span class="question">
-                公開後に月額費用はかかりますか？
-              </span>
-
-              <span class="faq-icon"></span>
-
-            </summary>
-
-
-            <div class="answer">
-
-              <span class="answer-mark">
-                A.
-              </span>
+              <h2>
+                ヒアリング・お見積り
+              </h2>
 
               <p>
-                月額管理費0円で運用できる方法にも対応しています。
-                独自ドメインや有料サービスを利用する場合は、
-                別途費用が発生することがあります。
-                また、利用するサービスの料金や提供条件が
-                将来変更される場合があります。
+                目的やご希望を整理し、
+                必要なページや機能、制作内容を確認したうえで、
+                料金をご案内します。
               </p>
 
             </div>
 
-          </details>
+          </div>
 
 
-          <!-- FAQ 03 -->
+          <div class="flow-item">
 
-          <details class="faq-item">
+            <div class="flow-number-area">
+              <span class="flow-number">03</span>
+            </div>
 
-            <summary>
+            <div class="flow-content">
 
-              <span class="question-mark">
-                Q.
-              </span>
+              <p class="flow-en">
+                APPLICATION &amp; PAYMENT
+              </p>
 
-              <span class="question">
-                更新をお願いすることはできますか？
-              </span>
-
-              <span class="faq-icon"></span>
-
-            </summary>
-
-
-            <div class="answer">
-
-              <span class="answer-mark">
-                A.
-              </span>
+              <h2>
+                お申し込み・お支払い
+              </h2>
 
               <p>
-                はい。
-                文章や画像の変更、ページ追加など、
-                必要なときだけご依頼いただけます。
-                更新内容を確認したうえで、
-                必要に応じて料金をご案内します。
+                制作内容とお見積りをご確認いただき、
+                お申し込み・お支払い確認後に制作を開始します。
               </p>
 
             </div>
 
-          </details>
+          </div>
 
 
-          <!-- FAQ 04 -->
+          <div class="flow-item">
 
-          <details class="faq-item">
+            <div class="flow-number-area">
+              <span class="flow-number">04</span>
+            </div>
 
-            <summary>
+            <div class="flow-content">
 
-              <span class="question-mark">
-                Q.
-              </span>
+              <p class="flow-en">
+                DESIGN &amp; DEVELOPMENT
+              </p>
 
-              <span class="question">
-                パソコンや設定が苦手でも大丈夫ですか？
-              </span>
-
-              <span class="faq-icon"></span>
-
-            </summary>
-
-
-            <div class="answer">
-
-              <span class="answer-mark">
-                A.
-              </span>
+              <h2>
+                デザイン・制作
+              </h2>
 
               <p>
-                はい。
-                必要に応じて、
-                画面を一緒に確認しながら
-                サポートすることも可能です。
-                パスワード入力や2段階認証などの本人認証は、
-                セキュリティ保護のため
-                お客様ご自身で操作していただきます。
+                サイト構成を整理し、
+                デザイン、コーディング、
+                スマートフォン対応などの制作を進めます。
               </p>
 
             </div>
 
-          </details>
+          </div>
+
+
+          <div class="flow-item">
+
+            <div class="flow-number-area">
+              <span class="flow-number">05</span>
+            </div>
+
+            <div class="flow-content">
+
+              <p class="flow-en">
+                REVIEW &amp; REVISION
+              </p>
+
+              <h2>
+                ご確認・修正
+              </h2>
+
+              <p>
+                完成前にWebサイトをご確認いただき、
+                必要な修正を行います。
+                内容をご確認いただきながら公開準備を進めます。
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="flow-item">
+
+            <div class="flow-number-area">
+              <span class="flow-number">06</span>
+            </div>
+
+            <div class="flow-content">
+
+              <p class="flow-en">
+                LAUNCH &amp; DELIVERY
+              </p>
+
+              <h2>
+                公開・納品
+              </h2>
+
+              <p>
+                最終確認後、Webサイトを公開します。
+                公開に必要な設定を行い、納品となります。
+              </p>
+
+            </div>
+
+          </div>
 
 
         </div>
@@ -874,30 +830,37 @@
     </section>
 
 
-    <!-- =========================
-         SUPPORT
-    ========================= -->
+    <!-- DELIVERY -->
 
-    <section class="support">
+    <section class="delivery">
 
       <div class="container">
 
-        <div class="support-inner">
+        <div class="delivery-inner">
 
           <p class="section-label">
-            OTHER QUESTIONS
+            DELIVERY TIME
           </p>
 
           <h2>
-            掲載されていないことも、ご相談ください。
+            納期は原則2ヶ月以内。
           </h2>
 
           <p>
-            Webサイトの内容や必要な機能は、
-            お客様によって異なります。
-            「これはできる？」「こんなサイトを作りたい」など、
-            気になることがあればご相談ください。
+            ご契約・制作に必要な素材のご提出完了後から、
+            原則2ヶ月以内を目安に制作します。
           </p>
+
+          <p>
+            予定より早く完成した場合は、
+            準備が整い次第、公開・納品することも可能です。
+          </p>
+
+          <div class="delivery-note">
+            ※制作内容やページ数、お客様によるご確認・修正の状況、
+            必要素材のご提出時期などにより、
+            納期が前後する場合があります。
+          </div>
 
         </div>
 
@@ -906,9 +869,7 @@
     </section>
 
 
-    <!-- =========================
-         CTA
-    ========================= -->
+    <!-- CTA -->
 
     <section class="cta">
 
@@ -919,12 +880,14 @@
         </h2>
 
         <p>
-          「何から始めればいいかわからない」という段階でも大丈夫です。
+          制作したい内容がまだ決まっていなくても大丈夫です。
         </p>
 
         <a
           class="button"
-          href="comingsoon.html"
+          href="https://forms.gle/8iQKXtGYebTbxYhW6"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           無料相談・お見積り
         </a>
@@ -937,9 +900,7 @@
   </main>
 
 
-  <!-- =========================
-       FOOTER
-  ========================= -->
+  <!-- FOOTER -->
 
   <footer>
 
