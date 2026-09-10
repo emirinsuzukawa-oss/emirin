@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SERVICE｜Emirin｜AI × Web Creative Director / Designer</title>
+
+  <meta
+    name="description"
+    content="EmirinのWeb制作サービス。企画・要件定義からデザイン・制作、公開・運用サポートまで一貫して対応します。"
+  >
+
+  <style>
+
+    /* =========================
+       BASIC
+    ========================= */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+
+      font-family:
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        Meiryo,
+        sans-serif;
+
+      color: #202020;
+      background: #ffffff;
+
+      line-height: 1.8;
+
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, 90%);
+      margin: 0 auto;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(255, 255, 255, 0.94);
+
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .header-inner {
+      min-height: 76px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+
+      font-weight: 300;
+
+      letter-spacing: 0.1em;
+
+      white-space: nowrap;
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav ul {
+      display: flex;
+      align-items: center;
+
+      gap: 24px;
+
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
+    }
+
+    nav a {
+      position: relative;
+
+      display: block;
+
+      padding: 28px 0 24px;
+
+      font-size: 0.75rem;
+
+      font-weight: 500;
+
+      letter-spacing: 0.08em;
+    }
+
+    nav a::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      bottom: 19px;
+
+      width: 0;
+      height: 1px;
+
+      background: #202020;
+
+      transition: width 0.25s ease;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+
+    /* =========================
+       PAGE HERO
+    ========================= */
+
+    .page-hero {
+      padding: 105px 0 80px;
+
+      background:
+        radial-gradient(
+          circle at 82% 30%,
+          rgba(226, 229, 233, 0.7),
+          transparent 32%
+        ),
+        linear-gradient(
+          135deg,
+          #ffffff 0%,
+          #fafafa 55%,
+          #f4f4f4 100%
+        );
+    }
+
+    .page-label {
+      margin: 0 0 12px;
+
+      font-size: 0.75rem;
+
+      font-weight: 500;
+
+      letter-spacing: 0.16em;
+
+      color: #777777;
+    }
+
+    .page-title {
+      margin: 0;
+
+      font-size: clamp(3.2rem, 7vw, 5.5rem);
+
+      font-weight: 300;
+
+      letter-spacing: 0.06em;
+
+      line-height: 1.1;
+    }
+
+    .page-subtitle {
+      margin: 18px 0 0;
+
+      font-size: 1rem;
+
+      font-weight: 400;
+
+      letter-spacing: 0.08em;
+    }
+
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .intro {
+      padding: 90px 0 60px;
+    }
+
+    .intro-text {
+      max-width: 760px;
+
+      margin: 0;
+
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+
+      line-height: 2;
+    }
+
+
+    /* =========================
+       SERVICE
+    ========================= */
+
+    .services {
+      padding: 30px 0 110px;
+    }
+
+    .service-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 24px;
+    }
+
+    .service-card {
+      min-height: 310px;
+
+      padding: 38px 32px;
+
+      background: #ffffff;
+
+      border: 1px solid #e3e3e3;
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+
+      box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.06);
+    }
+
+    .service-number {
+      display: block;
+
+      margin-bottom: 32px;
+
+      font-size: 0.72rem;
+
+      font-weight: 500;
+
+      letter-spacing: 0.14em;
+
+      color: #999999;
+    }
+
+    .service-card h2 {
+      margin: 0 0 20px;
+
+      font-size: 1.3rem;
+
+      font-weight: 600;
+
+      letter-spacing: 0.03em;
+    }
+
+    .service-card p {
+      margin: 0;
+
+      font-size: 0.94rem;
+
+      line-height: 1.9;
+    }
+
+
+    /* =========================
+       SUPPORT
+    ========================= */
+
+    .support {
+      padding: 100px 0;
+
+      background: #f7f7f7;
+    }
+
+    .support-inner {
+      max-width: 820px;
+    }
+
+    .support-label {
+      margin: 0 0 15px;
+
+      font-size: 0.75rem;
+
+      font-weight: 500;
+
+      letter-spacing: 0.15em;
+
+      color: #777777;
+    }
+
+    .support h2 {
+      margin: 0 0 28px;
+
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+
+      font-weight: 400;
+
+      letter-spacing: 0.04em;
+    }
+
+    .support p {
+      margin: 0 0 18px;
+
+      line-height: 2;
+    }
+
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      padding: 110px 0;
+
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin: 0 0 15px;
+
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+
+      font-weight: 400;
+
+      letter-spacing: 0.05em;
+    }
+
+    .cta p {
+      margin: 0 0 30px;
+
+      color: #666666;
+    }
+
+    .button {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      min-width: 210px;
+
+      padding: 14px 28px;
+
+      border: 1px solid #202020;
+      border-radius: 999px;
+
+      font-size: 0.9rem;
+
+      letter-spacing: 0.04em;
+
+      transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .button:hover {
+      color: #ffffff;
+
+      background: #202020;
+
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 40px 0;
+
+      border-top: 1px solid #eeeeee;
+    }
+
+    .footer-inner {
+      display: flex;
+
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 30px;
+
+      font-size: 0.75rem;
+
+      color: #777777;
+    }
+
+    .footer-inner p {
+      margin: 0;
+    }
+
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      nav ul {
+        gap: 13px;
+      }
+
+      nav a {
+        font-size: 0.67rem;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card {
+        min-height: auto;
+      }
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 720px) {
+
+      .header-inner {
+        min-height: 68px;
+      }
+
+      .logo {
+        font-size: 1.2rem;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .page-hero {
+        padding: 75px 0 60px;
+      }
+
+      .page-title {
+        font-size: clamp(2.8rem, 15vw, 4rem);
+      }
+
+      .intro {
+        padding: 65px 0 45px;
+      }
+
+      .services {
+        padding-bottom: 75px;
+      }
+
+      .support {
+        padding: 75px 0;
+      }
+
+      .cta {
+        padding: 80px 0;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header>
+
+    <div class="container header-inner">
+
+      <a
+        class="logo"
+        href="index.html"
+      >
+        Emirin
+      </a>
+
+
+      <nav>
+
+        <ul>
+
+          <li>
+            <a href="index.html">
+              HOME
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="active"
+              href="service.html"
+            >
+              SERVICE
+            </a>
+          </li>
+
+          <li>
+            <a href="works.html">
+              WORKS
+            </a>
+          </li>
+
+          <li>
+            <a href="price.html">
+              PRICE
+            </a>
+          </li>
+
+          <li>
+            <a href="profile.html">
+              PROFILE
+            </a>
+          </li>
+
+          <li>
+            <a href="flow.html">
+              FLOW
+            </a>
+          </li>
+
+          <li>
+            <a href="faq.html">
+              FAQ
+            </a>
+          </li>
+
+          <li>
+            <a href="comingsoon.html">
+              CONTACT
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+
+    <!-- =========================
+         PAGE HERO
+    ========================= -->
+
+    <section class="page-hero">
+
+      <div class="container">
+
+        <p class="page-label">
+          WHAT I DO
+        </p>
+
+        <h1 class="page-title">
+          SERVICE
+        </h1>
+
+        <p class="page-subtitle">
+          サービス
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         INTRO
+    ========================= -->
+
+    <section class="intro">
+
+      <div class="container">
+
+        <p class="intro-text">
+          ヒアリングから企画、デザイン、制作、公開まで一貫して対応します。
+          AIを制作パートナーとして活用しながら、
+          お客様の目的に合ったWebサイトを形にします。
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICE CARDS
+    ========================= -->
+
+    <section class="services">
+
+      <div class="container">
+
+        <div class="service-grid">
+
+
+          <article class="service-card">
+
+            <span class="service-number">
+              01
+            </span>
+
+            <h2>
+              企画・要件定義
+            </h2>
+
+            <p>
+              目的、ターゲット、必要なページや機能を整理し、
+              サイト全体の方向性を決めます。
+              「何を作ればいいかわからない」という段階からでも
+              ご相談いただけます。
+            </p>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <span class="service-number">
+              02
+            </span>
+
+            <h2>
+              デザイン・制作
+            </h2>
+
+            <p>
+              サイト構成、ワイヤーフレーム、デザイン、
+              コーディング、スマートフォン対応まで行います。
+              目的や伝えたいことに合わせて、
+              情報を整理しながら形にしていきます。
+            </p>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <span class="service-number">
+              03
+            </span>
+
+            <h2>
+              公開・運用サポート
+            </h2>
+
+            <p>
+              Webサイトの公開設定、
+              SNSや外部サービスとの連携、
+              公開後の文章・画像などの更新にも対応します。
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SUPPORT
+    ========================= -->
+
+    <section class="support">
+
+      <div class="container">
+
+        <div class="support-inner">
+
+          <p class="support-label">
+            SUPPORT
+          </p>
+
+          <h2>
+            パソコンや設定が苦手な方もサポートします。
+          </h2>
+
+          <p>
+            各種サービスの設定に不安がある場合は、
+            必要に応じて画面を一緒に確認しながら
+            サポートすることも可能です。
+          </p>
+
+          <p>
+            セキュリティ保護のため、
+            パスワード入力や2段階認証などの本人認証は
+            お客様ご自身で操作していただきます。
+            ログイン方法や設定方法がわからない場合も、
+            一緒に画面を確認しながら進めます。
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+    ========================= -->
+
+    <section class="cta">
+
+      <div class="container">
+
+        <h2>
+          アイデアを、伝わるカタチに。
+        </h2>
+
+        <p>
+          まずは制作したいことや、お困りのことをお聞かせください。
+        </p>
+
+        <a
+          class="button"
+          href="comingsoon.html"
+        >
+          無料相談・お見積り
+        </a>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <p>
+        AIを活用しながら、企画・デザインから制作・公開まで自身で手がけています。
+      </p>
+
+      <p>
+        © Emirin
+      </p>
+
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>
