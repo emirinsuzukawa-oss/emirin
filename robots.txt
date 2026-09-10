@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://emirinsuzukawa-oss.github.io/emirin/sitemap.xml
