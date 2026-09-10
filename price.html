@@ -14,10 +14,6 @@
 
   <style>
 
-    /* =========================
-       BASIC
-    ========================= */
-
     * {
       box-sizing: border-box;
     }
@@ -56,9 +52,7 @@
     }
 
 
-    /* =========================
-       HEADER
-    ========================= */
+    /* HEADER */
 
     header {
       position: sticky;
@@ -93,9 +87,7 @@
     }
 
 
-    /* =========================
-       NAVIGATION
-    ========================= */
+    /* NAVIGATION */
 
     nav ul {
       display: flex;
@@ -144,9 +136,7 @@
     }
 
 
-    /* =========================
-       PAGE HERO
-    ========================= */
+    /* PAGE HERO */
 
     .page-hero {
       padding: 105px 0 80px;
@@ -197,9 +187,7 @@
     }
 
 
-    /* =========================
-       INTRO
-    ========================= */
+    /* INTRO */
 
     .intro {
       padding: 90px 0 55px;
@@ -216,9 +204,7 @@
     }
 
 
-    /* =========================
-       PRICE
-    ========================= */
+    /* PRICE */
 
     .price-section {
       padding: 20px 0 110px;
@@ -278,20 +264,22 @@
     .price {
       margin: 0;
 
-      font-size: clamp(3rem, 6vw, 5rem);
+      font-size: clamp(2.2rem, 4vw, 3.6rem);
 
       font-weight: 300;
 
-      letter-spacing: 0.02em;
+      letter-spacing: 0.01em;
 
-      line-height: 1.1;
+      line-height: 1.15;
+
+      white-space: nowrap;
     }
 
     .price span {
-      margin-left: 8px;
+      margin-left: 5px;
 
-      font-size: 1rem;
-      font-weight: 400;
+      font-size: 0.85em;
+      font-weight: 300;
     }
 
     .price-detail {
@@ -335,9 +323,7 @@
     }
 
 
-    /* =========================
-       MONTHLY
-    ========================= */
+    /* MONTHLY */
 
     .monthly {
       padding: 100px 0;
@@ -400,9 +386,7 @@
     }
 
 
-    /* =========================
-       PAYMENT
-    ========================= */
+    /* PAYMENT */
 
     .payment {
       padding: 100px 0;
@@ -457,9 +441,7 @@
     }
 
 
-    /* =========================
-       CTA
-    ========================= */
+    /* CTA */
 
     .cta {
       padding: 110px 0;
@@ -522,9 +504,7 @@
     }
 
 
-    /* =========================
-       FOOTER
-    ========================= */
+    /* FOOTER */
 
     footer {
       padding: 40px 0;
@@ -550,9 +530,7 @@
     }
 
 
-    /* =========================
-       TABLET
-    ========================= */
+    /* TABLET */
 
     @media (max-width: 900px) {
 
@@ -576,9 +554,7 @@
     }
 
 
-    /* =========================
-       MOBILE
-    ========================= */
+    /* MOBILE */
 
     @media (max-width: 720px) {
 
@@ -615,6 +591,11 @@
         padding: 38px 28px;
       }
 
+      .price {
+        font-size: clamp(2rem, 10vw, 3rem);
+        white-space: nowrap;
+      }
+
       .monthly {
         padding: 75px 0;
       }
@@ -649,10 +630,6 @@
 <body>
 
 
-  <!-- =========================
-       HEADER
-  ========================= -->
-
   <header>
 
     <div class="container header-inner">
@@ -660,7 +637,6 @@
       <a class="logo" href="index.html">
         Emirin
       </a>
-
 
       <nav>
 
@@ -685,10 +661,7 @@
           </li>
 
           <li>
-            <a
-              class="active"
-              href="price.html"
-            >
+            <a class="active" href="price.html">
               PRICE
             </a>
           </li>
@@ -729,10 +702,6 @@
   <main>
 
 
-    <!-- =========================
-         PAGE HERO
-    ========================= -->
-
     <section class="page-hero">
 
       <div class="container">
@@ -754,10 +723,6 @@
     </section>
 
 
-    <!-- =========================
-         INTRO
-    ========================= -->
-
     <section class="intro">
 
       <div class="container">
@@ -771,10 +736,6 @@
 
     </section>
 
-
-    <!-- =========================
-         PRICE
-    ========================= -->
 
     <section class="price-section">
 
@@ -808,38 +769,17 @@
 
             <ul class="included-list">
 
-              <li>
-                ヒアリング
-              </li>
-
-              <li>
-                企画・コンセプト設計
-              </li>
-
-              <li>
-                サイト構成
-              </li>
-
-              <li>
-                Webデザイン
-              </li>
-
-              <li>
-                コーディング
-              </li>
-
-              <li>
-                スマートフォン対応
-              </li>
-
-              <li>
-                公開設定
-              </li>
+              <li>ヒアリング</li>
+              <li>企画・コンセプト設計</li>
+              <li>サイト構成</li>
+              <li>Webデザイン</li>
+              <li>コーディング</li>
+              <li>スマートフォン対応</li>
+              <li>公開設定</li>
 
             </ul>
 
           </div>
-
 
         </div>
 
@@ -847,10 +787,6 @@
 
     </section>
 
-
-    <!-- =========================
-         MONTHLY COST
-    ========================= -->
 
     <section class="monthly">
 
@@ -892,10 +828,6 @@
 
     </section>
 
-
-    <!-- =========================
-         PAYMENT
-    ========================= -->
 
     <section class="payment">
 
@@ -972,10 +904,6 @@
     </section>
 
 
-    <!-- =========================
-         CTA
-    ========================= -->
-
     <section class="cta">
 
       <div class="container">
@@ -1002,10 +930,6 @@
 
   </main>
 
-
-  <!-- =========================
-       FOOTER
-  ========================= -->
 
   <footer>
 
