@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>FLOW｜Emirin｜AI × Web Creative Director / Designer</title>
+
+  <meta
+    name="description"
+    content="EmirinのWebサイト制作の流れ。お問い合わせからヒアリング、お見積り、制作、確認・修正、公開・納品までの流れをご案内します。"
+  >
+
+  <style>
+
+    /* =========================
+       BASIC
+    ========================= */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+
+      font-family:
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        Meiryo,
+        sans-serif;
+
+      color: #202020;
+      background: #ffffff;
+
+      line-height: 1.8;
+
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, 90%);
+      margin: 0 auto;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(255, 255, 255, 0.94);
+
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .header-inner {
+      min-height: 76px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 300;
+
+      letter-spacing: 0.1em;
+
+      white-space: nowrap;
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav ul {
+      display: flex;
+      align-items: center;
+
+      gap: 24px;
+
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
+    }
+
+    nav a {
+      position: relative;
+
+      display: block;
+
+      padding: 28px 0 24px;
+
+      font-size: 0.75rem;
+      font-weight: 500;
+
+      letter-spacing: 0.08em;
+    }
+
+    nav a::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      bottom: 19px;
+
+      width: 0;
+      height: 1px;
+
+      background: #202020;
+
+      transition: width 0.25s ease;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+
+    /* =========================
+       PAGE HERO
+    ========================= */
+
+    .page-hero {
+      padding: 105px 0 80px;
+
+      background:
+        radial-gradient(
+          circle at 82% 30%,
+          rgba(226, 229, 233, 0.7),
+          transparent 32%
+        ),
+        linear-gradient(
+          135deg,
+          #ffffff 0%,
+          #fafafa 55%,
+          #f4f4f4 100%
+        );
+    }
+
+    .page-label {
+      margin: 0 0 12px;
+
+      font-size: 0.75rem;
+      font-weight: 500;
+
+      letter-spacing: 0.16em;
+
+      color: #777777;
+    }
+
+    .page-title {
+      margin: 0;
+
+      font-size: clamp(3.2rem, 7vw, 5.5rem);
+      font-weight: 300;
+
+      letter-spacing: 0.06em;
+
+      line-height: 1.1;
+    }
+
+    .page-subtitle {
+      margin: 18px 0 0;
+
+      font-size: 1rem;
+      font-weight: 400;
+
+      letter-spacing: 0.08em;
+    }
+
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .intro {
+      padding: 90px 0 65px;
+    }
+
+    .intro-text {
+      max-width: 760px;
+
+      margin: 0;
+
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+
+      line-height: 2;
+    }
+
+
+    /* =========================
+       FLOW
+    ========================= */
+
+    .flow {
+      padding: 20px 0 120px;
+    }
+
+    .flow-list {
+      max-width: 900px;
+
+      margin: 0 auto;
+    }
+
+    .flow-item {
+      position: relative;
+
+      display: grid;
+
+      grid-template-columns: 130px 1fr;
+
+      gap: 45px;
+
+      padding: 0 0 65px;
+    }
+
+    .flow-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .flow-number-area {
+      position: relative;
+
+      display: flex;
+      justify-content: center;
+    }
+
+    .flow-number {
+      position: relative;
+
+      z-index: 2;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 82px;
+      height: 82px;
+
+      border: 1px solid #bcbcbc;
+      border-radius: 50%;
+
+      background: #ffffff;
+
+      font-size: 0.82rem;
+      font-weight: 500;
+
+      letter-spacing: 0.12em;
+    }
+
+    .flow-item:not(:last-child)
+    .flow-number-area::after {
+      content: "";
+
+      position: absolute;
+
+      top: 82px;
+      bottom: -65px;
+
+      left: 50%;
+
+      width: 1px;
+
+      background: #d8d8d8;
+    }
+
+    .flow-content {
+      padding: 9px 0 0;
+    }
+
+    .flow-en {
+      margin: 0 0 5px;
+
+      font-size: 0.68rem;
+      font-weight: 500;
+
+      letter-spacing: 0.15em;
+
+      color: #999999;
+    }
+
+    .flow-content h2 {
+      margin: 0 0 14px;
+
+      font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+
+      font-weight: 500;
+
+      letter-spacing: 0.04em;
+    }
+
+    .flow-content p {
+      max-width: 650px;
+
+      margin: 0;
+
+      font-size: 0.95rem;
+
+      line-height: 1.95;
+
+      color: #555555;
+    }
+
+
+    /* =========================
+       DELIVERY
+    ========================= */
+
+    .delivery {
+      padding: 100px 0;
+
+      background: #f7f7f7;
+    }
+
+    .delivery-inner {
+      max-width: 850px;
+    }
+
+    .section-label {
+      margin: 0 0 15px;
+
+      font-size: 0.75rem;
+      font-weight: 500;
+
+      letter-spacing: 0.15em;
+
+      color: #777777;
+    }
+
+    .delivery h2 {
+      margin: 0 0 28px;
+
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+
+      font-weight: 400;
+
+      letter-spacing: 0.04em;
+
+      line-height: 1.5;
+    }
+
+    .delivery p {
+      margin: 0 0 18px;
+
+      line-height: 2;
+    }
+
+    .delivery-note {
+      margin-top: 30px;
+
+      padding: 24px 28px;
+
+      border-left: 2px solid #bdbdbd;
+
+      background: #ffffff;
+
+      font-size: 0.85rem;
+
+      line-height: 1.9;
+
+      color: #666666;
+    }
+
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      padding: 110px 0;
+
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin: 0 0 15px;
+
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+
+      font-weight: 400;
+
+      letter-spacing: 0.05em;
+    }
+
+    .cta p {
+      margin: 0 0 30px;
+
+      color: #666666;
+    }
+
+    .button {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      min-width: 210px;
+
+      padding: 14px 28px;
+
+      border: 1px solid #202020;
+      border-radius: 999px;
+
+      font-size: 0.9rem;
+
+      letter-spacing: 0.04em;
+
+      transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .button:hover {
+      color: #ffffff;
+
+      background: #202020;
+
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 40px 0;
+
+      border-top: 1px solid #eeeeee;
+    }
+
+    .footer-inner {
+      display: flex;
+
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 30px;
+
+      font-size: 0.75rem;
+
+      color: #777777;
+    }
+
+    .footer-inner p {
+      margin: 0;
+    }
+
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      nav ul {
+        gap: 13px;
+      }
+
+      nav a {
+        font-size: 0.67rem;
+      }
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 720px) {
+
+      .header-inner {
+        min-height: 68px;
+      }
+
+      .logo {
+        font-size: 1.2rem;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .page-hero {
+        padding: 75px 0 60px;
+      }
+
+      .page-title {
+        font-size: clamp(2.8rem, 15vw, 4rem);
+      }
+
+      .intro {
+        padding: 65px 0 50px;
+      }
+
+      .flow {
+        padding-bottom: 80px;
+      }
+
+      .flow-item {
+        grid-template-columns: 70px 1fr;
+
+        gap: 22px;
+
+        padding-bottom: 55px;
+      }
+
+      .flow-number {
+        width: 58px;
+        height: 58px;
+
+        font-size: 0.72rem;
+      }
+
+      .flow-item:not(:last-child)
+      .flow-number-area::after {
+        top: 58px;
+        bottom: -55px;
+      }
+
+      .flow-content {
+        padding-top: 2px;
+      }
+
+      .delivery {
+        padding: 75px 0;
+      }
+
+      .cta {
+        padding: 80px 0;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header>
+
+    <div class="container header-inner">
+
+      <a class="logo" href="index.html">
+        Emirin
+      </a>
+
+
+      <nav>
+
+        <ul>
+
+          <li>
+            <a href="index.html">
+              HOME
+            </a>
+          </li>
+
+          <li>
+            <a href="service.html">
+              SERVICE
+            </a>
+          </li>
+
+          <li>
+            <a href="works.html">
+              WORKS
+            </a>
+          </li>
+
+          <li>
+            <a href="price.html">
+              PRICE
+            </a>
+          </li>
+
+          <li>
+            <a href="profile.html">
+              PROFILE
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="active"
+              href="flow.html"
+            >
+              FLOW
+            </a>
+          </li>
+
+          <li>
+            <a href="faq.html">
+              FAQ
+            </a>
+          </li>
+
+          <li>
+            <a href="comingsoon.html">
+              CONTACT
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+
+    <!-- =========================
+         PAGE HERO
+    ========================= -->
+
+    <section class="page-hero">
+
+      <div class="container">
+
+        <p class="page-label">
+          HOW IT WORKS
+        </p>
+
+        <h1 class="page-title">
+          FLOW
+        </h1>
+
+        <p class="page-subtitle">
+          制作の流れ
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         INTRO
+    ========================= -->
+
+    <section class="intro">
+
+      <div class="container">
+
+        <p class="intro-text">
+          お問い合わせからWebサイトの公開・納品まで、
+          一つひとつ確認しながら進めていきます。
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FLOW
+    ========================= -->
+
+    <section class="flow">
+
+      <div class="container">
+
+        <div class="flow-list">
+
+
+          <!-- 01 -->
+
+          <div class="flow-item">
+
+            <div class="flow-number-area">
+
+              <span class="flow-number">
+                01
+              </span>
+
+            </div>
+
+            <div class="flow-content">
+
+              <p class="flow-en">
+                CONTACT
+              </p>
+
+              <h2>
+                お問い合わせ
+              </h2>
+
+              <p>
+                まずは制作内容やご希望をお聞かせください。
+                「何から始めればいいかわからない」という段階でも大丈夫です。
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- 02 -->
+
+          <div class="flow-item">
+
+            <div class="flow-number-area">
+
+              <span class="flow-number">
+                02
+              </span>
+
+            </div>
+
+            <div class="flow-content">
+
+              <p class="flow-en">
+                HEARING &amp; ESTIMATE
+              </p>
+
+              <h2>
+                ヒアリング・お見積り
+              </h2>
+
+              <p>
+                目的やご希望を整理し、
+                必要なページや機能、制作内容を確認したうえで、
+                料金をご案内します。
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- 03 -->
+
+          <div class="flow-item">
+
+            <div class="flow-number-area">
+
+              <span class="flow-number">
+                03
+              </span>
+
+            </div>
+
+            <div class="flow-content">
+
+              <p class="flow-en">
+                APPLICATION &amp; PAYMENT
+              </p>
+
+              <h2>
+                お申し込み・お支払い
+              </h2>
+
+              <p>
+                制作内容とお見積りをご確認いただき、
+                お申し込み・お支払い確認後に制作を開始します。
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- 04 -->
+
+          <div class="flow-item">
+
+            <div class="flow-number-area">
+
+              <span class="flow-number">
+                04
+              </span>
+
+            </div>
+
+            <div class="flow-content">
+
+              <p class="flow-en">
+                DESIGN &amp; DEVELOPMENT
+              </p>
+
+              <h2>
+                デザイン・制作
+              </h2>
+
+              <p>
+                サイト構成を整理し、
+                デザイン、コーディング、
+                スマートフォン対応などの制作を進めます。
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- 05 -->
+
+          <div class="flow-item">
+
+            <div class="flow-number-area">
+
+              <span class="flow-number">
+                05
+              </span>
+
+            </div>
+
+            <div class="flow-content">
+
+              <p class="flow-en">
+                REVIEW &amp; REVISION
+              </p>
+
+              <h2>
+                ご確認・修正
+              </h2>
+
+              <p>
+                完成前にWebサイトをご確認いただき、
+                必要な修正を行います。
+                内容をご確認いただきながら公開準備を進めます。
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- 06 -->
+
+          <div class="flow-item">
+
+            <div class="flow-number-area">
+
+              <span class="flow-number">
+                06
+              </span>
+
+            </div>
+
+            <div class="flow-content">
+
+              <p class="flow-en">
+                LAUNCH &amp; DELIVERY
+              </p>
+
+              <h2>
+                公開・納品
+              </h2>
+
+              <p>
+                最終確認後、Webサイトを公開します。
+                公開に必要な設定を行い、納品となります。
+              </p>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         DELIVERY
+    ========================= -->
+
+    <section class="delivery">
+
+      <div class="container">
+
+        <div class="delivery-inner">
+
+          <p class="section-label">
+            DELIVERY TIME
+          </p>
+
+          <h2>
+            納期は原則2ヶ月以内。
+          </h2>
+
+          <p>
+            ご契約・制作に必要な素材のご提出完了後から、
+            原則2ヶ月以内を目安に制作します。
+          </p>
+
+          <p>
+            予定より早く完成した場合は、
+            準備が整い次第、公開・納品することも可能です。
+          </p>
+
+          <div class="delivery-note">
+            ※制作内容やページ数、お客様によるご確認・修正の状況、
+            必要素材のご提出時期などにより、
+            納期が前後する場合があります。
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+    ========================= -->
+
+    <section class="cta">
+
+      <div class="container">
+
+        <h2>
+          まずはご相談ください。
+        </h2>
+
+        <p>
+          制作したい内容がまだ決まっていなくても大丈夫です。
+        </p>
+
+        <a
+          class="button"
+          href="comingsoon.html"
+        >
+          無料相談・お見積り
+        </a>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <p>
+        AIを活用しながら、企画・デザインから制作・公開まで自身で手がけています。
+      </p>
+
+      <p>
+        © Emirin
+      </p>
+
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>
