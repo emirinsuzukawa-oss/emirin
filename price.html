@@ -24,7 +24,6 @@
 
     body {
       margin: 0;
-
       font-family:
         "Helvetica Neue",
         Helvetica,
@@ -33,18 +32,23 @@
         "Hiragino Sans",
         Meiryo,
         sans-serif;
-
       color: #202020;
       background: #ffffff;
-
       line-height: 1.8;
-
       -webkit-font-smoothing: antialiased;
+    }
+
+    body.menu-open {
+      overflow: hidden;
     }
 
     a {
       color: inherit;
       text-decoration: none;
+    }
+
+    button {
+      font: inherit;
     }
 
     .container {
@@ -53,85 +57,64 @@
     }
 
 
-    /* =========================
-       HEADER
-    ========================= */
+    /* HEADER */
 
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-
       background: rgba(255, 255, 255, 0.94);
-
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-
       border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     }
 
     .header-inner {
       min-height: 76px;
-
       display: flex;
       align-items: center;
       justify-content: space-between;
-
       gap: 30px;
     }
 
     .logo {
+      position: relative;
+      z-index: 1002;
       font-size: 1.35rem;
       font-weight: 300;
-
       letter-spacing: 0.1em;
-
       white-space: nowrap;
     }
 
 
-    /* =========================
-       NAVIGATION
-    ========================= */
+    /* NAVIGATION */
 
     nav ul {
       display: flex;
       align-items: center;
-
       gap: 24px;
-
       margin: 0;
       padding: 0;
-
       list-style: none;
     }
 
     nav a {
       position: relative;
-
       display: block;
-
       padding: 28px 0 24px;
-
       font-size: 0.75rem;
       font-weight: 500;
-
       letter-spacing: 0.08em;
     }
 
     nav a::after {
       content: "";
-
       position: absolute;
-
       left: 0;
       bottom: 19px;
-
       width: 0;
       height: 1px;
-
       background: #202020;
-
       transition: width 0.25s ease;
     }
 
@@ -141,13 +124,27 @@
     }
 
 
-    /* =========================
-       PAGE HERO
-    ========================= */
+    /* MOBILE MENU BUTTON */
+
+    .menu-button {
+      display: none;
+      position: relative;
+      z-index: 1002;
+      padding: 10px 0;
+      border: 0;
+      background: transparent;
+      color: #202020;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      cursor: pointer;
+    }
+
+
+    /* PAGE HERO */
 
     .page-hero {
       padding: 105px 0 80px;
-
       background:
         radial-gradient(
           circle at 82% 30%,
@@ -164,39 +161,29 @@
 
     .page-label {
       margin: 0 0 12px;
-
       font-size: 0.75rem;
       font-weight: 500;
-
       letter-spacing: 0.16em;
-
       color: #777777;
     }
 
     .page-title {
       margin: 0;
-
       font-size: clamp(3.2rem, 7vw, 5.5rem);
       font-weight: 300;
-
       letter-spacing: 0.06em;
-
       line-height: 1.1;
     }
 
     .page-subtitle {
       margin: 18px 0 0;
-
       font-size: 1rem;
       font-weight: 400;
-
       letter-spacing: 0.08em;
     }
 
 
-    /* =========================
-       INTRO
-    ========================= */
+    /* INTRO */
 
     .intro {
       padding: 90px 0 60px;
@@ -204,18 +191,13 @@
 
     .intro-text {
       max-width: 760px;
-
       margin: 0;
-
       font-size: clamp(1.05rem, 2vw, 1.25rem);
-
       line-height: 2;
     }
 
 
-    /* =========================
-       PRICE
-    ========================= */
+    /* PRICE */
 
     .pricing {
       padding: 20px 0 120px;
@@ -223,232 +205,154 @@
 
     .price-card {
       display: grid;
-
       grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
-
       gap: clamp(45px, 8vw, 100px);
-
       padding: clamp(40px, 6vw, 70px);
-
       border: 1px solid #dddddd;
-
       background: #ffffff;
     }
 
     .price-label {
       margin: 0 0 20px;
-
       font-size: 0.75rem;
       font-weight: 500;
-
       letter-spacing: 0.14em;
-
       color: #777777;
     }
 
     .price-title {
       margin: 0 0 25px;
-
       font-size: clamp(1.5rem, 3vw, 2.2rem);
-
       font-weight: 400;
-
       letter-spacing: 0.04em;
     }
 
     .price {
       margin: 0;
-
       font-size: clamp(2.2rem, 4vw, 3.6rem);
-
       font-weight: 300;
-
       letter-spacing: 0.01em;
-
       line-height: 1.15;
-
       white-space: nowrap;
     }
 
     .price span {
       margin-left: 5px;
-
       font-size: 0.85em;
-
       font-weight: 300;
     }
 
     .price-description {
       margin: 20px 0 0;
-
       font-size: 0.85rem;
-
       color: #777777;
     }
 
     .included-title {
       margin: 0 0 25px;
-
       font-size: 0.75rem;
       font-weight: 500;
-
       letter-spacing: 0.14em;
-
       color: #777777;
     }
 
     .included-list {
       margin: 0;
       padding: 0;
-
       list-style: none;
-
       border-top: 1px solid #dddddd;
     }
 
     .included-list li {
       padding: 15px 0;
-
       border-bottom: 1px solid #dddddd;
-
       font-size: 0.93rem;
     }
 
 
-    /* =========================
-       RUNNING COST
-    ========================= */
+    /* RUNNING COST */
 
     .running-cost {
       padding: 100px 0;
-
       background: #f7f7f7;
     }
 
-    .running-inner {
+    .running-inner,
+    .payment-inner {
       max-width: 850px;
     }
 
     .section-label {
       margin: 0 0 15px;
-
       font-size: 0.75rem;
       font-weight: 500;
-
       letter-spacing: 0.15em;
-
       color: #777777;
     }
 
-    .running-cost h2 {
+    .running-cost h2,
+    .payment h2 {
       margin: 0 0 28px;
-
       font-size: clamp(1.8rem, 3vw, 2.5rem);
-
       font-weight: 400;
-
       letter-spacing: 0.04em;
-
       line-height: 1.5;
     }
 
-    .running-cost p {
+    .running-cost p,
+    .payment p {
       margin: 0 0 18px;
-
       line-height: 2;
     }
 
     .note {
       margin-top: 30px;
-
       padding: 24px 28px;
-
       border-left: 2px solid #bdbdbd;
-
       background: #ffffff;
-
       font-size: 0.85rem;
-
       line-height: 1.9;
-
       color: #666666;
     }
 
 
-    /* =========================
-       PAYMENT
-    ========================= */
+    /* PAYMENT */
 
     .payment {
       padding: 100px 0;
     }
 
-    .payment-inner {
-      max-width: 850px;
-    }
 
-    .payment h2 {
-      margin: 0 0 28px;
-
-      font-size: clamp(1.8rem, 3vw, 2.5rem);
-
-      font-weight: 400;
-
-      letter-spacing: 0.04em;
-    }
-
-    .payment p {
-      margin: 0 0 15px;
-
-      line-height: 2;
-    }
-
-
-    /* =========================
-       CTA
-    ========================= */
+    /* CTA */
 
     .cta {
       padding: 110px 0;
-
       text-align: center;
-
       background: #f7f7f7;
     }
 
     .cta h2 {
       margin: 0 0 15px;
-
       font-size: clamp(1.8rem, 3vw, 2.5rem);
-
       font-weight: 400;
-
       letter-spacing: 0.05em;
     }
 
     .cta p {
       margin: 0 0 30px;
-
       color: #666666;
     }
 
     .button {
       display: inline-flex;
-
       align-items: center;
       justify-content: center;
-
       min-width: 210px;
-
       padding: 14px 28px;
-
       border: 1px solid #202020;
       border-radius: 999px;
-
       font-size: 0.9rem;
-
       letter-spacing: 0.04em;
-
       transition:
         background 0.25s ease,
         color 0.25s ease,
@@ -457,33 +361,24 @@
 
     .button:hover {
       color: #ffffff;
-
       background: #202020;
-
       transform: translateY(-2px);
     }
 
 
-    /* =========================
-       FOOTER
-    ========================= */
+    /* FOOTER */
 
     footer {
       padding: 40px 0;
-
       border-top: 1px solid #eeeeee;
     }
 
     .footer-inner {
       display: flex;
-
       justify-content: space-between;
       align-items: center;
-
       gap: 30px;
-
       font-size: 0.75rem;
-
       color: #777777;
     }
 
@@ -492,9 +387,7 @@
     }
 
 
-    /* =========================
-       TABLET
-    ========================= */
+    /* TABLET */
 
     @media (max-width: 900px) {
 
@@ -512,9 +405,7 @@
     }
 
 
-    /* =========================
-       MOBILE
-    ========================= */
+    /* MOBILE */
 
     @media (max-width: 720px) {
 
@@ -526,7 +417,59 @@
         font-size: 1.2rem;
       }
 
+      .menu-button {
+        display: block;
+      }
+
       nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100dvh;
+        padding: 105px 5% 40px;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition:
+          opacity 0.25s ease,
+          visibility 0.25s ease,
+          transform 0.25s ease;
+        overflow-y: auto;
+        z-index: 1001;
+      }
+
+      nav.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        width: 100%;
+      }
+
+      nav li {
+        width: 100%;
+        border-bottom: 1px solid #eeeeee;
+      }
+
+      nav a {
+        width: 100%;
+        padding: 17px 0;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+      }
+
+      nav a::after {
         display: none;
       }
 
@@ -548,13 +491,11 @@
 
       .price-card {
         padding: 32px 24px;
-
         gap: 45px;
       }
 
       .price {
         font-size: clamp(2rem, 10vw, 3rem);
-
         white-space: nowrap;
       }
 
@@ -569,9 +510,7 @@
 
       .footer-inner {
         flex-direction: column;
-
         align-items: flex-start;
-
         gap: 10px;
       }
     }
@@ -582,11 +521,6 @@
 
 <body>
 
-
-  <!-- =========================
-       HEADER
-  ========================= -->
-
   <header>
 
     <div class="container header-inner">
@@ -595,55 +529,37 @@
         Emirin
       </a>
 
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+        aria-controls="global-nav"
+      >
+        MENU
+      </button>
 
-      <nav>
+      <nav id="global-nav">
 
         <ul>
 
-          <li>
-            <a href="index.html">
-              HOME
-            </a>
-          </li>
+          <li><a href="index.html">HOME</a></li>
+
+          <li><a href="service.html">SERVICE</a></li>
+
+          <li><a href="works.html">WORKS</a></li>
 
           <li>
-            <a href="service.html">
-              SERVICE
-            </a>
-          </li>
-
-          <li>
-            <a href="works.html">
-              WORKS
-            </a>
-          </li>
-
-          <li>
-            <a
-              class="active"
-              href="price.html"
-            >
+            <a class="active" href="price.html">
               PRICE
             </a>
           </li>
 
-          <li>
-            <a href="profile.html">
-              PROFILE
-            </a>
-          </li>
+          <li><a href="profile.html">PROFILE</a></li>
 
-          <li>
-            <a href="flow.html">
-              FLOW
-            </a>
-          </li>
+          <li><a href="flow.html">FLOW</a></li>
 
-          <li>
-            <a href="faq.html">
-              FAQ
-            </a>
-          </li>
+          <li><a href="faq.html">FAQ</a></li>
 
           <li>
             <a
@@ -666,11 +582,6 @@
 
   <main>
 
-
-    <!-- =========================
-         PAGE HERO
-    ========================= -->
-
     <section class="page-hero">
 
       <div class="container">
@@ -692,10 +603,6 @@
     </section>
 
 
-    <!-- =========================
-         INTRO
-    ========================= -->
-
     <section class="intro">
 
       <div class="container">
@@ -710,16 +617,11 @@
     </section>
 
 
-    <!-- =========================
-         PRICE
-    ========================= -->
-
     <section class="pricing">
 
       <div class="container">
 
         <div class="price-card">
-
 
           <div>
 
@@ -750,38 +652,23 @@
 
             <ul class="included-list">
 
-              <li>
-                ヒアリング
-              </li>
+              <li>ヒアリング</li>
 
-              <li>
-                企画・コンセプト設計
-              </li>
+              <li>企画・コンセプト設計</li>
 
-              <li>
-                サイト構成
-              </li>
+              <li>サイト構成</li>
 
-              <li>
-                Webデザイン
-              </li>
+              <li>Webデザイン</li>
 
-              <li>
-                コーディング
-              </li>
+              <li>コーディング</li>
 
-              <li>
-                スマートフォン対応
-              </li>
+              <li>スマートフォン対応</li>
 
-              <li>
-                公開設定
-              </li>
+              <li>公開設定</li>
 
             </ul>
 
           </div>
-
 
         </div>
 
@@ -789,10 +676,6 @@
 
     </section>
 
-
-    <!-- =========================
-         RUNNING COST
-    ========================= -->
 
     <section class="running-cost">
 
@@ -832,10 +715,6 @@
     </section>
 
 
-    <!-- =========================
-         PAYMENT
-    ========================= -->
-
     <section class="payment">
 
       <div class="container">
@@ -871,10 +750,6 @@
     </section>
 
 
-    <!-- =========================
-         CTA
-    ========================= -->
-
     <section class="cta">
 
       <div class="container">
@@ -900,13 +775,8 @@
 
     </section>
 
-
   </main>
 
-
-  <!-- =========================
-       FOOTER
-  ========================= -->
 
   <footer>
 
@@ -923,6 +793,59 @@
     </div>
 
   </footer>
+
+
+  <script>
+
+    const menuButton = document.querySelector(".menu-button");
+    const navigation = document.querySelector("#global-nav");
+
+    menuButton.addEventListener("click", function () {
+
+      const isOpen = navigation.classList.toggle("open");
+
+      document.body.classList.toggle("menu-open", isOpen);
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+
+      menuButton.setAttribute(
+        "aria-label",
+        isOpen ? "メニューを閉じる" : "メニューを開く"
+      );
+
+      menuButton.textContent = isOpen ? "CLOSE" : "MENU";
+
+    });
+
+
+    navigation.querySelectorAll("a").forEach(function (link) {
+
+      link.addEventListener("click", function () {
+
+        navigation.classList.remove("open");
+
+        document.body.classList.remove("menu-open");
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+        menuButton.setAttribute(
+          "aria-label",
+          "メニューを開く"
+        );
+
+        menuButton.textContent = "MENU";
+
+      });
+
+    });
+
+  </script>
 
 
 </body>
