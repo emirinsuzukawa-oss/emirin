@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PRICE｜Emirin｜AI × Web Creative Director / Designer</title>
+
+  <meta
+    name="description"
+    content="EmirinのWebサイト制作料金。企画・コンセプト設計、デザイン、制作、スマートフォン対応、公開設定まで一貫して対応します。"
+  >
+
+  <style>
+
+    /* =========================
+       BASIC
+    ========================= */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+
+      font-family:
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        Meiryo,
+        sans-serif;
+
+      color: #202020;
+      background: #ffffff;
+
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, 90%);
+      margin: 0 auto;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(255, 255, 255, 0.94);
+
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .header-inner {
+      min-height: 76px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 300;
+
+      letter-spacing: 0.1em;
+
+      white-space: nowrap;
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav ul {
+      display: flex;
+      align-items: center;
+
+      gap: 24px;
+
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
+    }
+
+    nav a {
+      position: relative;
+
+      display: block;
+
+      padding: 28px 0 24px;
+
+      font-size: 0.75rem;
+      font-weight: 500;
+
+      letter-spacing: 0.08em;
+    }
+
+    nav a::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      bottom: 19px;
+
+      width: 0;
+      height: 1px;
+
+      background: #202020;
+
+      transition: width 0.25s ease;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+
+    /* =========================
+       PAGE HERO
+    ========================= */
+
+    .page-hero {
+      padding: 105px 0 80px;
+
+      background:
+        radial-gradient(
+          circle at 82% 30%,
+          rgba(226, 229, 233, 0.7),
+          transparent 32%
+        ),
+        linear-gradient(
+          135deg,
+          #ffffff 0%,
+          #fafafa 55%,
+          #f4f4f4 100%
+        );
+    }
+
+    .page-label {
+      margin: 0 0 12px;
+
+      font-size: 0.75rem;
+      font-weight: 500;
+
+      letter-spacing: 0.16em;
+
+      color: #777777;
+    }
+
+    .page-title {
+      margin: 0;
+
+      font-size: clamp(3.2rem, 7vw, 5.5rem);
+      font-weight: 300;
+
+      letter-spacing: 0.06em;
+
+      line-height: 1.1;
+    }
+
+    .page-subtitle {
+      margin: 18px 0 0;
+
+      font-size: 1rem;
+      font-weight: 400;
+
+      letter-spacing: 0.08em;
+    }
+
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .intro {
+      padding: 90px 0 55px;
+    }
+
+    .intro-text {
+      max-width: 760px;
+
+      margin: 0;
+
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+
+      line-height: 2;
+    }
+
+
+    /* =========================
+       PRICE
+    ========================= */
+
+    .price-section {
+      padding: 20px 0 110px;
+    }
+
+    .price-card {
+      display: grid;
+
+      grid-template-columns: 0.8fr 1.2fr;
+
+      border: 1px solid #dedede;
+
+      background: #ffffff;
+    }
+
+    .price-main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      padding: 60px;
+
+      background:
+        radial-gradient(
+          circle at 15% 15%,
+          rgba(225, 228, 232, 0.8),
+          transparent 35%
+        ),
+        linear-gradient(
+          135deg,
+          #fafafa 0%,
+          #f3f3f3 100%
+        );
+    }
+
+    .price-label {
+      margin: 0 0 24px;
+
+      font-size: 0.75rem;
+      font-weight: 500;
+
+      letter-spacing: 0.15em;
+
+      color: #777777;
+    }
+
+    .price-main h2 {
+      margin: 0 0 24px;
+
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
+
+      font-weight: 400;
+
+      letter-spacing: 0.04em;
+    }
+
+    .price {
+      margin: 0;
+
+      font-size: clamp(3rem, 6vw, 5rem);
+
+      font-weight: 300;
+
+      letter-spacing: 0.02em;
+
+      line-height: 1.1;
+    }
+
+    .price span {
+      margin-left: 8px;
+
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    .price-detail {
+      padding: 60px;
+    }
+
+    .price-detail h3 {
+      margin: 0 0 28px;
+
+      font-size: 1rem;
+      font-weight: 600;
+
+      letter-spacing: 0.06em;
+    }
+
+    .included-list {
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
+    }
+
+    .included-list li {
+      position: relative;
+
+      padding: 14px 0 14px 28px;
+
+      border-bottom: 1px solid #eeeeee;
+
+      font-size: 0.95rem;
+    }
+
+    .included-list li::before {
+      content: "—";
+
+      position: absolute;
+
+      left: 0;
+
+      color: #888888;
+    }
+
+
+    /* =========================
+       MONTHLY
+    ========================= */
+
+    .monthly {
+      padding: 100px 0;
+
+      background: #f7f7f7;
+    }
+
+    .monthly-inner {
+      max-width: 850px;
+    }
+
+    .section-label {
+      margin: 0 0 15px;
+
+      font-size: 0.75rem;
+      font-weight: 500;
+
+      letter-spacing: 0.15em;
+
+      color: #777777;
+    }
+
+    .monthly h2 {
+      margin: 0 0 28px;
+
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+
+      font-weight: 400;
+
+      letter-spacing: 0.04em;
+
+      line-height: 1.5;
+    }
+
+    .monthly h2 strong {
+      font-size: 1.35em;
+      font-weight: 500;
+    }
+
+    .monthly p {
+      margin: 0 0 20px;
+
+      line-height: 2;
+    }
+
+    .notice {
+      margin-top: 35px;
+
+      padding: 25px 28px;
+
+      border-left: 2px solid #bdbdbd;
+
+      background: #ffffff;
+
+      font-size: 0.82rem;
+
+      line-height: 1.9;
+
+      color: #666666;
+    }
+
+
+    /* =========================
+       PAYMENT
+    ========================= */
+
+    .payment {
+      padding: 100px 0;
+    }
+
+    .payment-grid {
+      display: grid;
+
+      grid-template-columns: 0.65fr 1.35fr;
+
+      gap: 70px;
+
+      align-items: start;
+    }
+
+    .payment h2 {
+      margin: 0;
+
+      font-size: clamp(1.7rem, 3vw, 2.3rem);
+
+      font-weight: 400;
+
+      letter-spacing: 0.04em;
+    }
+
+    .payment-content {
+      border-top: 1px solid #dddddd;
+    }
+
+    .payment-row {
+      display: grid;
+
+      grid-template-columns: 150px 1fr;
+
+      gap: 30px;
+
+      padding: 26px 0;
+
+      border-bottom: 1px solid #dddddd;
+    }
+
+    .payment-row strong {
+      font-size: 0.85rem;
+
+      letter-spacing: 0.04em;
+    }
+
+    .payment-row p {
+      margin: 0;
+
+      font-size: 0.94rem;
+    }
+
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      padding: 110px 0;
+
+      text-align: center;
+
+      background:
+        linear-gradient(
+          135deg,
+          #fafafa,
+          #f4f4f4
+        );
+    }
+
+    .cta h2 {
+      margin: 0 0 15px;
+
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+
+      font-weight: 400;
+
+      letter-spacing: 0.05em;
+    }
+
+    .cta p {
+      margin: 0 0 30px;
+
+      color: #666666;
+    }
+
+    .button {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      min-width: 210px;
+
+      padding: 14px 28px;
+
+      border: 1px solid #202020;
+      border-radius: 999px;
+
+      font-size: 0.9rem;
+
+      letter-spacing: 0.04em;
+
+      transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .button:hover {
+      color: #ffffff;
+
+      background: #202020;
+
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 40px 0;
+
+      border-top: 1px solid #eeeeee;
+    }
+
+    .footer-inner {
+      display: flex;
+
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 30px;
+
+      font-size: 0.75rem;
+
+      color: #777777;
+    }
+
+    .footer-inner p {
+      margin: 0;
+    }
+
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      nav ul {
+        gap: 13px;
+      }
+
+      nav a {
+        font-size: 0.67rem;
+      }
+
+      .price-card {
+        grid-template-columns: 1fr;
+      }
+
+      .payment-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+      }
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 720px) {
+
+      .header-inner {
+        min-height: 68px;
+      }
+
+      .logo {
+        font-size: 1.2rem;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .page-hero {
+        padding: 75px 0 60px;
+      }
+
+      .page-title {
+        font-size: clamp(2.8rem, 15vw, 4rem);
+      }
+
+      .intro {
+        padding: 65px 0 45px;
+      }
+
+      .price-section {
+        padding-bottom: 75px;
+      }
+
+      .price-main,
+      .price-detail {
+        padding: 38px 28px;
+      }
+
+      .monthly {
+        padding: 75px 0;
+      }
+
+      .payment {
+        padding: 75px 0;
+      }
+
+      .payment-row {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+      }
+
+      .cta {
+        padding: 80px 0;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header>
+
+    <div class="container header-inner">
+
+      <a class="logo" href="index.html">
+        Emirin
+      </a>
+
+
+      <nav>
+
+        <ul>
+
+          <li>
+            <a href="index.html">
+              HOME
+            </a>
+          </li>
+
+          <li>
+            <a href="service.html">
+              SERVICE
+            </a>
+          </li>
+
+          <li>
+            <a href="works.html">
+              WORKS
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="active"
+              href="price.html"
+            >
+              PRICE
+            </a>
+          </li>
+
+          <li>
+            <a href="profile.html">
+              PROFILE
+            </a>
+          </li>
+
+          <li>
+            <a href="flow.html">
+              FLOW
+            </a>
+          </li>
+
+          <li>
+            <a href="faq.html">
+              FAQ
+            </a>
+          </li>
+
+          <li>
+            <a href="comingsoon.html">
+              CONTACT
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+
+    <!-- =========================
+         PAGE HERO
+    ========================= -->
+
+    <section class="page-hero">
+
+      <div class="container">
+
+        <p class="page-label">
+          PLAN &amp; PRICE
+        </p>
+
+        <h1 class="page-title">
+          PRICE
+        </h1>
+
+        <p class="page-subtitle">
+          料金
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         INTRO
+    ========================= -->
+
+    <section class="intro">
+
+      <div class="container">
+
+        <p class="intro-text">
+          企画・コンセプト設計からデザイン、制作、公開まで。
+          Webサイトに必要な工程を一貫してサポートします。
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRICE
+    ========================= -->
+
+    <section class="price-section">
+
+      <div class="container">
+
+        <div class="price-card">
+
+
+          <div class="price-main">
+
+            <p class="price-label">
+              WEB SITE PRODUCTION
+            </p>
+
+            <h2>
+              Webサイト制作
+            </h2>
+
+            <p class="price">
+              60,000円<span>〜</span>
+            </p>
+
+          </div>
+
+
+          <div class="price-detail">
+
+            <h3>
+              基本料金に含まれる内容
+            </h3>
+
+            <ul class="included-list">
+
+              <li>
+                ヒアリング
+              </li>
+
+              <li>
+                企画・コンセプト設計
+              </li>
+
+              <li>
+                サイト構成
+              </li>
+
+              <li>
+                Webデザイン
+              </li>
+
+              <li>
+                コーディング
+              </li>
+
+              <li>
+                スマートフォン対応
+              </li>
+
+              <li>
+                公開設定
+              </li>
+
+            </ul>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         MONTHLY COST
+    ========================= -->
+
+    <section class="monthly">
+
+      <div class="container">
+
+        <div class="monthly-inner">
+
+          <p class="section-label">
+            RUNNING COST
+          </p>
+
+          <h2>
+            公開後の月額維持費
+            <strong>0円</strong>
+            で運用できる方法にも対応。
+          </h2>
+
+          <p>
+            Webサイトの内容や用途に応じて、
+            公開後に月額のサーバー管理費をかけずに
+            運用できる方法をご提案することも可能です。
+          </p>
+
+          <p>
+            必要なときだけ文章や画像の変更、
+            ページ追加などをご依頼いただくこともできます。
+          </p>
+
+          <div class="notice">
+            ※現在のサービス・無料プランの提供条件に基づきます。
+            独自ドメイン、有料外部サービス等の利用、
+            または提供元の料金・仕様変更等により、
+            別途費用が発生する場合があります。
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PAYMENT
+    ========================= -->
+
+    <section class="payment">
+
+      <div class="container">
+
+        <div class="payment-grid">
+
+
+          <div>
+
+            <p class="section-label">
+              PAYMENT
+            </p>
+
+            <h2>
+              お支払いについて
+            </h2>
+
+          </div>
+
+
+          <div class="payment-content">
+
+
+            <div class="payment-row">
+
+              <strong>
+                お支払い
+              </strong>
+
+              <p>
+                原則一括払い（分割払い応相談）
+              </p>
+
+            </div>
+
+
+            <div class="payment-row">
+
+              <strong>
+                制作料金
+              </strong>
+
+              <p>
+                サイトのページ数、機能、制作内容などにより
+                料金が変わる場合があります。
+                ヒアリング後にお見積りをご案内します。
+              </p>
+
+            </div>
+
+
+            <div class="payment-row">
+
+              <strong>
+                外部サービス
+              </strong>
+
+              <p>
+                独自ドメインや有料の外部サービスなどを
+                利用する場合は、制作料金とは別に
+                実費が必要となる場合があります。
+              </p>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+    ========================= -->
+
+    <section class="cta">
+
+      <div class="container">
+
+        <h2>
+          まずはご相談ください。
+        </h2>
+
+        <p>
+          ご希望の内容を伺ったうえで、お見積りをご案内します。
+        </p>
+
+        <a
+          class="button"
+          href="comingsoon.html"
+        >
+          無料相談・お見積り
+        </a>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <p>
+        AIを活用しながら、企画・デザインから制作・公開まで自身で手がけています。
+      </p>
+
+      <p>
+        © Emirin
+      </p>
+
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>
