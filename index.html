@@ -5,18 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Emirin｜AI × Web Creative Director / Designer</title>
+  <title>えみりん｜AI × Web Creative Director / Designer｜Webサイト制作</title>
 
   <meta
     name="description"
-    content="AIを活用したWebサイト制作。企画・コンセプト設計からデザイン、制作、情報発信、マーケティングまで一貫してサポートします。"
+    content="AI × Web Creative Director / Designer えみりん。企画・コンセプト設計からWebデザイン、制作、公開、情報発信まで一貫してサポートします。"
   >
 
   <style>
-
-    /* =========================
-       BASIC
-    ========================= */
 
     * {
       box-sizing: border-box;
@@ -28,7 +24,6 @@
 
     body {
       margin: 0;
-
       font-family:
         "Helvetica Neue",
         Helvetica,
@@ -37,10 +32,8 @@
         "Hiragino Sans",
         Meiryo,
         sans-serif;
-
       color: #202020;
       background: #ffffff;
-
       line-height: 1.8;
       -webkit-font-smoothing: antialiased;
     }
@@ -61,86 +54,57 @@
       margin: 0 auto;
     }
 
-
-    /* =========================
-       HEADER
-    ========================= */
-
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-
       background: rgba(255, 255, 255, 0.94);
-
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-
       border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     }
 
     .header-inner {
       min-height: 76px;
-
       display: flex;
       align-items: center;
       justify-content: space-between;
-
       gap: 30px;
     }
 
     .logo {
       font-size: 1.35rem;
       font-weight: 300;
-
       letter-spacing: 0.1em;
-
       white-space: nowrap;
     }
-
-
-    /* =========================
-       NAVIGATION
-    ========================= */
 
     nav ul {
       display: flex;
       align-items: center;
-
       gap: 24px;
-
       margin: 0;
       padding: 0;
-
       list-style: none;
     }
 
     nav a {
       position: relative;
-
       display: block;
-
       padding: 28px 0 24px;
-
       font-size: 0.75rem;
       font-weight: 500;
-
       letter-spacing: 0.08em;
     }
 
     nav a::after {
       content: "";
-
       position: absolute;
-
       left: 0;
       bottom: 19px;
-
       width: 0;
       height: 1px;
-
       background: #202020;
-
       transition: width 0.25s ease;
     }
 
@@ -149,26 +113,17 @@
       width: 100%;
     }
 
-
-    /* =========================
-       HERO
-    ========================= */
-
     .hero {
       min-height: calc(100vh - 76px);
-
       display: flex;
       align-items: center;
-
-      padding: 80px 0;
-
-      overflow: hidden;
+      padding: 85px 0;
 
       background:
         radial-gradient(
-          circle at 82% 30%,
+          circle at 82% 28%,
           rgba(226, 229, 233, 0.72),
-          transparent 32%
+          transparent 30%
         ),
         linear-gradient(
           135deg,
@@ -180,93 +135,52 @@
 
     .hero-grid {
       display: grid;
-
-      grid-template-columns:
-        minmax(0, 1.25fr)
-        minmax(300px, 0.75fr);
-
-      align-items: center;
-
+      grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
       gap: clamp(50px, 8vw, 110px);
+      align-items: center;
     }
 
-
-    /* =========================
-       HERO TEXT
-    ========================= */
-
     .hero-name {
-      margin: 0;
-
+      margin: 0 0 16px;
       font-size: clamp(3.4rem, 6vw, 5.2rem);
-
       font-weight: 300;
-
-      letter-spacing: 0.07em;
-
+      letter-spacing: 0.06em;
       line-height: 1.05;
     }
 
     .hero-title {
-      margin: 25px 0 0;
-
+      margin: 0 0 22px;
       font-size: clamp(1.5rem, 2.7vw, 2.1rem);
-
       font-weight: 700;
-
-      letter-spacing: 0.025em;
-
       line-height: 1.4;
     }
 
     .hero-catch {
-      margin: 22px 0 32px;
-
+      margin: 0 0 35px;
       font-size: clamp(1.45rem, 2.5vw, 2rem);
-
       font-weight: 300;
-
-      letter-spacing: 0.07em;
-
+      letter-spacing: 0.04em;
       line-height: 1.5;
     }
 
-    .hero-description {
-      max-width: 700px;
-
-      margin: 0 0 18px;
-
-      font-size: 0.98rem;
-
+    .hero-text {
+      max-width: 680px;
+      margin: 0 0 20px;
+      font-size: 0.97rem;
       line-height: 2;
-    }
-
-
-    /* =========================
-       BUTTON
-    ========================= */
-
-    .button-area {
-      margin-top: 35px;
     }
 
     .button {
       display: inline-flex;
-
       align-items: center;
       justify-content: center;
-
       min-width: 210px;
-
+      margin-top: 18px;
       padding: 14px 28px;
-
       border: 1px solid #202020;
       border-radius: 999px;
-
       font-size: 0.9rem;
-
       letter-spacing: 0.04em;
-
       transition:
         background 0.25s ease,
         color 0.25s ease,
@@ -276,14 +190,8 @@
     .button:hover {
       color: #ffffff;
       background: #202020;
-
       transform: translateY(-2px);
     }
-
-
-    /* =========================
-       PHOTO
-    ========================= */
 
     .hero-visual {
       position: relative;
@@ -291,145 +199,105 @@
 
     .hero-visual::before {
       content: "";
-
       position: absolute;
-
-      width: 76%;
-      height: 76%;
-
-      right: -30px;
-      top: -30px;
-
+      width: 82%;
+      height: 82%;
+      right: -25px;
+      top: -25px;
       border: 1px solid rgba(0, 0, 0, 0.08);
-
       z-index: 0;
     }
 
     .hero-photo {
       position: relative;
-
       z-index: 1;
-
       width: 100%;
-      max-width: 400px;
-
+      max-width: 430px;
       margin-left: auto;
-
       aspect-ratio: 4 / 5;
-
       object-fit: cover;
       object-position: center;
-
-      box-shadow:
-        0 30px 80px
-        rgba(0, 0, 0, 0.12);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.11);
     }
-
-
-    /* =========================
-       EXPLORE
-    ========================= */
 
     .explore {
-      padding: 90px 0;
-
-      background: #ffffff;
+      padding: 110px 0;
     }
 
-    .explore-label {
-      margin: 0 0 42px;
-
+    .section-label {
+      margin: 0 0 12px;
       font-size: 0.75rem;
       font-weight: 500;
-
       letter-spacing: 0.16em;
+      color: #777777;
+    }
+
+    .section-title {
+      margin: 0 0 55px;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 300;
+      letter-spacing: 0.04em;
     }
 
     .explore-grid {
       display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      border-top: 1px solid #dedede;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid #dddddd;
+      border-left: 1px solid #dddddd;
     }
 
-    .explore-link {
-      display: block;
-
-      padding: 30px 20px 30px 0;
-
-      border-bottom: 1px solid #dedede;
-
+    .explore-card {
+      min-height: 210px;
+      padding: 35px;
+      border-right: 1px solid #dddddd;
+      border-bottom: 1px solid #dddddd;
       transition:
-        opacity 0.25s ease,
+        background 0.25s ease,
         transform 0.25s ease;
     }
 
-    .explore-link:nth-child(3n + 2),
-    .explore-link:nth-child(3n + 3) {
-      padding-left: 30px;
+    .explore-card:hover {
+      background: #f7f7f7;
     }
 
-    .explore-link:hover {
-      opacity: 0.5;
-
-      transform: translateX(5px);
-    }
-
-    .explore-en {
+    .explore-number {
       display: block;
-
-      margin-bottom: 4px;
-
-      font-size: 1.05rem;
-      font-weight: 500;
-
-      letter-spacing: 0.08em;
+      margin-bottom: 35px;
+      font-size: 0.7rem;
+      color: #999999;
+      letter-spacing: 0.12em;
     }
 
-    .explore-ja {
-      display: block;
+    .explore-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.25rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+    }
 
-      font-size: 0.78rem;
-
+    .explore-card p {
+      margin: 0;
+      font-size: 0.85rem;
       color: #777777;
     }
 
-
-    /* =========================
-       FOOTER
-    ========================= */
-
     footer {
       padding: 40px 0;
-
       border-top: 1px solid #eeeeee;
-
-      background: #ffffff;
     }
 
     .footer-inner {
       display: flex;
-
       justify-content: space-between;
       align-items: center;
-
       gap: 30px;
-
       font-size: 0.75rem;
-
       color: #777777;
     }
 
     .footer-inner p {
       margin: 0;
     }
-
-
-    /* =========================
-       TABLET
-    ========================= */
 
     @media (max-width: 900px) {
 
@@ -443,32 +311,17 @@
 
       .hero-grid {
         grid-template-columns: 1fr;
-
-        gap: 55px;
       }
 
       .hero-photo {
-        width: min(100%, 390px);
-
-        margin: 0 auto;
+        margin: 30px 0 0;
+        width: min(100%, 430px);
       }
 
       .explore-grid {
-        grid-template-columns:
-          repeat(2, 1fr);
-      }
-
-      .explore-link,
-      .explore-link:nth-child(3n + 2),
-      .explore-link:nth-child(3n + 3) {
-        padding-left: 0;
+        grid-template-columns: repeat(2, 1fr);
       }
     }
-
-
-    /* =========================
-       MOBILE
-    ========================= */
 
     @media (max-width: 720px) {
 
@@ -486,34 +339,27 @@
 
       .hero {
         min-height: auto;
+        padding: 70px 0;
+      }
 
-        padding: 65px 0 75px;
+      .hero-grid {
+        gap: 45px;
       }
 
       .hero-name {
-        font-size: clamp(3rem, 15vw, 4.3rem);
+        font-size: clamp(3rem, 16vw, 4.2rem);
       }
 
       .hero-title {
-        margin-top: 22px;
-
         font-size: 1.4rem;
       }
 
       .hero-catch {
-        margin-top: 18px;
-
-        font-size: 1.35rem;
-      }
-
-      .hero-description {
-        font-size: 0.94rem;
-
-        line-height: 1.9;
+        font-size: 1.4rem;
       }
 
       .explore {
-        padding: 70px 0;
+        padding: 80px 0;
       }
 
       .explore-grid {
@@ -522,9 +368,7 @@
 
       .footer-inner {
         flex-direction: column;
-
         align-items: flex-start;
-
         gap: 10px;
       }
     }
@@ -535,32 +379,20 @@
 
 <body>
 
-
-  <!-- =========================
-       HEADER
-  ========================= -->
-
   <header>
 
     <div class="container header-inner">
 
-      <a
-        class="logo"
-        href="index.html"
-      >
+      <a class="logo" href="index.html">
         Emirin
       </a>
-
 
       <nav>
 
         <ul>
 
           <li>
-            <a
-              class="active"
-              href="index.html"
-            >
+            <a class="active" href="index.html">
               HOME
             </a>
           </li>
@@ -602,7 +434,11 @@
           </li>
 
           <li>
-            <a href="comingsoon.html">
+            <a
+              href="https://forms.gle/8iQKXtGYebTbxYhW6"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               CONTACT
             </a>
           </li>
@@ -616,66 +452,49 @@
   </header>
 
 
-  <!-- =========================
-       HOME
-  ========================= -->
-
   <main>
-
 
     <section class="hero">
 
       <div class="container hero-grid">
 
-
-        <!-- TEXT -->
-
-        <div>
+        <div class="hero-content">
 
           <h1 class="hero-name">
             Emirin
           </h1>
 
-
           <p class="hero-title">
             AI × Web Creative Director / Designer
           </p>
 
-
-          <h2 class="hero-catch">
+          <p class="hero-catch">
             アイデアを、伝わるカタチに。
-          </h2>
+          </p>
 
-
-          <p class="hero-description">
+          <p class="hero-text">
             会社やお店、個人の魅力をインターネットで伝えるお手伝いをしています。
             AIを活用して、WebサイトやSNSなどの企画・デザイン・制作を行います。
           </p>
 
-
-          <p class="hero-description">
+          <p class="hero-text">
             「何を作ればいいかわからない」という段階から、
             目的や伝えたいことを整理し、
             企画・コンセプト設計からデザイン、制作、情報発信、
             マーケティングまで一貫してサポートします。
           </p>
 
-
-          <div class="button-area">
-
-            <a
-              class="button"
-              href="comingsoon.html"
-            >
-              無料相談・お見積り
-            </a>
-
-          </div>
+          <a
+            class="button"
+            href="https://forms.gle/8iQKXtGYebTbxYhW6"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            無料相談・お見積り
+          </a>
 
         </div>
 
-
-        <!-- PHOTO -->
 
         <div class="hero-visual">
 
@@ -687,111 +506,126 @@
 
         </div>
 
-
       </div>
 
     </section>
 
 
-    <!-- =========================
-         EXPLORE
-    ========================= -->
-
     <section class="explore">
 
       <div class="container">
 
-        <p class="explore-label">
+        <p class="section-label">
           EXPLORE
         </p>
+
+        <h2 class="section-title">
+          More about my work.
+        </h2>
 
 
         <div class="explore-grid">
 
+          <a class="explore-card" href="service.html">
 
-          <a
-            class="explore-link"
-            href="service.html"
-          >
-            <span class="explore-en">
+            <span class="explore-number">
+              01
+            </span>
+
+            <h3>
               SERVICE
-            </span>
+            </h3>
 
-            <span class="explore-ja">
+            <p>
               サービス
-            </span>
+            </p>
+
           </a>
 
 
-          <a
-            class="explore-link"
-            href="works.html"
-          >
-            <span class="explore-en">
+          <a class="explore-card" href="works.html">
+
+            <span class="explore-number">
+              02
+            </span>
+
+            <h3>
               WORKS
-            </span>
+            </h3>
 
-            <span class="explore-ja">
+            <p>
               制作実績
-            </span>
+            </p>
+
           </a>
 
 
-          <a
-            class="explore-link"
-            href="price.html"
-          >
-            <span class="explore-en">
+          <a class="explore-card" href="price.html">
+
+            <span class="explore-number">
+              03
+            </span>
+
+            <h3>
               PRICE
-            </span>
+            </h3>
 
-            <span class="explore-ja">
+            <p>
               料金
-            </span>
+            </p>
+
           </a>
 
 
-          <a
-            class="explore-link"
-            href="profile.html"
-          >
-            <span class="explore-en">
+          <a class="explore-card" href="profile.html">
+
+            <span class="explore-number">
+              04
+            </span>
+
+            <h3>
               PROFILE
-            </span>
+            </h3>
 
-            <span class="explore-ja">
+            <p>
               プロフィール
-            </span>
+            </p>
+
           </a>
 
 
-          <a
-            class="explore-link"
-            href="flow.html"
-          >
-            <span class="explore-en">
+          <a class="explore-card" href="flow.html">
+
+            <span class="explore-number">
+              05
+            </span>
+
+            <h3>
               FLOW
-            </span>
+            </h3>
 
-            <span class="explore-ja">
+            <p>
               制作の流れ
-            </span>
+            </p>
+
           </a>
 
 
-          <a
-            class="explore-link"
-            href="faq.html"
-          >
-            <span class="explore-en">
+          <a class="explore-card" href="faq.html">
+
+            <span class="explore-number">
+              06
+            </span>
+
+            <h3>
               FAQ
-            </span>
+            </h3>
 
-            <span class="explore-ja">
+            <p>
               よくあるご質問
-            </span>
-          </a>
+            </p>
 
+          </a>
 
         </div>
 
@@ -799,13 +633,8 @@
 
     </section>
 
-
   </main>
 
-
-  <!-- =========================
-       FOOTER
-  ========================= -->
 
   <footer>
 
@@ -822,7 +651,6 @@
     </div>
 
   </footer>
-
 
 </body>
 
