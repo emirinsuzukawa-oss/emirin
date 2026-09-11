@@ -6,7 +6,11 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CTE1SCYRW"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
     gtag('config', 'G-6CTE1SCYRW');
   </script>
@@ -16,26 +20,71 @@
 
   <title>PRICE｜Emirin｜AI × Web Creative Director / Designer</title>
 
-  <link rel="canonical" href="https://emirinsuzukawa-oss.github.io/emirin/price.html">
+  <link
+    rel="canonical"
+    href="https://emirinsuzukawa-oss.github.io/emirin/price.html"
+  >
 
   <!-- OGP -->
-  <meta property="og:title" content="えみりん｜AI × Web Creative Director / Designer｜Webサイト制作">
-  <meta property="og:description" content="AI × Web Creative Director / Designer えみりん。企画・コンセプト設計からWebデザイン、制作、情報発信、マーケティングまで一貫してサポートします。">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://emirinsuzukawa-oss.github.io/emirin/price.html">
-  <meta property="og:image" content="https://emirinsuzukawa-oss.github.io/emirin/ogp.png">
-  <meta property="og:site_name" content="Emirin">
-  <meta property="og:locale" content="ja_JP">
+  <meta
+    property="og:title"
+    content="えみりん｜AI × Web Creative Director / Designer｜Webサイト制作"
+  >
+
+  <meta
+    property="og:description"
+    content="AI × Web Creative Director / Designer えみりん。Webサイト制作から公開後の運用・SEOサポートまで対応します。"
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:url"
+    content="https://emirinsuzukawa-oss.github.io/emirin/price.html"
+  >
+
+  <meta
+    property="og:image"
+    content="https://emirinsuzukawa-oss.github.io/emirin/ogp.png"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Emirin"
+  >
+
+  <meta
+    property="og:locale"
+    content="ja_JP"
+  >
 
   <!-- X / Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="えみりん｜AI × Web Creative Director / Designer｜Webサイト制作">
-  <meta name="twitter:description" content="AI × Web Creative Director / Designer えみりん。企画・コンセプト設計からWebデザイン、制作、情報発信、マーケティングまで一貫してサポートします。">
-  <meta name="twitter:image" content="https://emirinsuzukawa-oss.github.io/emirin/ogp.png">
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="えみりん｜AI × Web Creative Director / Designer｜Webサイト制作"
+  >
+
+  <meta
+    name="twitter:description"
+    content="AI × Web Creative Director / Designer えみりん。Webサイト制作から公開後の運用・SEOサポートまで対応します。"
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://emirinsuzukawa-oss.github.io/emirin/ogp.png"
+  >
 
   <meta
     name="description"
-    content="EmirinのWebサイト制作料金。企画・コンセプト設計からデザイン、制作、公開まで一貫して対応します。"
+    content="EmirinのWebサイト制作料金。Webサイト制作60,000円〜、制作＋6か月の運用・SEOサポート140,000円〜、運用・SEOサポート15,000円／月。"
   >
 
   <style>
@@ -223,10 +272,78 @@
     }
 
 
+    /* PLAN INDEX */
+
+    .plan-index {
+      padding: 10px 0 100px;
+    }
+
+    .plan-index-label {
+      margin: 0 0 25px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      color: #777777;
+    }
+
+    .plan-index-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .plan-index-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 260px;
+      padding: 30px;
+      border: 1px solid #dddddd;
+      background: #ffffff;
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .plan-index-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .plan-index-number {
+      margin: 0 0 18px;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      color: #888888;
+    }
+
+    .plan-index-card h2 {
+      margin: 0 0 20px;
+      font-size: 1.15rem;
+      font-weight: 400;
+      line-height: 1.6;
+      letter-spacing: 0.03em;
+    }
+
+    .plan-index-price {
+      margin: auto 0 8px;
+      font-size: clamp(1.6rem, 3vw, 2.3rem);
+      font-weight: 300;
+      line-height: 1.3;
+    }
+
+    .plan-index-note {
+      margin: 0;
+      font-size: 0.78rem;
+      line-height: 1.7;
+      color: #777777;
+    }
+
+
     /* PRICE */
 
     .pricing {
-      padding: 20px 0 120px;
+      padding: 0 0 120px;
     }
 
     .price-card {
@@ -236,6 +353,25 @@
       padding: clamp(40px, 6vw, 70px);
       border: 1px solid #dddddd;
       background: #ffffff;
+      scroll-margin-top: 110px;
+    }
+
+    .price-card + .price-card {
+      margin-top: 35px;
+    }
+
+    .price-card.recommended {
+      border: 1px solid #202020;
+    }
+
+    .recommended-badge {
+      display: inline-block;
+      margin: 0 0 18px;
+      padding: 5px 10px;
+      border: 1px solid #202020;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
     }
 
     .price-label {
@@ -251,6 +387,7 @@
       font-size: clamp(1.5rem, 3vw, 2.2rem);
       font-weight: 400;
       letter-spacing: 0.04em;
+      line-height: 1.5;
     }
 
     .price {
@@ -268,9 +405,17 @@
       font-weight: 300;
     }
 
+    .price-sub {
+      margin: 15px 0 0;
+      font-size: 0.88rem;
+      line-height: 1.8;
+      color: #555555;
+    }
+
     .price-description {
       margin: 20px 0 0;
       font-size: 0.85rem;
+      line-height: 1.9;
       color: #777777;
     }
 
@@ -280,6 +425,18 @@
       font-weight: 500;
       letter-spacing: 0.14em;
       color: #777777;
+    }
+
+    .plan-lead {
+      margin: 0 0 25px;
+      font-size: 1.08rem;
+      font-weight: 500;
+      line-height: 1.9;
+    }
+
+    .plan-text {
+      margin: 0 0 28px;
+      line-height: 2;
     }
 
     .included-list {
@@ -293,6 +450,25 @@
       padding: 15px 0;
       border-bottom: 1px solid #dddddd;
       font-size: 0.93rem;
+    }
+
+    .normal-price {
+      margin: 30px 0 0;
+      padding: 20px 22px;
+      background: #f7f7f7;
+      font-size: 0.88rem;
+      line-height: 1.9;
+    }
+
+    .normal-price strong {
+      font-weight: 600;
+    }
+
+    .plan-note {
+      margin: 25px 0 0;
+      font-size: 0.8rem;
+      line-height: 1.9;
+      color: #777777;
     }
 
 
@@ -425,6 +601,18 @@
         font-size: 0.67rem;
       }
 
+      .plan-index-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .plan-index-card {
+        min-height: auto;
+      }
+
+      .plan-index-price {
+        margin-top: 30px;
+      }
+
       .price-card {
         grid-template-columns: 1fr;
       }
@@ -511,6 +699,14 @@
         padding: 65px 0 45px;
       }
 
+      .plan-index {
+        padding-bottom: 70px;
+      }
+
+      .plan-index-card {
+        padding: 25px 22px;
+      }
+
       .pricing {
         padding-bottom: 80px;
       }
@@ -522,7 +718,7 @@
 
       .price {
         font-size: clamp(2rem, 10vw, 3rem);
-        white-space: nowrap;
+        white-space: normal;
       }
 
       .running-cost,
@@ -569,23 +765,50 @@
 
         <ul>
 
-          <li><a href="index.html">HOME</a></li>
-
-          <li><a href="service.html">SERVICE</a></li>
-
-          <li><a href="works.html">WORKS</a></li>
+          <li>
+            <a href="index.html">
+              HOME
+            </a>
+          </li>
 
           <li>
-            <a class="active" href="price.html">
+            <a href="service.html">
+              SERVICE
+            </a>
+          </li>
+
+          <li>
+            <a href="works.html">
+              WORKS
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="active"
+              href="price.html"
+            >
               PRICE
             </a>
           </li>
 
-          <li><a href="profile.html">PROFILE</a></li>
+          <li>
+            <a href="profile.html">
+              PROFILE
+            </a>
+          </li>
 
-          <li><a href="flow.html">FLOW</a></li>
+          <li>
+            <a href="flow.html">
+              FLOW
+            </a>
+          </li>
 
-          <li><a href="faq.html">FAQ</a></li>
+          <li>
+            <a href="faq.html">
+              FAQ
+            </a>
+          </li>
 
           <li>
             <a
@@ -608,6 +831,8 @@
 
   <main>
 
+    <!-- PAGE HERO -->
+
     <section class="page-hero">
 
       <div class="container">
@@ -629,13 +854,15 @@
     </section>
 
 
+    <!-- INTRO -->
+
     <section class="intro">
 
       <div class="container">
 
         <p class="intro-text">
-          企画・コンセプト設計からデザイン、制作、公開まで、
-          Webサイト制作に必要な工程をまとめて対応します。
+          Webサイトの制作から、公開後の運用・SEOまで。<br>
+          目的やご希望に合わせてお選びいただけます。
         </p>
 
       </div>
@@ -643,16 +870,259 @@
     </section>
 
 
+    <!-- PLAN INDEX -->
+
+    <section class="plan-index">
+
+      <div class="container">
+
+        <p class="plan-index-label">
+          PLAN
+        </p>
+
+        <div class="plan-index-grid">
+
+          <!-- PLAN 01 -->
+
+          <a
+            class="plan-index-card"
+            href="#plan01"
+          >
+
+            <p class="plan-index-number">
+              01
+            </p>
+
+            <h2>
+              Webサイト制作＋<br>
+              運用・SEOサポート
+            </h2>
+
+            <p class="plan-index-price">
+              140,000円〜
+            </p>
+
+            <p class="plan-index-note">
+              制作費＋6か月分の<br>
+              運用・SEOサポート費込み
+            </p>
+
+          </a>
+
+
+          <!-- PLAN 02 -->
+
+          <a
+            class="plan-index-card"
+            href="#plan02"
+          >
+
+            <p class="plan-index-number">
+              02
+            </p>
+
+            <h2>
+              Webサイト制作
+            </h2>
+
+            <p class="plan-index-price">
+              60,000円〜
+            </p>
+
+            <p class="plan-index-note">
+              企画・デザイン・制作・公開まで
+            </p>
+
+          </a>
+
+
+          <!-- PLAN 03 -->
+
+          <a
+            class="plan-index-card"
+            href="#plan03"
+          >
+
+            <p class="plan-index-number">
+              03
+            </p>
+
+            <h2>
+              Webサイト運用・<br>
+              SEOサポート
+            </h2>
+
+            <p class="plan-index-price">
+              15,000円／月
+            </p>
+
+            <p class="plan-index-note">
+              最低契約期間：3か月<br>
+              当方で制作したWebサイトのみ対象
+            </p>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PRICE DETAILS -->
+
     <section class="pricing">
 
       <div class="container">
 
-        <div class="price-card">
+
+        <!-- PLAN 01 -->
+
+        <article
+          class="price-card recommended"
+          id="plan01"
+        >
+
+          <div>
+
+            <p class="recommended-badge">
+              RECOMMENDED
+            </p>
+
+            <p class="price-label">
+              01 / WEBSITE + SUPPORT
+            </p>
+
+            <h2 class="price-title">
+              Webサイト制作＋<br>
+              運用・SEOサポート
+            </h2>
+
+            <p class="price">
+              140,000円<span>〜</span>
+            </p>
+
+            <p class="price-sub">
+              制作費＋6か月分の<br>
+              運用・SEOサポート費込み
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <p class="included-title">
+              ABOUT
+            </p>
+
+            <p class="plan-lead">
+              Webサイトの制作から、公開後の運用までまとめておまかせ。
+            </p>
+
+            <p class="plan-text">
+              Webサイトの企画・デザイン・制作・公開に加えて、
+              公開後6か月間、検索状況やサイトの状態を定期的に確認しながら、
+              より多くの方に見つけてもらえるWebサイトを目指して改善していきます。
+            </p>
+
+            <p class="plan-text">
+              「Webサイトを作りたいけれど、
+              公開後の管理や検索対策まで自分でできるか不安」
+              という方におすすめです。
+            </p>
+
+            <p class="included-title">
+              INCLUDED
+            </p>
+
+            <ul class="included-list">
+
+              <li>
+                ヒアリング・目的の整理
+              </li>
+
+              <li>
+                企画・コンセプト設計
+              </li>
+
+              <li>
+                Webデザイン
+              </li>
+
+              <li>
+                Webサイト制作
+              </li>
+
+              <li>
+                スマートフォン対応
+              </li>
+
+              <li>
+                公開作業
+              </li>
+
+              <li>
+                Google検索での表示状況をチェック
+              </li>
+
+              <li>
+                どんな検索ワードから見られているかを確認
+              </li>
+
+              <li>
+                アクセスが伸びている／伸びていないページを確認
+              </li>
+
+              <li>
+                リンク切れ・表示上の問題をチェック
+              </li>
+
+              <li>
+                文章や画像などの軽微な修正・更新（月1回）
+              </li>
+
+              <li>
+                改善したほうがよいポイントがあればご提案
+              </li>
+
+              <li>
+                毎月の状況をA4 1枚でご報告
+              </li>
+
+            </ul>
+
+            <div class="normal-price">
+              通常価格：Webサイト制作 60,000円〜 ＋
+              運用・SEOサポート 15,000円 × 6か月
+              <br>
+              <strong>
+                150,000円〜 → セット価格 140,000円〜
+              </strong>
+            </div>
+
+            <p class="plan-note">
+              ※大幅なデザイン変更、新規ページ制作、記事制作、
+              機能追加などは別途お見積りとなります。
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- PLAN 02 -->
+
+        <article
+          class="price-card"
+          id="plan02"
+        >
 
           <div>
 
             <p class="price-label">
-              WEBSITE PRODUCTION
+              02 / WEBSITE PRODUCTION
             </p>
 
             <h2 class="price-title">
@@ -673,35 +1143,177 @@
           <div>
 
             <p class="included-title">
+              ABOUT
+            </p>
+
+            <p class="plan-lead">
+              企画・デザインから制作・公開まで、
+              Webサイト制作をまとめてサポートします。
+            </p>
+
+            <p class="plan-text">
+              「Webサイトを作りたいけれど、
+              何から始めればいいかわからない」という段階から、
+              目的や伝えたいことを整理し、
+              企画・コンセプト設計からデザイン、制作、公開まで一貫して行います。
+            </p>
+
+            <p class="included-title">
               INCLUDED
             </p>
 
             <ul class="included-list">
 
-              <li>ヒアリング</li>
+              <li>
+                ヒアリング・目的の整理
+              </li>
 
-              <li>企画・コンセプト設計</li>
+              <li>
+                企画・コンセプト設計
+              </li>
 
-              <li>サイト構成</li>
+              <li>
+                Webデザイン
+              </li>
 
-              <li>Webデザイン</li>
+              <li>
+                Webサイト制作
+              </li>
 
-              <li>コーディング</li>
+              <li>
+                スマートフォン対応
+              </li>
 
-              <li>スマートフォン対応</li>
-
-              <li>公開設定</li>
+              <li>
+                公開作業
+              </li>
 
             </ul>
 
+            <p class="plan-note">
+              ※ページ数や機能、制作内容によって料金が異なる場合があります。
+            </p>
+
           </div>
 
-        </div>
+        </article>
+
+
+        <!-- PLAN 03 -->
+
+        <article
+          class="price-card"
+          id="plan03"
+        >
+
+          <div>
+
+            <p class="price-label">
+              03 / WEBSITE SUPPORT
+            </p>
+
+            <h2 class="price-title">
+              Webサイト運用・<br>
+              SEOサポート
+            </h2>
+
+            <p class="price">
+              15,000円<span>／月</span>
+            </p>
+
+            <p class="price-sub">
+              最低契約期間：3か月
+            </p>
+
+            <p class="price-description">
+              当方で制作したWebサイトのみ対象です。
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <p class="included-title">
+              ABOUT
+            </p>
+
+            <p class="plan-lead">
+              当方で制作したWebサイト限定の、
+              公開後の継続サポートです。
+            </p>
+
+            <p class="plan-text">
+              Webサイトは、公開して終わりではありません。
+            </p>
+
+            <p class="plan-text">
+              公開後も検索状況やサイトの状態を定期的に確認し、
+              より多くの方に見つけてもらえるよう継続的に改善していきます。
+            </p>
+
+            <p class="plan-text">
+              「サイトのことはよくわからない」
+              「公開後の管理も任せたい」という方に向けて、
+              毎月のチェック・簡単な更新・検索対策をまとめてサポートします。
+            </p>
+
+            <p class="included-title">
+              MONTHLY SUPPORT
+            </p>
+
+            <ul class="included-list">
+
+              <li>
+                Google検索での表示状況をチェック
+              </li>
+
+              <li>
+                どんな検索ワードから見られているかを確認
+              </li>
+
+              <li>
+                アクセスが伸びている／伸びていないページを確認
+              </li>
+
+              <li>
+                リンク切れ・表示上の問題をチェック
+              </li>
+
+              <li>
+                文章や画像などの軽微な修正・更新（月1回）
+              </li>
+
+              <li>
+                改善したほうがよいポイントがあればご提案
+              </li>
+
+              <li>
+                毎月の状況をA4 1枚でご報告
+              </li>
+
+            </ul>
+
+            <p class="plan-note">
+              ※本サービスは、当方で制作したWebサイトのみ対象となります。
+              <br>
+              ※最低3か月からのご契約となります。
+              <br>
+              ※大幅なデザイン変更、新規ページ制作、記事制作、
+              機能追加などは別途お見積りとなります。
+            </p>
+
+          </div>
+
+        </article>
+
 
       </div>
 
     </section>
 
+
+    <!-- RUNNING COST -->
 
     <section class="running-cost">
 
@@ -741,6 +1353,8 @@
     </section>
 
 
+    <!-- PAYMENT -->
+
     <section class="payment">
 
       <div class="container">
@@ -775,6 +1389,8 @@
 
     </section>
 
+
+    <!-- CTA -->
 
     <section class="cta">
 
@@ -834,7 +1450,10 @@
 
       const isOpen = navigation.classList.toggle("open");
 
-      document.body.classList.toggle("menu-open", isOpen);
+      document.body.classList.toggle(
+        "menu-open",
+        isOpen
+      );
 
       menuButton.setAttribute(
         "aria-expanded",
@@ -876,7 +1495,6 @@
     });
 
   </script>
-
 
 </body>
 
